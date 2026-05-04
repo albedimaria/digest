@@ -1,7 +1,6 @@
 """
 daily-digest — 2-3 storie curate, stile Breaking Italy.
-Primary: Gemini 2.0 Flash (gratis, web search nativo)
-Fallback: Perplexity Sonar (web search nativo)
+Powered by Gemini 2.0 Flash con Google Search nativo.
 """
 
 import os
@@ -16,8 +15,7 @@ from email.mime.text import MIMEText
 RECIPIENT        = "ing.albertodimaria@gmail.com"
 SENDER           = "ing.albertodimaria@gmail.com"
 SMTP_PASS        = os.environ["GMAIL_APP_PASSWORD"]
-GEMINI_API_KEY   = os.environ.get("GEMINI_API_KEY", "")
-PERPLEXITY_KEY   = os.environ.get("PERPLEXITY_API_KEY", "")
+GEMINI_API_KEY   = os.environ["GEMINI_API_KEY"]
 
 INTERESTS = """
 - AI & developer tools: nuovi modelli, API, agentic frameworks, strumenti per dev
@@ -91,46 +89,11 @@ def fetch_with_gemini(today: str) -> list:
     return json.loads(raw).get("stories", [])
 
 
-# ── Perplexity ────────────────────────────────────────────────────────────────
+# ── Fetch ─────────────────────────────────────────────────────────────────────
 
-def fetch_with_perplexity(today: str) -> list:
-    from openai import OpenAI
-
-    client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
-    response = client.chat.completions.create(
-        model="sonar",
-        messages=[{"role": "user", "content": build_prompt(today)}],
-        temperature=0.3,
-    )
-
-    raw = response.choices[0].message.content.strip()
-    if raw.startswith("```"):
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-        raw = raw.strip()
-
-    return json.loads(raw).get("stories", [])
-
-
-# ── Fetch with fallback ───────────────────────────────────────────────────────
-
-def fetch_digest(today: str) -> tuple[list, str]:
-    """Returns (stories, provider_name)"""
-    if GEMINI_API_KEY:
-        try:
-            print("  Trying Gemini…")
-            stories = fetch_with_gemini(today)
-            return stories, "Gemini"
-        except Exception as e:
-            print(f"  Gemini failed: {e}")
-
-    if PERPLEXITY_KEY:
-        print("  Trying Perplexity…")
-        stories = fetch_with_perplexity(today)
-        return stories, "Perplexity"
-
-    raise RuntimeError("No API keys available (GEMINI_API_KEY or PERPLEXITY_API_KEY required)")
+def fetch_digest(today: str) -> list:
+    stories = fetch_with_gemini(today)
+    return stories
 
 
 # ── HTML ───────────────────────────────────────────────────────────────────────
@@ -172,7 +135,7 @@ def render_story(story: dict, index: int) -> str:
       </a>
     </div>"""
 
-def build_html(stories: list, today: str, provider: str) -> str:
+def build_html(stories: list, today: str) -> str:
     stories_html = "".join(render_story(s, i) for i, s in enumerate(stories))
     count_label  = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
     return f"""<!DOCTYPE html>
@@ -188,7 +151,7 @@ def build_html(stories: list, today: str, provider: str) -> str:
     <div style="padding:28px 32px;">{stories_html}</div>
     <div style="padding:16px 32px;background:#f9fafb;text-align:center;border-top:1px solid #e5e7eb;">
       <p style="margin:0;font-size:11px;color:#9ca3af;">
-        Curato da {provider} · github.com/albedimaria/digest
+        Curato da Gemini · github.com/albedimaria/digest
       </p>
     </div>
   </div>
@@ -214,9 +177,9 @@ def send_email(html: str, today: str, story_count: int):
 def main():
     today = date.today().strftime("%A, %d %B %Y")
     print("Fetching today's digest…")
-    stories, provider = fetch_digest(today)
-    print(f"  → {len(stories)} stories via {provider}")
-    html = build_html(stories, today, provider)
+    stories = fetch_digest(today)
+    print(f"  → {len(stories)} stories")
+    html = build_html(stories, today)
     send_email(html, today, len(stories))
 
 if __name__ == "__main__":

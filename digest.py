@@ -75,14 +75,19 @@ def fetch_with_gemini(today: str) -> list:
     from google.genai import types
 
     client = genai.Client(api_key=GEMINI_API_KEY)
-    response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=build_prompt(today),
-        config=types.GenerateContentConfig(
-            tools=[types.Tool(google_search=types.GoogleSearch())],
-            temperature=0.3,
-        ),
-    )
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=build_prompt(today),
+            config=types.GenerateContentConfig(
+                tools=[types.Tool(google_search=types.GoogleSearch())],
+                temperature=0.3,
+            ),
+        )
+    except Exception as e:
+        if any(k in str(e) for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
+            print(f"  GEMINI QUOTA ESAURITA: {e}")
+        raise
 
     raw = response.text.strip()
     if raw.startswith("```"):
@@ -100,11 +105,16 @@ def fetch_with_perplexity(today: str) -> list:
     from openai import OpenAI
 
     client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
-    response = client.chat.completions.create(
-        model="sonar",
-        messages=[{"role": "user", "content": build_prompt(today)}],
-        temperature=0.3,
-    )
+    try:
+        response = client.chat.completions.create(
+            model="sonar",
+            messages=[{"role": "user", "content": build_prompt(today)}],
+            temperature=0.3,
+        )
+    except Exception as e:
+        if any(k in str(e) for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
+            print(f"  PERPLEXITY QUOTA ESAURITA: {e}")
+        raise
 
     raw = response.choices[0].message.content.strip()
     if raw.startswith("```"):

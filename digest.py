@@ -1,119 +1,58 @@
 """
 daily-digest — 2-3 storie curate, stile Breaking Italy.
-RSS feeds → Gemini 2.0 Flash (free tier, no grounding).
+Primary: Gemini 2.0 Flash (gratis, web search nativo)
+Fallback: Perplexity Sonar (web search nativo)
 """
 
-import os, smtplib, json, feedparser
-from datetime import date, datetime, timezone, timedelta
+import os
+import smtplib
+import json
+from datetime import date
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-RECIPIENT      = "ing.albertodimaria@gmail.com"
-SENDER         = "ing.albertodimaria@gmail.com"
-SMTP_PASS      = os.environ["GMAIL_APP_PASSWORD"]
-GEMINI_API_KEY = os.environ["GEMINI_API_KEY"]
+RECIPIENT        = "ing.albertodimaria@gmail.com"
+SENDER           = "ing.albertodimaria@gmail.com"
+SMTP_PASS        = os.environ["GMAIL_APP_PASSWORD"]
+GEMINI_API_KEY   = os.environ.get("GEMINI_API_KEY", "")
+PERPLEXITY_KEY   = os.environ.get("PERPLEXITY_API_KEY", "")
 
-FEEDS = {
-    "AI & Developer Tools": [
-        "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-        "https://techcrunch.com/category/artificial-intelligence/feed/",
-    ],
-    "Audio AI & Music Tech": [
-        "https://export.arxiv.org/rss/cs.SD",
-        "https://www.musictech.net/feed/",
-    ],
-    "Colombia": [
-        "https://colombiareports.com/feed/",
-        "https://www.elespectador.com/arc/outboundfeeds/rss/?outputType=xml",
-    ],
-    "Letteratura": [
-        "https://www.theguardian.com/books/rss",
-    ],
-    "Design & UX": [
-        "https://www.smashingmagazine.com/feed/",
-        "https://uxdesign.cc/feed",
-    ],
-    "Jazz & Musica": [
-        "https://pitchfork.com/rss/news/",
-        "https://www.allaboutjazz.com/rss/news.rss",
-    ],
-    "Scienza & Filosofia": [
-        "https://www.quantamagazine.org/feed/",
-    ],
-}
+INTERESTS = """
+- AI & developer tools: nuovi modelli, API, agentic frameworks, strumenti per dev
+- Audio AI & music tech: modelli audio/musicali, MIR, ricerca su arXiv/ISMIR — solo roba significativa
+- Startup audio/AI lanciate da piccoli team o solo dev
+- Colombia: attualità, politica, cultura, musica
+- Letteratura latinoamericana e spagnola: nuove uscite, premi, autori, cultura letteraria
+- Design & UX: trend, tool, case study, ispirazioni visive
+- Jazz, black music (soul, funk, R&B, hip-hop, afrobeat), musica latina (salsa, cumbia, bossa nova, MPB)
+  → NO: elettronica mainstream, pop italiano, EDM
+- Brujería messicana, curanderismo, tradizioni precolombiane: antropologia, storia, cultura
+- Curiosità scientifiche o filosofiche profonde (stile Quanta Magazine) — solo se c'è qualcosa davvero notevole
+"""
 
-# ── RSS fetch ─────────────────────────────────────────────────────────────────
+def build_prompt(today: str) -> str:
+    return f"""Sei un editor che cura una newsletter quotidiana personalizzata da leggere in 5 minuti in metropolitana.
 
-def fetch_articles(hours: int = 48) -> list[dict]:
-    cutoff   = datetime.now(timezone.utc) - timedelta(hours=hours)
-    articles = []
-
-    for topic, urls in FEEDS.items():
-        for url in urls:
-            try:
-                feed = feedparser.parse(url)
-                for entry in feed.entries[:8]:
-                    pub = entry.get("published_parsed") or entry.get("updated_parsed")
-                    if pub:
-                        pub_dt = datetime(*pub[:6], tzinfo=timezone.utc)
-                        if pub_dt < cutoff:
-                            continue
-                    summary = entry.get("summary", "")
-                    # strip HTML tags crudely
-                    import re
-                    summary = re.sub(r"<[^>]+>", "", summary)[:300]
-                    articles.append({
-                        "topic":   topic,
-                        "title":   entry.get("title", "").strip(),
-                        "summary": summary.strip(),
-                        "url":     entry.get("link", ""),
-                        "source":  feed.feed.get("title", url),
-                    })
-            except Exception as e:
-                print(f"  Feed error ({url}): {e}")
-
-    print(f"  → {len(articles)} articles from RSS")
-    return articles
-
-
-def format_articles_for_prompt(articles: list[dict]) -> str:
-    lines = []
-    for i, a in enumerate(articles, 1):
-        lines.append(
-            f"[{i}] ({a['topic']}) {a['title']}\n"
-            f"    Source: {a['source']} | URL: {a['url']}\n"
-            f"    {a['summary']}"
-        )
-    return "\n\n".join(lines)
-
-
-# ── Gemini ────────────────────────────────────────────────────────────────────
-
-def fetch_digest(articles: list[dict], today: str) -> list:
-    from google import genai
-    from google.genai import types
-
-    articles_text = format_articles_for_prompt(articles)
-
-    prompt = f"""Sei un editor che cura una newsletter quotidiana personalizzata da leggere in 5 minuti.
+Gli interessi del lettore sono:
+{INTERESTS}
 
 Oggi è {today}.
 
-Di seguito trovi gli articoli raccolti dai feed RSS nelle ultime 48 ore:
-
-{articles_text}
-
 Il tuo compito:
-1. Scegli le 2-3 storie più interessanti e rilevanti per il lettore.
+1. Cerca notizie di oggi su questi temi usando il web.
+2. Scegli le 2-3 storie più interessanti e rilevanti tra tutti i temi.
    - Privilegia qualità sulla varietà: se ci sono due notizie forti sullo stesso tema, prendile entrambe.
-   - Se un tema non ha niente di interessante, ignoralo.
-2. Per ogni storia selezionata scrivi un pezzo stile Breaking Italy:
+   - Se su un tema non c'è niente di interessante oggi, ignoralo.
+   - Cerca almeno 3-4 temi prima di decidere cosa tenere.
+   - Evita di selezionare sempre lo stesso tipo di notizia per lo stesso tema (es. non sempre elezioni o politica per la Colombia): varia tra cultura, musica, economia, società, storia, ambiente.
+3. Per ogni storia scrivi un pezzo approfondito stile Breaking Italy:
    - Titolo diretto e informativo
-   - 4-6 frasi con contesto, perché importa, cosa succede dopo
-   - Testo fluente e giornalistico, niente elenchi puntati
-   - Usa il topic esatto dall'articolo scelto
+   - 4-6 frasi che partono dal fatto del giorno come gancio e lo aprono in un'analisi più ampia: contesto storico o strutturale, conseguenze, perché conta oltre la cronaca immediata
+   - La cronaca pura non basta: ogni pezzo deve lasciare al lettore una comprensione più profonda di quella che aveva prima
+   - Testo fluente e giornalistico, no elenchi puntati
+   - Indica il tema (es. "Audio AI", "Colombia", "Design")
 
 Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
 {{
@@ -128,11 +67,21 @@ Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
   ]
 }}"""
 
-    client   = genai.Client(api_key=GEMINI_API_KEY)
+
+# ── Gemini ────────────────────────────────────────────────────────────────────
+
+def fetch_with_gemini(today: str) -> list:
+    from google import genai
+    from google.genai import types
+
+    client = genai.Client(api_key=GEMINI_API_KEY)
     response = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt,
-        config=types.GenerateContentConfig(temperature=0.3),
+        model="gemini-2.0-flash",
+        contents=build_prompt(today),
+        config=types.GenerateContentConfig(
+            tools=[types.Tool(google_search=types.GoogleSearch())],
+            temperature=0.3,
+        ),
     )
 
     raw = response.text.strip()
@@ -143,6 +92,48 @@ Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
         raw = raw.strip()
 
     return json.loads(raw).get("stories", [])
+
+
+# ── Perplexity ────────────────────────────────────────────────────────────────
+
+def fetch_with_perplexity(today: str) -> list:
+    from openai import OpenAI
+
+    client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
+    response = client.chat.completions.create(
+        model="sonar",
+        messages=[{"role": "user", "content": build_prompt(today)}],
+        temperature=0.3,
+    )
+
+    raw = response.choices[0].message.content.strip()
+    if raw.startswith("```"):
+        raw = raw.split("```")[1]
+        if raw.startswith("json"):
+            raw = raw[4:]
+        raw = raw.strip()
+
+    return json.loads(raw).get("stories", [])
+
+
+# ── Fetch with fallback ───────────────────────────────────────────────────────
+
+def fetch_digest(today: str) -> tuple[list, str]:
+    """Returns (stories, provider_name)"""
+    if GEMINI_API_KEY:
+        try:
+            print("  Trying Gemini…")
+            stories = fetch_with_gemini(today)
+            return stories, "Gemini"
+        except Exception as e:
+            print(f"  Gemini failed: {e}")
+
+    if PERPLEXITY_KEY:
+        print("  Trying Perplexity…")
+        stories = fetch_with_perplexity(today)
+        return stories, "Perplexity"
+
+    raise RuntimeError("No API keys available (GEMINI_API_KEY or PERPLEXITY_API_KEY required)")
 
 
 # ── HTML ───────────────────────────────────────────────────────────────────────
@@ -162,8 +153,8 @@ def topic_color(topic: str) -> str:
     return "#374151"
 
 def render_story(story: dict, index: int) -> str:
-    color = topic_color(story.get("topic", ""))
-    num   = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
+    color  = topic_color(story.get("topic", ""))
+    num    = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
     return f"""
     <div style="margin-bottom:28px; padding:22px; background:#f9fafb;
                 border-radius:10px; border-left:4px solid {color};">
@@ -184,7 +175,7 @@ def render_story(story: dict, index: int) -> str:
       </a>
     </div>"""
 
-def build_html(stories: list, today: str) -> str:
+def build_html(stories: list, today: str, provider: str) -> str:
     stories_html = "".join(render_story(s, i) for i, s in enumerate(stories))
     count_label  = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
     return f"""<!DOCTYPE html>
@@ -200,7 +191,7 @@ def build_html(stories: list, today: str) -> str:
     <div style="padding:28px 32px;">{stories_html}</div>
     <div style="padding:16px 32px;background:#f9fafb;text-align:center;border-top:1px solid #e5e7eb;">
       <p style="margin:0;font-size:11px;color:#9ca3af;">
-        Curato da Gemini · github.com/albedimaria/digest
+        Curato da {provider} · github.com/albedimaria/digest
       </p>
     </div>
   </div>
@@ -224,15 +215,11 @@ def send_email(html: str, today: str, story_count: int):
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
-    today    = date.today().strftime("%A, %d %B %Y")
-    articles = fetch_articles(hours=48)
-    if not articles:
-        print("No articles found, aborting.")
-        return
-    print("Asking Gemini to pick the best stories…")
-    stories = fetch_digest(articles, today)
-    print(f"  → {len(stories)} stories selected")
-    html = build_html(stories, today)
+    today = date.today().strftime("%A, %d %B %Y")
+    print("Fetching today's digest…")
+    stories, provider = fetch_digest(today)
+    print(f"  → {len(stories)} stories via {provider}")
+    html = build_html(stories, today, provider)
     send_email(html, today, len(stories))
 
 if __name__ == "__main__":

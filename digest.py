@@ -6,6 +6,7 @@ Primary: Gemini 2.5 Flash | Fallback: Perplexity Sonar
 import os
 import smtplib
 import json
+import html as html_lib
 from datetime import date
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -97,21 +98,19 @@ def fetch_with_gemini(interests: str, today: str) -> list:
     from google.genai import types
 
     client = genai.Client(api_key=GEMINI_API_KEY)
-    try:
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=build_prompt(interests, today),
-            config=types.GenerateContentConfig(
-                tools=[types.Tool(google_search=types.GoogleSearch())],
-                temperature=0.3,
-            ),
-        )
-    except Exception as e:
-        if any(k in str(e) for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
-            print(f"  GEMINI QUOTA ESAURITA: {e}")
-        raise
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=build_prompt(interests, today),
+        config=types.GenerateContentConfig(
+            tools=[types.Tool(google_search=types.GoogleSearch())],
+            temperature=0.3,
+        ),
+    )
 
-    raw = response.text.strip()
+    raw = (response.text or "").strip()
+    if not raw:
+        raise ValueError("Gemini ha restituito una risposta vuota")
+
     if raw.startswith("```"):
         raw = raw.split("```")[1]
         if raw.startswith("json"):
@@ -124,21 +123,22 @@ def fetch_with_gemini(interests: str, today: str) -> list:
 # ── Perplexity ────────────────────────────────────────────────────────────────
 
 def fetch_with_perplexity(interests: str, today: str) -> list:
-    from openai import OpenAI
+    try:
+        from openai import OpenAI
+    except ImportError:
+        raise RuntimeError("openai non installato — aggiungi 'openai' a requirements.txt")
 
     client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
-    try:
-        response = client.chat.completions.create(
-            model="sonar",
-            messages=[{"role": "user", "content": build_prompt(interests, today)}],
-            temperature=0.3,
-        )
-    except Exception as e:
-        if any(k in str(e) for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
-            print(f"  PERPLEXITY QUOTA ESAURITA: {e}")
-        raise
+    response = client.chat.completions.create(
+        model="sonar",
+        messages=[{"role": "user", "content": build_prompt(interests, today)}],
+        temperature=0.3,
+    )
 
-    raw = response.choices[0].message.content.strip()
+    raw = (response.choices[0].message.content or "").strip()
+    if not raw:
+        raise ValueError("Perplexity ha restituito una risposta vuota")
+
     if raw.startswith("```"):
         raw = raw.split("```")[1]
         if raw.startswith("json"):
@@ -158,7 +158,7 @@ def fetch_digest(interests: str, today: str) -> tuple[list, str]:
             return stories, "Gemini"
         except Exception as e:
             err = str(e)
-            if any(k in err for k in ["429", "RESOURCE_EXHAUSTED", "quota"]):
+            if any(k in err for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
                 print(f"  ⚠ GEMINI QUOTA ESAURITA: {err}")
             else:
                 print(f"  ⚠ GEMINI ERROR: {err}")
@@ -170,7 +170,7 @@ def fetch_digest(interests: str, today: str) -> tuple[list, str]:
             return stories, "Perplexity"
         except Exception as e:
             err = str(e)
-            if any(k in err for k in ["429", "quota", "rate"]):
+            if any(k in err for k in ("429", "quota", "rate")):
                 print(f"  ⚠ PERPLEXITY QUOTA ESAURITA: {err}")
             else:
                 print(f"  ⚠ PERPLEXITY ERROR: {err}")
@@ -197,25 +197,30 @@ def topic_color(topic: str) -> str:
     return "#374151"
 
 def render_story(story: dict, index: int) -> str:
-    color = topic_color(story.get("topic", ""))
-    num   = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
+    color  = topic_color(story.get("topic", ""))
+    num    = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
+    topic  = html_lib.escape(story.get("topic", ""))
+    title  = html_lib.escape(story.get("title", ""))
+    body   = html_lib.escape(story.get("body", ""))
+    source = html_lib.escape(story.get("source", ""))
+    url    = story.get("url", "#")
     return f"""
     <div style="margin-bottom:28px;padding:22px;background:#f9fafb;
                 border-radius:10px;border-left:4px solid {color};">
       <div style="margin-bottom:8px;">
         <span style="font-size:10px;font-weight:700;text-transform:uppercase;
-                     letter-spacing:1px;color:{color};">{story.get('topic','')}</span>
+                     letter-spacing:1px;color:{color};">{topic}</span>
       </div>
       <h2 style="margin:0 0 12px;font-size:17px;font-weight:700;
                  color:#111827;line-height:1.4;font-family:Georgia,serif;">
-        {num} {story.get('title','')}
+        {num} {title}
       </h2>
       <p style="margin:0 0 14px;font-size:14px;color:#374151;line-height:1.75;">
-        {story.get('body','')}
+        {body}
       </p>
-      <a href="{story.get('url','#')}" style="font-size:12px;color:{color};
-                                              text-decoration:none;font-weight:600;">
-        Leggi su {story.get('source','')} →
+      <a href="{url}" style="font-size:12px;color:{color};
+                             text-decoration:none;font-weight:600;">
+        Leggi su {source} →
       </a>
     </div>"""
 
@@ -265,6 +270,9 @@ def main():
         print(f"\n[{profile['name']}] Fetching digest…")
         try:
             stories, provider = fetch_digest(profile["interests"], today)
+            if not stories:
+                print(f"  ✗ Nessuna storia trovata per {profile['name']}, skip.")
+                continue
             print(f"  → {len(stories)} stories via {provider}")
             html = build_html(stories, today, provider)
             send_email(profile["recipient"], html, today, len(stories))

@@ -1,7 +1,6 @@
 """
-daily-digest — 2-3 storie curate, stile Breaking Italy.
-Primary: Gemini 2.0 Flash (gratis, web search nativo)
-Fallback: Perplexity Sonar (web search nativo)
+daily-digest — 2-3 storie curate per persona, stile Breaking Italy.
+Primary: Gemini 2.5 Flash | Fallback: Perplexity Sonar
 """
 
 import os
@@ -13,30 +12,52 @@ from email.mime.text import MIMEText
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-RECIPIENT        = "ing.albertodimaria@gmail.com"
-SENDER           = "ing.albertodimaria@gmail.com"
-SMTP_PASS        = os.environ["GMAIL_APP_PASSWORD"]
-GEMINI_API_KEY   = os.environ.get("GEMINI_API_KEY", "")
-PERPLEXITY_KEY   = os.environ.get("PERPLEXITY_API_KEY", "")
+SENDER         = "ing.albertodimaria@gmail.com"
+SMTP_PASS      = os.environ["GMAIL_APP_PASSWORD"]
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+PERPLEXITY_KEY = os.environ.get("PERPLEXITY_API_KEY", "")
 
-INTERESTS = """
+PROFILES = [
+    {
+        "name": "Alberto",
+        "recipient": "ing.albertodimaria@gmail.com",
+        "interests": """
 - AI & developer tools: nuovi modelli, API, agentic frameworks, strumenti per dev
 - Audio AI & music tech: modelli audio/musicali, MIR, ricerca su arXiv/ISMIR — solo roba significativa
 - Startup audio/AI lanciate da piccoli team o solo dev
-- Colombia: attualità, politica, cultura, musica
+- Colombia: attualità, politica, cultura, musica — varia tra cultura, musica, economia, società, storia, ambiente
 - Letteratura latinoamericana e spagnola: nuove uscite, premi, autori, cultura letteraria
 - Design & UX: trend, tool, case study, ispirazioni visive
 - Jazz, black music (soul, funk, R&B, hip-hop, afrobeat), musica latina (salsa, cumbia, bossa nova, MPB)
   → NO: elettronica mainstream, pop italiano, EDM
 - Brujería messicana, curanderismo, tradizioni precolombiane: antropologia, storia, cultura
 - Curiosità scientifiche o filosofiche profonde (stile Quanta Magazine) — solo se c'è qualcosa davvero notevole
-"""
+""",
+    },
+    {
+        "name": "Laura",
+        "recipient": "laura.zanchetta00@gmail.com",
+        "interests": """
+- Arte contemporanea & gallerie: mostre, artisti emergenti, mercato dell'arte
+- Illustrazione editoriale & poster: illustratori da seguire, nuove pubblicazioni, campagne visive
+- Fotografia: fotografi, tendenze, progetti documentari, fotogiornalismo
+- UX/UI design: tool e novità (Figma, Framer...), design system, accessibilità, trend visivi & tipografia
+- AI generativa applicata al design e all'arte: nuovi modelli, tool creativi, impatto sul mondo visivo
+- Cinema & serie — con focus su backstage e processo creativo, non recensioni:
+  film d'autore, festival (Cannes, Venezia, Berlino e indipendenti), curiosità di produzione
+- Ambiente & sostenibilità: cambiamento climatico, biodiversità, design etico e sostenibile
+- Attualità generale (geopolitica, società) — solo se c'è qualcosa di davvero importante
+""",
+    },
+]
 
-def build_prompt(today: str) -> str:
+# ── Prompt ────────────────────────────────────────────────────────────────────
+
+def build_prompt(interests: str, today: str) -> str:
     return f"""Sei un editor che cura una newsletter quotidiana personalizzata da leggere in 5 minuti in metropolitana.
 
 Gli interessi del lettore sono:
-{INTERESTS}
+{interests}
 
 Oggi è {today}.
 
@@ -46,13 +67,14 @@ Il tuo compito:
    - Privilegia qualità sulla varietà: se ci sono due notizie forti sullo stesso tema, prendile entrambe.
    - Se su un tema non c'è niente di interessante oggi, ignoralo.
    - Cerca almeno 3-4 temi prima di decidere cosa tenere.
-   - Evita di selezionare sempre lo stesso tipo di notizia per lo stesso tema (es. non sempre elezioni o politica per la Colombia): varia tra cultura, musica, economia, società, storia, ambiente.
+   - Evita di selezionare sempre lo stesso tipo di notizia per lo stesso tema.
 3. Per ogni storia scrivi un pezzo approfondito stile Breaking Italy:
    - Titolo diretto e informativo
-   - 4-6 frasi che partono dal fatto del giorno come gancio e lo aprono in un'analisi più ampia: contesto storico o strutturale, conseguenze, perché conta oltre la cronaca immediata
-   - La cronaca pura non basta: ogni pezzo deve lasciare al lettore una comprensione più profonda di quella che aveva prima
+   - 4-6 frasi che partono dal fatto del giorno come gancio e lo aprono in un'analisi più ampia:
+     contesto storico o strutturale, conseguenze, perché conta oltre la cronaca immediata
+   - La cronaca pura non basta: ogni pezzo deve lasciare al lettore una comprensione più profonda
    - Testo fluente e giornalistico, no elenchi puntati
-   - Indica il tema (es. "Audio AI", "Colombia", "Design")
+   - Indica il tema (es. "Audio AI", "Cinema", "Design")
 
 Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
 {{
@@ -70,7 +92,7 @@ Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
 
 # ── Gemini ────────────────────────────────────────────────────────────────────
 
-def fetch_with_gemini(today: str) -> list:
+def fetch_with_gemini(interests: str, today: str) -> list:
     from google import genai
     from google.genai import types
 
@@ -78,7 +100,7 @@ def fetch_with_gemini(today: str) -> list:
     try:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
-            contents=build_prompt(today),
+            contents=build_prompt(interests, today),
             config=types.GenerateContentConfig(
                 tools=[types.Tool(google_search=types.GoogleSearch())],
                 temperature=0.3,
@@ -101,14 +123,14 @@ def fetch_with_gemini(today: str) -> list:
 
 # ── Perplexity ────────────────────────────────────────────────────────────────
 
-def fetch_with_perplexity(today: str) -> list:
+def fetch_with_perplexity(interests: str, today: str) -> list:
     from openai import OpenAI
 
     client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
     try:
         response = client.chat.completions.create(
             model="sonar",
-            messages=[{"role": "user", "content": build_prompt(today)}],
+            messages=[{"role": "user", "content": build_prompt(interests, today)}],
             temperature=0.3,
         )
     except Exception as e:
@@ -128,22 +150,32 @@ def fetch_with_perplexity(today: str) -> list:
 
 # ── Fetch with fallback ───────────────────────────────────────────────────────
 
-def fetch_digest(today: str) -> tuple[list, str]:
-    """Returns (stories, provider_name)"""
+def fetch_digest(interests: str, today: str) -> tuple[list, str]:
     if GEMINI_API_KEY:
         try:
             print("  Trying Gemini…")
-            stories = fetch_with_gemini(today)
+            stories = fetch_with_gemini(interests, today)
             return stories, "Gemini"
         except Exception as e:
-            print(f"  Gemini failed: {e}")
+            err = str(e)
+            if any(k in err for k in ["429", "RESOURCE_EXHAUSTED", "quota"]):
+                print(f"  ⚠ GEMINI QUOTA ESAURITA: {err}")
+            else:
+                print(f"  ⚠ GEMINI ERROR: {err}")
 
     if PERPLEXITY_KEY:
-        print("  Trying Perplexity…")
-        stories = fetch_with_perplexity(today)
-        return stories, "Perplexity"
+        try:
+            print("  Trying Perplexity…")
+            stories = fetch_with_perplexity(interests, today)
+            return stories, "Perplexity"
+        except Exception as e:
+            err = str(e)
+            if any(k in err for k in ["429", "quota", "rate"]):
+                print(f"  ⚠ PERPLEXITY QUOTA ESAURITA: {err}")
+            else:
+                print(f"  ⚠ PERPLEXITY ERROR: {err}")
 
-    raise RuntimeError("No API keys available (GEMINI_API_KEY or PERPLEXITY_API_KEY required)")
+    raise RuntimeError("Nessun provider disponibile — controlla GEMINI_API_KEY e PERPLEXITY_API_KEY")
 
 
 # ── HTML ───────────────────────────────────────────────────────────────────────
@@ -153,6 +185,8 @@ TOPIC_COLORS = {
     "letteratura": "#059669", "literatura": "#059669", "design": "#d97706",
     "jazz": "#be185d", "musica": "#be185d", "brujería": "#b45309",
     "brujeria": "#b45309", "scienza": "#6b7280", "filosofia": "#6b7280",
+    "arte": "#ea580c", "fotografia": "#0284c7", "cinema": "#7c3aed",
+    "ambiente": "#16a34a", "sostenibilità": "#16a34a", "ux": "#d97706",
 }
 
 def topic_color(topic: str) -> str:
@@ -163,24 +197,24 @@ def topic_color(topic: str) -> str:
     return "#374151"
 
 def render_story(story: dict, index: int) -> str:
-    color  = topic_color(story.get("topic", ""))
-    num    = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
+    color = topic_color(story.get("topic", ""))
+    num   = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
     return f"""
-    <div style="margin-bottom:28px; padding:22px; background:#f9fafb;
-                border-radius:10px; border-left:4px solid {color};">
+    <div style="margin-bottom:28px;padding:22px;background:#f9fafb;
+                border-radius:10px;border-left:4px solid {color};">
       <div style="margin-bottom:8px;">
-        <span style="font-size:10px; font-weight:700; text-transform:uppercase;
-                     letter-spacing:1px; color:{color};">{story.get('topic','')}</span>
+        <span style="font-size:10px;font-weight:700;text-transform:uppercase;
+                     letter-spacing:1px;color:{color};">{story.get('topic','')}</span>
       </div>
-      <h2 style="margin:0 0 12px; font-size:17px; font-weight:700;
-                 color:#111827; line-height:1.4; font-family:Georgia,serif;">
+      <h2 style="margin:0 0 12px;font-size:17px;font-weight:700;
+                 color:#111827;line-height:1.4;font-family:Georgia,serif;">
         {num} {story.get('title','')}
       </h2>
-      <p style="margin:0 0 14px; font-size:14px; color:#374151; line-height:1.75;">
+      <p style="margin:0 0 14px;font-size:14px;color:#374151;line-height:1.75;">
         {story.get('body','')}
       </p>
-      <a href="{story.get('url','#')}" style="font-size:12px; color:{color};
-                                              text-decoration:none; font-weight:600;">
+      <a href="{story.get('url','#')}" style="font-size:12px;color:{color};
+                                              text-decoration:none;font-weight:600;">
         Leggi su {story.get('source','')} →
       </a>
     </div>"""
@@ -210,27 +244,32 @@ def build_html(stories: list, today: str, provider: str) -> str:
 
 # ── Email ──────────────────────────────────────────────────────────────────────
 
-def send_email(html: str, today: str, story_count: int):
+def send_email(recipient: str, html: str, today: str, story_count: int):
     msg = MIMEMultipart("alternative")
     msg["Subject"] = f"☀️ {story_count} storie per oggi — {today}"
     msg["From"]    = SENDER
-    msg["To"]      = RECIPIENT
+    msg["To"]      = recipient
     msg.attach(MIMEText(html, "html"))
     with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
         server.login(SENDER, SMTP_PASS)
-        server.sendmail(SENDER, RECIPIENT, msg.as_string())
-    print(f"✓ Sent: {story_count} stories to {RECIPIENT}")
+        server.sendmail(SENDER, recipient, msg.as_string())
+    print(f"  ✓ Inviata a {recipient}")
 
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
     today = date.today().strftime("%A, %d %B %Y")
-    print("Fetching today's digest…")
-    stories, provider = fetch_digest(today)
-    print(f"  → {len(stories)} stories via {provider}")
-    html = build_html(stories, today, provider)
-    send_email(html, today, len(stories))
+
+    for profile in PROFILES:
+        print(f"\n[{profile['name']}] Fetching digest…")
+        try:
+            stories, provider = fetch_digest(profile["interests"], today)
+            print(f"  → {len(stories)} stories via {provider}")
+            html = build_html(stories, today, provider)
+            send_email(profile["recipient"], html, today, len(stories))
+        except Exception as e:
+            print(f"  ✗ Errore per {profile['name']}: {e}")
 
 if __name__ == "__main__":
     main()

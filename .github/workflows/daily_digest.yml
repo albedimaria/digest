@@ -2,7 +2,7 @@ name: Daily Digest
 
 on:
   schedule:
-    - cron: "0 7 * * *"   # ogni giorno alle 07:00 UTC (09:00 ora italiana)
+    - cron: "0 5 * * *"   # ogni giorno alle 07:00 ora italiana (05:00 UTC estate, 06:00 inverno)
   workflow_dispatch:       # run manuale dalla UI di GitHub
 
 jobs:

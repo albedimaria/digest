@@ -151,17 +151,29 @@ def fetch_with_perplexity(interests: str, today: str) -> list:
 # ── Fetch with fallback ───────────────────────────────────────────────────────
 
 def fetch_digest(interests: str, today: str) -> tuple[list, str]:
+    import time
+
     if GEMINI_API_KEY:
-        try:
-            print("  Trying Gemini…")
-            stories = fetch_with_gemini(interests, today)
-            return stories, "Gemini"
-        except Exception as e:
-            err = str(e)
-            if any(k in err for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
-                print(f"  ⚠ GEMINI QUOTA ESAURITA: {err}")
-            else:
-                print(f"  ⚠ GEMINI ERROR: {err}")
+        for attempt in range(4):  # 0 = initial, 1-3 = retries
+            if attempt > 0:
+                print(f"  Retry {attempt}/3…")
+                time.sleep(10)
+            try:
+                if attempt == 0:
+                    print("  Trying Gemini…")
+                stories = fetch_with_gemini(interests, today)
+                return stories, "Gemini"
+            except Exception as e:
+                err = str(e)
+                if any(k in err for k in ("503", "UNAVAILABLE")) and attempt < 3:
+                    continue
+                if any(k in err for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
+                    print(f"  ⚠ GEMINI QUOTA ESAURITA: {err}")
+                elif any(k in err for k in ("503", "UNAVAILABLE")):
+                    print(f"  ⚠ GEMINI UNAVAILABLE dopo 3 tentativi: {err}")
+                else:
+                    print(f"  ⚠ GEMINI ERROR: {err}")
+                break
 
     if PERPLEXITY_KEY:
         try:
@@ -234,7 +246,7 @@ def build_html(stories: list, today: str, provider: str) -> str:
   <div style="max-width:600px;margin:32px auto;background:#fff;
               border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,0.08);overflow:hidden;">
     <div style="background:#111827;padding:28px 32px;">
-      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">☀️ Daily Digest</h1>
+      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">le news per te</h1>
       <p style="margin:0;color:#9ca3af;font-size:12px;">{today} · {count_label}</p>
     </div>
     <div style="padding:28px 32px;">{stories_html}</div>

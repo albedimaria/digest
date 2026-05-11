@@ -25,14 +25,14 @@ PROFILES = [
         "interests": """
 - AI & developer tools: nuovi modelli, API, agentic frameworks, strumenti per dev
 - Audio AI & music tech: modelli audio/musicali, MIR, ricerca su arXiv/ISMIR — solo roba significativa
-- Startup audio/AI lanciate da piccoli team o solo dev
 - Colombia: attualità, politica, cultura, musica — varia tra cultura, musica, economia, società, storia, ambiente
 - Letteratura latinoamericana e spagnola: nuove uscite, premi, autori, cultura letteraria
+- Crescita personale
+- Brujería messicana
 - Design & UX: trend, tool, case study, ispirazioni visive
-- Jazz, black music (soul, funk, R&B, hip-hop, afrobeat), musica latina (salsa, cumbia, bossa nova, MPB)
-  → NO: elettronica mainstream, pop italiano, EDM
-- Brujería messicana, curanderismo, tradizioni precolombiane: antropologia, storia, cultura
-- Curiosità scientifiche o filosofiche profonde (stile Quanta Magazine) — solo se c'è qualcosa davvero notevole
+- Startup audio/AI lanciate da piccoli team o solo dev
+
+
 """,
     },
     {
@@ -63,11 +63,13 @@ Gli interessi del lettore sono:
 Oggi è {today}.
 
 Il tuo compito:
-1. Cerca notizie di oggi su questi temi usando il web.
+1. Cerca notizie delle ultime 48 ore su questi temi usando il web. Effettua le ricerche in inglese, anche se il digest finale va scritto in italiano.
+   - Per tech/AI preferisci: The Verge, TechCrunch, Ars Technica, Hacker News, arXiv, blog ufficiali di aziende tech.
+   - Evita blog di opinione, articoli SEO generici, e analisi senza un evento specifico come base.
 2. Scegli le 2-3 storie più interessanti e rilevanti tra tutti i temi.
    - Privilegia qualità sulla varietà: se ci sono due notizie forti sullo stesso tema, prendile entrambe.
    - Se su un tema non c'è niente di interessante oggi, ignoralo.
-   - Cerca almeno 3-4 temi prima di decidere cosa tenere.
+   - Cerca in tutti i temi prima di decidere cosa tenere.
    - Evita di selezionare sempre lo stesso tipo di notizia per lo stesso tema.
 3. Per ogni storia scrivi un pezzo approfondito stile Breaking Italy:
    - Titolo diretto e informativo
@@ -76,6 +78,10 @@ Il tuo compito:
    - La cronaca pura non basta: ogni pezzo deve lasciare al lettore una comprensione più profonda
    - Testo fluente e giornalistico, no elenchi puntati
    - Indica il tema (es. "Audio AI", "Cinema", "Design")
+   - Riporta solo fatti specifici e verificabili: nomi di prodotti, aziende, persone, date, numeri. Se non hai un fatto concreto, non includere la storia.
+   - NO analisi generiche, trend astratti o considerazioni di settore senza un evento preciso come gancio.
+   - Esempio di storia BUONA: "Xiaomi ha lanciato OmniVoice, un modello audio multimodale che..." — evento specifico, fonte chiara.
+   - Esempio di storia CATTIVA: "Il primo trimestre 2026 segna un punto di svolta per gli strumenti AI..." — nessun fatto, solo analisi.
 
 Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
 {{
@@ -246,7 +252,7 @@ def build_html(stories: list, today: str, provider: str) -> str:
   <div style="max-width:600px;margin:32px auto;background:#fff;
               border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,0.08);overflow:hidden;">
     <div style="background:#111827;padding:28px 32px;">
-      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">le news per te</h1>
+      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">daily news of</h1>
       <p style="margin:0;color:#9ca3af;font-size:12px;">{today} · {count_label}</p>
     </div>
     <div style="padding:28px 32px;">{stories_html}</div>

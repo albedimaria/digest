@@ -11,6 +11,8 @@ from datetime import date
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+from config import PROFILES, PROMPT_TEMPLATE
+
 # ── Config ────────────────────────────────────────────────────────────────────
 
 SENDER         = "ing.albertodimaria@gmail.com"
@@ -18,95 +20,24 @@ SMTP_PASS      = os.environ["GMAIL_APP_PASSWORD"]
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 PERPLEXITY_KEY = os.environ.get("PERPLEXITY_API_KEY", "")
 
-PROFILES = [
-    {
-        "name": "Alberto",
-        "recipient": "ing.albertodimaria@gmail.com",
-        "interests": """
-- AI & developer tools: nuovi modelli, API, agentic frameworks, strumenti per dev
-- Audio AI & music tech: modelli audio/musicali, MIR, ricerca su arXiv/ISMIR — solo roba significativa
-- Colombia: attualità, politica, cultura, musica — varia tra cultura, musica, economia, società, storia, ambiente
-- Letteratura latinoamericana e spagnola: nuove uscite, premi, autori, cultura letteraria
-- Crescita personale
-- Brujería messicana
-- Design & UX: trend, tool, case study, ispirazioni visive
-- Startup audio/AI lanciate da piccoli team o solo dev
-
-
-""",
-    },
-    {
-        "name": "Laura",
-        "recipient": "laura.zanchetta00@gmail.com",
-        "interests": """
-- Arte contemporanea & gallerie: mostre, artisti emergenti, mercato dell'arte
-- Illustrazione editoriale & poster: illustratori da seguire, nuove pubblicazioni, campagne visive
-- Fotografia: fotografi, tendenze, progetti documentari, fotogiornalismo
-- UX/UI design: tool e novità (Figma, Framer...), design system, accessibilità, trend visivi & tipografia
-- AI generativa applicata al design e all'arte: nuovi modelli, tool creativi, impatto sul mondo visivo
-- Cinema & serie — con focus su backstage e processo creativo, non recensioni:
-  film d'autore, festival (Cannes, Venezia, Berlino e indipendenti), curiosità di produzione
-- Ambiente & sostenibilità: cambiamento climatico, biodiversità, design etico e sostenibile
-- Attualità generale (geopolitica, società) — solo se c'è qualcosa di davvero importante
-""",
-    },
-]
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
 
-def build_prompt(interests: str, today: str) -> str:
-    return f"""Sei un editor che cura una newsletter quotidiana personalizzata da leggere in 5 minuti in metropolitana.
-
-Gli interessi del lettore sono:
-{interests}
-
-Oggi è {today}.
-
-Il tuo compito:
-1. Cerca notizie delle ultime 48 ore su questi temi usando il web. Effettua le ricerche in inglese, anche se il digest finale va scritto in italiano.
-   - Per tech/AI preferisci: The Verge, TechCrunch, Ars Technica, Hacker News, arXiv, blog ufficiali di aziende tech.
-   - Evita blog di opinione, articoli SEO generici, e analisi senza un evento specifico come base.
-2. Scegli le 2-3 storie più interessanti e rilevanti tra tutti i temi.
-   - Privilegia qualità sulla varietà: se ci sono due notizie forti sullo stesso tema, prendile entrambe.
-   - Se su un tema non c'è niente di interessante oggi, ignoralo.
-   - Cerca in tutti i temi prima di decidere cosa tenere.
-   - Evita di selezionare sempre lo stesso tipo di notizia per lo stesso tema.
-3. Per ogni storia scrivi un pezzo approfondito stile Breaking Italy:
-   - Titolo diretto e informativo
-   - 4-6 frasi che partono dal fatto del giorno come gancio e lo aprono in un'analisi più ampia:
-     contesto storico o strutturale, conseguenze, perché conta oltre la cronaca immediata
-   - La cronaca pura non basta: ogni pezzo deve lasciare al lettore una comprensione più profonda
-   - Testo fluente e giornalistico, no elenchi puntati
-   - Indica il tema (es. "Audio AI", "Cinema", "Design")
-   - Riporta solo fatti specifici e verificabili: nomi di prodotti, aziende, persone, date, numeri. Se non hai un fatto concreto, non includere la storia.
-   - NO analisi generiche, trend astratti o considerazioni di settore senza un evento preciso come gancio.
-   - Esempio di storia BUONA: "Xiaomi ha lanciato OmniVoice, un modello audio multimodale che..." — evento specifico, fonte chiara.
-   - Esempio di storia CATTIVA: "Il primo trimestre 2026 segna un punto di svolta per gli strumenti AI..." — nessun fatto, solo analisi.
-
-Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
-{{
-  "stories": [
-    {{
-      "topic": "nome del tema",
-      "title": "Titolo",
-      "body": "Testo 4-6 frasi...",
-      "source": "Nome fonte",
-      "url": "https://..."
-    }}
-  ]
-}}"""
+def build_prompt(profile: dict, today: str) -> str:
+    template = profile.get("prompt_template", PROMPT_TEMPLATE)
+    return template.format(interests=profile["interests"], today=today)
 
 
 # ── Gemini ────────────────────────────────────────────────────────────────────
 
-def fetch_with_gemini(interests: str, today: str) -> list:
+def fetch_with_gemini(profile: dict, today: str) -> tuple[list, list]:
     from google import genai
     from google.genai import types
 
     client = genai.Client(api_key=GEMINI_API_KEY)
     response = client.models.generate_content(
         model="gemini-2.5-flash",
-        contents=build_prompt(interests, today),
+        contents=build_prompt(profile, today),
         config=types.GenerateContentConfig(
             tools=[types.Tool(google_search=types.GoogleSearch())],
             temperature=0.3,
@@ -123,12 +54,13 @@ def fetch_with_gemini(interests: str, today: str) -> list:
             raw = raw[4:]
         raw = raw.strip()
 
-    return json.loads(raw).get("stories", [])
+    data = json.loads(raw)
+    return data.get("stories", []), data.get("also_noting", [])
 
 
 # ── Perplexity ────────────────────────────────────────────────────────────────
 
-def fetch_with_perplexity(interests: str, today: str) -> list:
+def fetch_with_perplexity(profile: dict, today: str) -> tuple[list, list]:
     try:
         from openai import OpenAI
     except ImportError:
@@ -137,7 +69,7 @@ def fetch_with_perplexity(interests: str, today: str) -> list:
     client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
     response = client.chat.completions.create(
         model="sonar",
-        messages=[{"role": "user", "content": build_prompt(interests, today)}],
+        messages=[{"role": "user", "content": build_prompt(profile, today)}],
         temperature=0.3,
     )
 
@@ -151,12 +83,13 @@ def fetch_with_perplexity(interests: str, today: str) -> list:
             raw = raw[4:]
         raw = raw.strip()
 
-    return json.loads(raw).get("stories", [])
+    data = json.loads(raw)
+    return data.get("stories", []), data.get("also_noting", [])
 
 
 # ── Fetch with fallback ───────────────────────────────────────────────────────
 
-def fetch_digest(interests: str, today: str) -> tuple[list, str]:
+def fetch_digest(profile: dict, today: str) -> tuple[list, list, str]:
     import time
 
     if GEMINI_API_KEY:
@@ -167,8 +100,8 @@ def fetch_digest(interests: str, today: str) -> tuple[list, str]:
             try:
                 if attempt == 0:
                     print("  Trying Gemini…")
-                stories = fetch_with_gemini(interests, today)
-                return stories, "Gemini"
+                stories, also_noting = fetch_with_gemini(profile, today)
+                return stories, also_noting, "Gemini"
             except Exception as e:
                 err = str(e)
                 if any(k in err for k in ("503", "UNAVAILABLE")) and attempt < 3:
@@ -184,8 +117,8 @@ def fetch_digest(interests: str, today: str) -> tuple[list, str]:
     if PERPLEXITY_KEY:
         try:
             print("  Trying Perplexity…")
-            stories = fetch_with_perplexity(interests, today)
-            return stories, "Perplexity"
+            stories, also_noting = fetch_with_perplexity(profile, today)
+            return stories, also_noting, "Perplexity"
         except Exception as e:
             err = str(e)
             if any(k in err for k in ("429", "quota", "rate")):
@@ -222,47 +155,78 @@ def render_story(story: dict, index: int) -> str:
     body   = html_lib.escape(story.get("body", ""))
     source = html_lib.escape(story.get("source", ""))
     url    = story.get("url", "#")
-    return f"""
-    <div style="margin-bottom:28px;padding:22px;background:#f9fafb;
-                border-radius:10px;border-left:4px solid {color};">
-      <div style="margin-bottom:8px;">
-        <span style="font-size:10px;font-weight:700;text-transform:uppercase;
-                     letter-spacing:1px;color:{color};">{topic}</span>
-      </div>
-      <h2 style="margin:0 0 12px;font-size:17px;font-weight:700;
-                 color:#111827;line-height:1.4;font-family:Georgia,serif;">
-        {num} {title}
-      </h2>
-      <p style="margin:0 0 14px;font-size:14px;color:#374151;line-height:1.75;">
-        {body}
-      </p>
-      <a href="{url}" style="font-size:12px;color:{color};
-                             text-decoration:none;font-weight:600;">
-        Leggi su {source} →
-      </a>
-    </div>"""
+    return (
+        '\n    <div style="margin-bottom:28px;padding:22px;background:#f9fafb;'
+        'border-radius:10px;border-left:4px solid ' + color + ';">'
+        '\n      <div style="margin-bottom:8px;">'
+        '\n        <span style="font-size:10px;font-weight:700;text-transform:uppercase;'
+        'letter-spacing:1px;color:' + color + ';">' + topic + '</span>'
+        '\n      </div>'
+        '\n      <h2 style="margin:0 0 12px;font-size:17px;font-weight:700;'
+        'color:#111827;line-height:1.4;font-family:Georgia,serif;">'
+        '\n        ' + num + ' ' + title +
+        '\n      </h2>'
+        '\n      <p style="margin:0 0 14px;font-size:14px;color:#374151;line-height:1.75;">'
+        '\n        ' + body +
+        '\n      </p>'
+        '\n      <a href="' + url + '" style="font-size:12px;color:' + color + ';'
+        'text-decoration:none;font-weight:600;">'
+        '\n        Leggi su ' + source + ' →'
+        '\n      </a>'
+        '\n    </div>'
+    )
 
-def build_html(stories: list, today: str, provider: str) -> str:
-    stories_html = "".join(render_story(s, i) for i, s in enumerate(stories))
-    count_label  = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
-    return f"""<!DOCTYPE html>
-<html><head><meta charset="UTF-8"></head>
-<body style="margin:0;padding:0;background:#f3f4f6;
-             font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
-  <div style="max-width:600px;margin:32px auto;background:#fff;
-              border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,0.08);overflow:hidden;">
-    <div style="background:#111827;padding:28px 32px;">
-      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">daily news of</h1>
-      <p style="margin:0;color:#9ca3af;font-size:12px;">{today} · {count_label}</p>
-    </div>
-    <div style="padding:28px 32px;">{stories_html}</div>
-    <div style="padding:16px 32px;background:#f9fafb;text-align:center;border-top:1px solid #e5e7eb;">
-      <p style="margin:0;font-size:11px;color:#9ca3af;">
-        Curato da {provider} · github.com/albedimaria/digest
-      </p>
-    </div>
-  </div>
-</body></html>"""
+def render_also_noting(items: list) -> str:
+    if not items:
+        return ""
+    rows = ""
+    for item in items:
+        color = topic_color(item.get("topic", ""))
+        topic = html_lib.escape(item.get("topic", ""))
+        title = html_lib.escape(item.get("title", ""))
+        url   = item.get("url", "#")
+        rows += (
+            '\n      <li style="margin-bottom:8px;">'
+            '<span style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            'letter-spacing:1px;color:' + color + ';margin-right:6px;">' + topic + '</span>'
+            '<a href="' + url + '" style="font-size:13px;color:#374151;text-decoration:none;">'
+            + title + '</a>'
+            '</li>'
+        )
+    return (
+        '\n    <div style="margin-top:8px;padding:20px 22px;background:#f3f4f6;'
+        'border-radius:10px;">'
+        '\n      <p style="margin:0 0 10px;font-size:11px;font-weight:700;'
+        'text-transform:uppercase;letter-spacing:1px;color:#6b7280;">NB — anche oggi</p>'
+        '\n      <ul style="margin:0;padding-left:16px;list-style:disc;">'
+        + rows +
+        '\n      </ul>'
+        '\n    </div>'
+    )
+
+def build_html(stories: list, also_noting: list, today: str, provider: str) -> str:
+    stories_html     = "".join(render_story(s, i) for i, s in enumerate(stories))
+    also_noting_html = render_also_noting(also_noting)
+    count_label      = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
+    return (
+        '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"></head>\n'
+        '<body style="margin:0;padding:0;background:#f3f4f6;'
+        'font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;">\n'
+        '  <div style="max-width:600px;margin:32px auto;background:#fff;'
+        'border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,0.08);overflow:hidden;">\n'
+        '    <div style="background:#111827;padding:28px 32px;">\n'
+        '      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">daily news of</h1>\n'
+        '      <p style="margin:0;color:#9ca3af;font-size:12px;">' + today + ' · ' + count_label + '</p>\n'
+        '    </div>\n'
+        '    <div style="padding:28px 32px;">' + stories_html + also_noting_html + '</div>\n'
+        '    <div style="padding:16px 32px;background:#f9fafb;text-align:center;border-top:1px solid #e5e7eb;">\n'
+        '      <p style="margin:0;font-size:11px;color:#9ca3af;">\n'
+        '        Curato da ' + provider + ' · github.com/albedimaria/digest\n'
+        '      </p>\n'
+        '    </div>\n'
+        '  </div>\n'
+        '</body></html>'
+    )
 
 
 # ── Email ──────────────────────────────────────────────────────────────────────
@@ -287,12 +251,12 @@ def main():
     for profile in PROFILES:
         print(f"\n[{profile['name']}] Fetching digest…")
         try:
-            stories, provider = fetch_digest(profile["interests"], today)
+            stories, also_noting, provider = fetch_digest(profile, today)
             if not stories:
                 print(f"  ✗ Nessuna storia trovata per {profile['name']}, skip.")
                 continue
-            print(f"  → {len(stories)} stories via {provider}")
-            html = build_html(stories, today, provider)
+            print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
+            html = build_html(stories, also_noting, today, provider)
             send_email(profile["recipient"], html, today, len(stories))
         except Exception as e:
             print(f"  ✗ Errore per {profile['name']}: {e}")

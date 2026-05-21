@@ -51,24 +51,24 @@ REGOLA ASSOLUTA SUGLI URL: usa SOLO URL che hai effettivamente trovato durante l
 Se non hai un URL preciso per un articolo, metti l'homepage del sito (es. "https://techcrunch.com") — mai un URL inventato.
 
 Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
-{
+{{
   "stories": [
-    {
+    {{
       "topic": "nome del tema",
       "title": "Titolo",
       "body": "Testo 4-6 frasi...",
       "source": "Nome fonte",
       "url": "https://..."
-    }
+    }}
   ],
   "also_noting": [
-    {
+    {{
       "topic": "nome del tema",
       "title": "Titolo breve",
       "url": "https://..."
-    }
+    }}
   ]
-}""",
+}}""",
     },
     {
         "name": "Laura",
@@ -125,21 +125,21 @@ REGOLA ASSOLUTA SUGLI URL: usa SOLO URL che hai effettivamente trovato durante l
 Se non hai un URL preciso per un articolo, metti l'homepage del sito (es. "https://theverge.com") — mai un URL inventato.
 
 Rispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:
-{
+{{
   "stories": [
-    {
+    {{
       "topic": "nome del tema",
       "title": "Titolo",
       "body": "Testo 4-6 frasi...",
       "source": "Nome fonte",
       "url": "https://..."
-    }
+    }}
   ],
   "also_noting": [
-    {
+    {{
       "topic": "nome del tema",
       "title": "Titolo breve",
       "url": "https://..."
-    }
+    }}
   ]
-}"""
+}}"""

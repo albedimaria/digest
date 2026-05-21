@@ -246,7 +246,9 @@ def send_email(recipient: str, html: str, today: str, story_count: int):
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
-    today = date.today().strftime("%A, %d %B %Y")
+    import sys
+    today  = date.today().strftime("%A, %d %B %Y")
+    failed = False
 
     for profile in PROFILES:
         print(f"\n[{profile['name']}] Fetching digest…")
@@ -254,12 +256,17 @@ def main():
             stories, also_noting, provider = fetch_digest(profile, today)
             if not stories:
                 print(f"  ✗ Nessuna storia trovata per {profile['name']}, skip.")
+                failed = True
                 continue
             print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
             html = build_html(stories, also_noting, today, provider)
             send_email(profile["recipient"], html, today, len(stories))
         except Exception as e:
             print(f"  ✗ Errore per {profile['name']}: {e}")
+            failed = True
+
+    if failed:
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

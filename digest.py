@@ -33,11 +33,23 @@ def load_history() -> dict:
     except (FileNotFoundError, json.JSONDecodeError):
         return {}
 
-def recent_titles(history: dict, profile_name: str) -> list:
-    """Titoli inviati negli ultimi HISTORY_DAYS giorni per questo profilo."""
+def _recent_entries(history: dict, profile_name: str) -> list:
     from datetime import timedelta
     cutoff = (date.today() - timedelta(days=HISTORY_DAYS)).isoformat()
-    return [e["title"] for e in history.get(profile_name, []) if e.get("date", "") >= cutoff]
+    return [e for e in history.get(profile_name, []) if e.get("date", "") >= cutoff]
+
+def recent_titles(history: dict, profile_name: str) -> list:
+    """Titoli inviati negli ultimi HISTORY_DAYS giorni per questo profilo."""
+    return [e["title"] for e in _recent_entries(history, profile_name)]
+
+def recent_topics(history: dict, profile_name: str) -> list:
+    """Temi trattati di recente, dal più frequente, per evitare di ripeterli."""
+    from collections import Counter
+    counts = Counter(
+        e.get("topic", "").strip() for e in _recent_entries(history, profile_name)
+        if e.get("topic", "").strip()
+    )
+    return [topic for topic, _ in counts.most_common()]
 
 def record_sent(history: dict, profile_name: str, stories: list) -> None:
     """Aggiunge le storie inviate allo storico e pota le voci più vecchie di HISTORY_DAYS."""
@@ -46,7 +58,12 @@ def record_sent(history: dict, profile_name: str, stories: list) -> None:
     today_iso = date.today().isoformat()
     entries = [e for e in history.get(profile_name, []) if e.get("date", "") >= cutoff]
     for s in stories:
-        entries.append({"date": today_iso, "title": s.get("title", ""), "url": s.get("url", "")})
+        entries.append({
+            "date": today_iso,
+            "title": s.get("title", ""),
+            "url": s.get("url", ""),
+            "topic": s.get("topic", ""),
+        })
     history[profile_name] = entries
 
 def save_history(history: dict) -> None:
@@ -81,7 +98,8 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
 
-def build_prompt(profile: dict, today: str, recent: list | None = None) -> str:
+def build_prompt(profile: dict, today: str, recent: list | None = None,
+                 recent_topics: list | None = None) -> str:
     template = profile.get("prompt_template", PROMPT_TEMPLATE)
     prompt = template.format(interests=profile["interests"], today=today)
     if recent:
@@ -90,19 +108,26 @@ def build_prompt(profile: dict, today: str, recent: list | None = None) -> str:
             "\n\nIMPORTANTE — queste storie sono già state inviate nei giorni scorsi. "
             "NON riproporle e non scegliere notizie sostanzialmente equivalenti:\n" + avoid
         )
+    if recent_topics:
+        temi = ", ".join(recent_topics)
+        prompt += (
+            "\n\nVARIETÀ — nei giorni scorsi hai già trattato spesso questi temi: " + temi + ". "
+            "Per le storie dopo la prima, privilegia temi DIVERSI da questi e diversi tra loro."
+        )
     return prompt
 
 
 # ── Gemini ────────────────────────────────────────────────────────────────────
 
-def fetch_with_gemini(profile: dict, today: str, recent: list | None = None) -> tuple[list, list]:
+def fetch_with_gemini(profile: dict, today: str, recent: list | None = None,
+                      recent_topics: list | None = None) -> tuple[list, list]:
     from google import genai
     from google.genai import types
 
     client = genai.Client(api_key=GEMINI_API_KEY)
     response = client.models.generate_content(
         model="gemini-2.5-flash",
-        contents=build_prompt(profile, today, recent),
+        contents=build_prompt(profile, today, recent, recent_topics),
         config=types.GenerateContentConfig(
             tools=[types.Tool(google_search=types.GoogleSearch())],
             temperature=0.3,
@@ -114,7 +139,8 @@ def fetch_with_gemini(profile: dict, today: str, recent: list | None = None) -> 
 
 # ── Fetch ─────────────────────────────────────────────────────────────────────
 
-def fetch_digest(profile: dict, today: str, recent: list | None = None) -> tuple[list, list, str]:
+def fetch_digest(profile: dict, today: str, recent: list | None = None,
+                 recent_topics: list | None = None) -> tuple[list, list, str]:
     import time
 
     if not GEMINI_API_KEY:
@@ -128,7 +154,7 @@ def fetch_digest(profile: dict, today: str, recent: list | None = None) -> tuple
         try:
             if attempt == 0:
                 print("  Trying Gemini…")
-            stories, also_noting = fetch_with_gemini(profile, today, recent)
+            stories, also_noting = fetch_with_gemini(profile, today, recent, recent_topics)
             return stories, also_noting, "Gemini"
         except Exception as e:
             last_err = e
@@ -228,7 +254,7 @@ def render_also_noting(items: list) -> str:
         '\n    </div>'
     )
 
-def build_html(stories: list, also_noting: list, today: str, provider: str) -> str:
+def build_html(stories: list, also_noting: list, today: str, provider: str, name: str = "") -> str:
     # togli dalle menzioni rapide gli URL e i titoli già usati nelle storie principali
     used_urls   = {(s.get("url") or "").strip() for s in stories}
     used_titles = {(s.get("title") or "").strip().lower() for s in stories}
@@ -240,6 +266,7 @@ def build_html(stories: list, also_noting: list, today: str, provider: str) -> s
     stories_html     = "".join(render_story(s, i) for i, s in enumerate(stories))
     also_noting_html = render_also_noting(also_noting)
     count_label      = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
+    header_title     = "daily news of " + html_lib.escape(name) if name else "daily news"
     return (
         '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"></head>\n'
         '<body style="margin:0;padding:0;background:#f3f4f6;'
@@ -247,7 +274,7 @@ def build_html(stories: list, also_noting: list, today: str, provider: str) -> s
         '  <div style="max-width:600px;margin:32px auto;background:#fff;'
         'border-radius:14px;box-shadow:0 1px 6px rgba(0,0,0,0.08);overflow:hidden;">\n'
         '    <div style="background:#111827;padding:28px 32px;">\n'
-        '      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">daily news of</h1>\n'
+        '      <h1 style="margin:0 0 4px;color:#fff;font-size:20px;font-weight:700;">' + header_title + '</h1>\n'
         '      <p style="margin:0;color:#9ca3af;font-size:12px;">' + today + ' · ' + count_label + '</p>\n'
         '    </div>\n'
         '    <div style="padding:28px 32px;">' + stories_html + also_noting_html + '</div>\n'
@@ -263,9 +290,17 @@ def build_html(stories: list, also_noting: list, today: str, provider: str) -> s
 
 # ── Email ──────────────────────────────────────────────────────────────────────
 
-def send_email(recipient: str, html: str, today: str, story_count: int):
+def build_subject(stories: list) -> str:
+    top   = (stories[0].get("title", "") if stories else "").strip()
+    extra = len(stories) - 1
+    if not top:
+        return f"☀️ {len(stories)} storie per oggi"
+    suffix = f" (+{extra})" if extra > 0 else ""
+    return f"☀️ {top}{suffix}"
+
+def send_email(recipient: str, html: str, subject: str):
     msg = MIMEMultipart("alternative")
-    msg["Subject"] = f"☀️ {story_count} storie per oggi — {today}"
+    msg["Subject"] = subject
     msg["From"]    = SENDER
     msg["To"]      = recipient
     msg.attach(MIMEText(html, "html"))
@@ -288,16 +323,17 @@ def main():
         print(f"\n[{name}] Fetching digest…")
         try:
             recent = recent_titles(history, name)
+            topics = recent_topics(history, name)
             if recent:
-                print(f"  ({len(recent)} storie recenti da evitare)")
-            stories, also_noting, provider = fetch_digest(profile, today, recent)
+                print(f"  ({len(recent)} storie recenti da evitare; temi: {', '.join(topics) or '—'})")
+            stories, also_noting, provider = fetch_digest(profile, today, recent, topics)
             if not stories:
                 print(f"  ✗ Nessuna storia trovata per {name}, skip.")
                 failed = True
                 continue
             print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
-            html = build_html(stories, also_noting, today, provider)
-            send_email(profile["recipient"], html, today, len(stories))
+            html = build_html(stories, also_noting, today, provider, name)
+            send_email(profile["recipient"], html, build_subject(stories))
             record_sent(history, name, stories)
         except Exception as e:
             print(f"  ✗ Errore per {name}: {e}")

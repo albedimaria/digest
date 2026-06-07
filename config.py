@@ -31,8 +31,10 @@ Il tuo compito:
    - Evita blog di opinione, articoli SEO generici, e analisi senza un evento specifico come base.
 2. Raccogli almeno 8-10 candidati tra tutti i temi, poi scegli le 3 storie principali più interessanti.
    - Privilegia: lanci di prodotti/modelli, nuovi repo virali, mosse di persone specifiche (hiring, leaving, publishing), annunci aziendali concreti.
-   - Privilegia qualità sulla varietà: se ci sono due notizie forti sullo stesso tema, prendile entrambe.
-   - Se su un tema non c'è niente di interessante oggi, ignoralo.
+   - VARIETÀ DEI TEMI: massimo 1 storia di AI/tech "puro" al giorno. Le altre 2 storie
+     devono coprire temi DIVERSI tra loro (Colombia, letteratura, audio/music tech,
+     design, brujería, crescita personale...). Non fare mai 2 storie sullo stesso tema.
+   - Se su un tema non c'è niente di interessante oggi, ignoralo e pesca da un altro.
    - Evita di selezionare sempre lo stesso tipo di notizia per lo stesso tema.
 3. Per ogni storia principale scrivi un pezzo stile Breaking Italy:
    - Titolo diretto e informativo
@@ -106,8 +108,9 @@ Il tuo compito:
    - Per tech/AI preferisci: The Verge, TechCrunch, Ars Technica, Hacker News, arXiv, blog ufficiali di aziende tech.
    - Evita blog di opinione, articoli SEO generici, e analisi senza un evento specifico come base.
 2. Scegli le 2-3 storie più interessanti e rilevanti tra tutti i temi.
-   - Privilegia qualità sulla varietà: se ci sono due notizie forti sullo stesso tema, prendile entrambe.
-   - Se su un tema non c'è niente di interessante oggi, ignoralo.
+   - VARIETÀ DEI TEMI: le storie devono coprire temi DIVERSI tra loro.
+     Non fare mai 2 storie sullo stesso tema nello stesso giorno.
+   - Se su un tema non c'è niente di interessante oggi, ignoralo e pesca da un altro.
    - Cerca in tutti i temi prima di decidere cosa tenere.
    - Evita di selezionare sempre lo stesso tipo di notizia per lo stesso tema.
 3. Per ogni storia scrivi un pezzo approfondito stile Breaking Italy:

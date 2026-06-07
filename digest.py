@@ -11,9 +11,17 @@ from datetime import date
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from config import PROFILES, PROMPT_TEMPLATE
+from config import PROMPT_TEMPLATE
 
 # ── Config ────────────────────────────────────────────────────────────────────
+
+PROFILES_FILE = "profiles.json"
+
+def load_profiles() -> list:
+    """Carica i profili da profiles.json, tenendo solo quelli attivi."""
+    with open(PROFILES_FILE, encoding="utf-8") as f:
+        profiles = json.load(f)
+    return [p for p in profiles if p.get("active", True)]
 
 GIORNI = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
 MESI   = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
@@ -314,11 +322,12 @@ def send_email(recipient: str, html: str, subject: str):
 
 def main():
     import sys
-    today   = italian_date(date.today())
-    history = load_history()
-    failed  = False
+    today    = italian_date(date.today())
+    history  = load_history()
+    profiles = load_profiles()
+    failed   = False
 
-    for profile in PROFILES:
+    for profile in profiles:
         name = profile["name"]
         print(f"\n[{name}] Fetching digest…")
         try:

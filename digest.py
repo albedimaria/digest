@@ -49,6 +49,40 @@ SMTP_PASS      = os.environ["GMAIL_APP_PASSWORD"]
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 
+# ── Impostazioni per-profilo ───────────────────────────────────────────────────
+
+DEPTH_CLAUSE = {
+    "brief":    "2-3 frasi asciutte, solo il fatto e il perché conta",
+    "standard": "4-6 frasi: fatto del giorno + contesto + perché conta",
+    "deep":     "7-9 frasi: fatto, contesto storico/strutturale, conseguenze e implicazioni più ampie (stile Breaking Italy)",
+}
+
+def profile_settings(profile: dict) -> tuple[int, str, str]:
+    """Ritorna (num_stories, depth, mode) con default e clamp."""
+    mode = profile.get("mode") or "full"
+    if mode not in ("full", "links"):
+        mode = "full"
+    try:
+        num = int(profile.get("num_stories") or 3)
+    except (TypeError, ValueError):
+        num = 3
+    num   = max(1, min(num, 15 if mode == "links" else 6))  # links: lista più lunga
+    depth = profile.get("depth") or "standard"
+    if depth not in DEPTH_CLAUSE:
+        depth = "standard"
+    return num, depth, mode
+
+def due_today(profile: dict) -> bool:
+    """Se 'weekly', invia solo nel giorno della settimana scelto (default lunedì)."""
+    if (profile.get("frequency") or "daily") != "weekly":
+        return True
+    try:
+        wd = int(profile.get("weekly_day") or 0)
+    except (TypeError, ValueError):
+        wd = 0
+    return date.today().weekday() == wd
+
+
 # ── Prompt ────────────────────────────────────────────────────────────────────
 
 def build_prompt(profile: dict, today: str, recent: list | None = None,
@@ -67,6 +101,22 @@ def build_prompt(profile: dict, today: str, recent: list | None = None,
             "\n\nVARIETÀ — nei giorni scorsi hai già trattato spesso questi temi: " + temi + ". "
             "Per le storie dopo la prima, privilegia temi DIVERSI da questi e diversi tra loro."
         )
+
+    num, depth, mode = profile_settings(profile)
+    if mode == "links":
+        prompt += (
+            "\n\nMODALITÀ SOLO LINK (PRIORITARIA, sovrascrive quanto detto sopra sulle storie): "
+            "NON scrivere testi di analisi. Lascia \"stories\" vuoto ([]). "
+            f"Popola \"also_noting\" con esattamente {num} voci (topic, title breve, url reale): "
+            "una lista di spunti da cui il lettore sceglie cosa leggere."
+        )
+    else:
+        prompt += (
+            "\n\nISTRUZIONI PRIORITARIE (in caso di conflitto con quanto sopra, prevalgono queste):"
+            f"\n- Genera esattamente {num} storie principali."
+            f"\n- Lunghezza di ogni storia: {DEPTH_CLAUSE[depth]}."
+        )
+
     prompt += (
         "\n\nSICUREZZA — usa SOLO fonti giornalistiche, ufficiali o accademiche. "
         "Non includere MAI link a siti per adulti/NSFW, gambling, malware o contenuti illegali."
@@ -211,7 +261,7 @@ def render_story(story: dict, index: int) -> str:
         '\n    </div>'
     )
 
-def render_also_noting(items: list) -> str:
+def render_also_noting(items: list, heading: str = "NB — anche oggi") -> str:
     if not items:
         return ""
     rows = ""
@@ -234,14 +284,15 @@ def render_also_noting(items: list) -> str:
         '\n    <div style="margin-top:8px;padding:20px 22px;background:#f3f4f6;'
         'border-radius:10px;">'
         '\n      <p style="margin:0 0 10px;font-size:11px;font-weight:700;'
-        'text-transform:uppercase;letter-spacing:1px;color:#6b7280;">NB — anche oggi</p>'
+        'text-transform:uppercase;letter-spacing:1px;color:#6b7280;">' + html_lib.escape(heading) + '</p>'
         '\n      <ul style="margin:0;padding-left:16px;list-style:disc;">'
         + rows +
         '\n      </ul>'
         '\n    </div>'
     )
 
-def build_html(stories: list, also_noting: list, today: str, provider: str, name: str = "") -> str:
+def build_html(stories: list, also_noting: list, today: str, provider: str,
+               name: str = "", links_mode: bool = False) -> str:
     # togli dalle menzioni rapide gli URL e i titoli già usati nelle storie principali
     used_urls   = {(s.get("url") or "").strip() for s in stories}
     used_titles = {(s.get("title") or "").strip().lower() for s in stories}
@@ -251,8 +302,12 @@ def build_html(stories: list, also_noting: list, today: str, provider: str, name
         and (it.get("title") or "").strip().lower() not in used_titles
     ]
     stories_html     = "".join(render_story(s, i) for i, s in enumerate(stories))
-    also_noting_html = render_also_noting(also_noting)
-    count_label      = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
+    heading          = "Spunti di oggi" if links_mode else "NB — anche oggi"
+    also_noting_html = render_also_noting(also_noting, heading)
+    if links_mode:
+        count_label = f"{len(also_noting)} spunt{'o' if len(also_noting)==1 else 'i'} oggi"
+    else:
+        count_label = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
     header_title     = "daily news of " + html_lib.escape(name) if name else "daily news"
     return (
         '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"></head>\n'
@@ -309,20 +364,36 @@ def main():
 
     for profile in profiles:
         name = profile["name"]
-        print(f"\n[{name}] Fetching digest…")
+        if not due_today(profile):
+            print(f"\n[{name}] non in programma oggi (frequency={profile.get('frequency')}), skip.")
+            continue
+        _, _, mode = profile_settings(profile)
+        print(f"\n[{name}] Fetching digest… (mode={mode})")
         try:
             recent, topics = store.get_recent(profile)
             if recent:
                 print(f"  ({len(recent)} storie recenti da evitare; temi: {', '.join(topics) or '—'})")
             stories, also_noting, provider = fetch_digest(profile, today, recent, topics)
-            if not stories:
-                print(f"  ✗ Nessuna storia trovata per {name}, skip.")
-                failed = True
-                continue
-            print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
-            html = build_html(stories, also_noting, today, provider, name)
-            send_email(profile["recipient"], html, build_subject(stories))
-            store.record_sent(profile, stories)
+
+            if mode == "links":
+                if not also_noting:
+                    print(f"  ✗ Nessuno spunto trovato per {name}, skip.")
+                    failed = True
+                    continue
+                print(f"  → {len(also_noting)} spunti via {provider}")
+                html = build_html([], also_noting, today, provider, name, links_mode=True)
+                subject = f"☀️ {len(also_noting)} spunti per oggi — {today}"
+                send_email(profile["recipient"], html, subject)
+                store.record_sent(profile, also_noting)
+            else:
+                if not stories:
+                    print(f"  ✗ Nessuna storia trovata per {name}, skip.")
+                    failed = True
+                    continue
+                print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
+                html = build_html(stories, also_noting, today, provider, name)
+                send_email(profile["recipient"], html, build_subject(stories))
+                store.record_sent(profile, stories)
         except Exception as e:
             print(f"  ✗ Errore per {name}: {e}")
             failed = True

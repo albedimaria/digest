@@ -3,11 +3,13 @@
 Roadmap degli interventi rimandati. Ordine indicativo per priorità.
 
 ## Qualità notizie (quando serve / col carico utenti)
-- [ ] **Switch provider** — Gemini 2.5 Flash free tier è il collo di bottiglia su
-      qualità e quota. Valutare Claude o GPT con web search quando ci sono utenti
-      paganti che ripagano l'API. Tenere il codice già astratto (vedi sotto).
-      NB: il fallback Perplexity è stato rimosso (non era free); il futuro fallback
-      sarà direttamente il provider a pagamento di cui sopra.
+- [ ] **Switch provider / profondità reale** — Gemini 2.5 Flash free tier è il collo
+      di bottiglia sull'approfondimento (depth='deep' spinge il prompt ma il modello
+      ha un tetto). Per una qualità Breaking Italy vera serve Gemini Pro / Claude / GPT.
+      Predisporre un campo profilo 'model' / tier premium quando ci sono utenti paganti.
+      NB: il fallback Perplexity è stato rimosso (non era free).
+- [ ] **Modalità links — heading/UX dedicata** — funziona ma è grezza; rifinire la
+      resa quando arriva la web app.
 - [ ] **Pre-fetch fonti reali** — invece di affidarsi solo alla ricerca del modello,
       tirare giù candidati VERI da fonti gratuite (Hacker News API, GitHub Trending,
       arXiv API, RSS) e passarli al modello. Risolve URL inventati e storie generiche

@@ -42,6 +42,11 @@ def main():
             "active":          p.get("active", True),
             "interests":       p.get("interests", ""),
             "prompt_template": p.get("prompt_template"),
+            "frequency":       p.get("frequency", "daily"),
+            "weekly_day":      p.get("weekly_day", 0),
+            "num_stories":     p.get("num_stories", 3),
+            "depth":           p.get("depth", "standard"),
+            "mode":            p.get("mode", "full"),
             "satisfaction":    p.get("satisfaction"),
         }
         if existing:

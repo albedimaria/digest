@@ -9,6 +9,12 @@ create table if not exists profiles (
   active          boolean not null default true,
   interests       text    not null default '',
   prompt_template text,                       -- null → usa il template di default nel codice
+  -- personalizzazione
+  frequency       text    not null default 'daily',     -- 'daily' | 'weekly'
+  weekly_day      int     not null default 0,           -- 0=lunedì ... 6=domenica (solo se weekly)
+  num_stories     int     not null default 3,           -- quante storie / quanti link
+  depth           text    not null default 'standard',  -- 'brief' | 'standard' | 'deep'
+  mode            text    not null default 'full',       -- 'full' (analisi) | 'links' (solo spunti)
   satisfaction    int,                        -- ultimo voto 1-5
   created_at      timestamptz not null default now(),
   updated_at      timestamptz not null default now()

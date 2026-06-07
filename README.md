@@ -46,13 +46,14 @@ Profiles live in `profiles.json` (JSON mode) or in the Supabase `profiles` table
   "prompt_template": "... (optional, overrides the default)",
   "frequency": "daily",      // "daily" | "weekly"
   "weekly_day": 0,            // 0=Mon ... 6=Sun (only if weekly)
-  "num_stories": 3,           // stories (full) or links (links mode); clamp 1-6 / 1-15
-  "depth": "standard",       // "brief" | "standard" | "deep"
-  "mode": "full"             // "full" (analysis) | "links" (just a list of links to pick from)
+  "num_stories": 2,           // full: max 2 stories (+3 quick links); links mode: max 5
+  "depth": "standard",       // RESERVED — not active yet (future feature, see TODO)
+  "mode": "full"             // "full" (analysis + 3 quick links) | "links" (just N links to pick from)
 }
 ```
 
 Defaults apply when a field is missing, so old profiles keep working.
+Note: `depth` is stored but not yet wired into the prompt — it's a planned feature.
 
 ## Storage backends
 

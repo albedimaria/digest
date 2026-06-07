@@ -42,7 +42,7 @@ def parse_response(raw: str) -> tuple[list, list]:
             raw = raw[start:end + 1]
 
     data = json.loads(raw)
-    return data.get("stories", []), (data.get("also_noting", []) or [])[:6]
+    return data.get("stories", []), (data.get("also_noting", []) or [])[:15]
 
 SENDER         = "ing.albertodimaria@gmail.com"
 SMTP_PASS      = os.environ["GMAIL_APP_PASSWORD"]
@@ -51,25 +51,20 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 
 # ── Impostazioni per-profilo ───────────────────────────────────────────────────
 
-DEPTH_CLAUSE = {
-    "brief":    "2-3 frasi asciutte, solo il fatto e il perché conta",
-    "standard": "4-6 frasi: fatto del giorno + contesto + perché conta",
-    "deep":     "7-9 frasi: fatto, contesto storico/strutturale, conseguenze e implicazioni più ampie (stile Breaking Italy)",
-}
+QUICK_LINKS = 3   # menzioni rapide in modalità full
 
 def profile_settings(profile: dict) -> tuple[int, str, str]:
-    """Ritorna (num_stories, depth, mode) con default e clamp."""
+    """Ritorna (num_stories, depth, mode) con default e clamp.
+    NB: 'depth' è solo predisposto, non ancora cablato nel prompt (feature futura)."""
     mode = profile.get("mode") or "full"
     if mode not in ("full", "links"):
         mode = "full"
     try:
-        num = int(profile.get("num_stories") or 3)
+        num = int(profile.get("num_stories") or (5 if mode == "links" else 2))
     except (TypeError, ValueError):
-        num = 3
-    num   = max(1, min(num, 15 if mode == "links" else 6))  # links: lista più lunga
+        num = 5 if mode == "links" else 2
+    num   = max(1, min(num, 5 if mode == "links" else 2))
     depth = profile.get("depth") or "standard"
-    if depth not in DEPTH_CLAUSE:
-        depth = "standard"
     return num, depth, mode
 
 def due_today(profile: dict) -> bool:
@@ -113,8 +108,8 @@ def build_prompt(profile: dict, today: str, recent: list | None = None,
     else:
         prompt += (
             "\n\nISTRUZIONI PRIORITARIE (in caso di conflitto con quanto sopra, prevalgono queste):"
-            f"\n- Genera esattamente {num} storie principali."
-            f"\n- Lunghezza di ogni storia: {DEPTH_CLAUSE[depth]}."
+            f"\n- Genera al massimo {num} storie principali."
+            f"\n- Includi esattamente {QUICK_LINKS} menzioni rapide in \"also_noting\"."
         )
 
     prompt += (
@@ -367,7 +362,7 @@ def main():
         if not due_today(profile):
             print(f"\n[{name}] non in programma oggi (frequency={profile.get('frequency')}), skip.")
             continue
-        _, _, mode = profile_settings(profile)
+        num, _, mode = profile_settings(profile)
         print(f"\n[{name}] Fetching digest… (mode={mode})")
         try:
             recent, topics = store.get_recent(profile)
@@ -376,6 +371,7 @@ def main():
             stories, also_noting, provider = fetch_digest(profile, today, recent, topics)
 
             if mode == "links":
+                also_noting = also_noting[:num]
                 if not also_noting:
                     print(f"  ✗ Nessuno spunto trovato per {name}, skip.")
                     failed = True
@@ -386,6 +382,8 @@ def main():
                 send_email(profile["recipient"], html, subject)
                 store.record_sent(profile, also_noting)
             else:
+                stories     = stories[:num]
+                also_noting = also_noting[:QUICK_LINKS]
                 if not stories:
                     print(f"  ✗ Nessuna storia trovata per {name}, skip.")
                     failed = True

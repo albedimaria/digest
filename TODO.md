@@ -10,6 +10,10 @@ Roadmap degli interventi rimandati. Ordine indicativo per priorità.
       NB: il fallback Perplexity è stato rimosso (non era free).
 - [ ] **Modalità links — heading/UX dedicata** — funziona ma è grezza; rifinire la
       resa quando arriva la web app.
+- [ ] **Profondità (depth) configurabile** — FEATURE FUTURA. Il campo 'depth'
+      (brief/standard/deep) è già nello schema e in profiles.json ma NON è ancora
+      cablato nel prompt. Da attivare insieme allo switch verso un modello migliore
+      (Gemini Flash free non regge la profondità 'deep' stile Breaking Italy).
 - [ ] **Pre-fetch fonti reali** — invece di affidarsi solo alla ricerca del modello,
       tirare giù candidati VERI da fonti gratuite (Hacker News API, GitHub Trending,
       arXiv API, RSS) e passarli al modello. Risolve URL inventati e storie generiche

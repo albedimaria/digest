@@ -164,6 +164,13 @@ def topic_color(topic: str) -> str:
             return color
     return "#374151"
 
+def safe_url(url: str) -> str:
+    """Accetta solo http(s), altrimenti '#'. Escapa per il contesto attributo HTML."""
+    url = (url or "").strip()
+    if not url.startswith(("http://", "https://")):
+        return "#"
+    return html_lib.escape(url, quote=True)
+
 def render_story(story: dict, index: int) -> str:
     color  = topic_color(story.get("topic", ""))
     num    = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
@@ -171,7 +178,7 @@ def render_story(story: dict, index: int) -> str:
     title  = html_lib.escape(story.get("title", ""))
     body   = html_lib.escape(story.get("body", ""))
     source = html_lib.escape(story.get("source", ""))
-    url    = story.get("url", "#")
+    url    = safe_url(story.get("url", ""))
     return (
         '\n    <div style="margin-bottom:28px;padding:22px;background:#f9fafb;'
         'border-radius:10px;border-left:4px solid ' + color + ';">'
@@ -201,7 +208,7 @@ def render_also_noting(items: list) -> str:
         color = topic_color(item.get("topic", ""))
         topic = html_lib.escape(item.get("topic", ""))
         title = html_lib.escape(item.get("title", ""))
-        url   = item.get("url", "#")
+        url   = safe_url(item.get("url", ""))
         rows += (
             '\n      <li style="margin-bottom:8px;">'
             '<span style="font-size:10px;font-weight:700;text-transform:uppercase;'
@@ -222,6 +229,14 @@ def render_also_noting(items: list) -> str:
     )
 
 def build_html(stories: list, also_noting: list, today: str, provider: str) -> str:
+    # togli dalle menzioni rapide gli URL e i titoli già usati nelle storie principali
+    used_urls   = {(s.get("url") or "").strip() for s in stories}
+    used_titles = {(s.get("title") or "").strip().lower() for s in stories}
+    also_noting = [
+        it for it in also_noting
+        if (it.get("url") or "").strip() not in used_urls
+        and (it.get("title") or "").strip().lower() not in used_titles
+    ]
     stories_html     = "".join(render_story(s, i) for i, s in enumerate(stories))
     also_noting_html = render_also_noting(also_noting)
     count_label      = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"

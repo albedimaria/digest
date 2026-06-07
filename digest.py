@@ -67,6 +67,10 @@ def build_prompt(profile: dict, today: str, recent: list | None = None,
             "\n\nVARIETÀ — nei giorni scorsi hai già trattato spesso questi temi: " + temi + ". "
             "Per le storie dopo la prima, privilegia temi DIVERSI da questi e diversi tra loro."
         )
+    prompt += (
+        "\n\nSICUREZZA — usa SOLO fonti giornalistiche, ufficiali o accademiche. "
+        "Non includere MAI link a siti per adulti/NSFW, gambling, malware o contenuti illegali."
+    )
     return prompt
 
 
@@ -143,12 +147,40 @@ def topic_color(topic: str) -> str:
             return color
     return "#374151"
 
-def safe_url(url: str) -> str:
-    """Accetta solo http(s), altrimenti '#'. Escapa per il contesto attributo HTML."""
+BLOCKED_TLDS = (".xxx", ".porn", ".adult", ".sex", ".sexy", ".cam", ".tube")
+BLOCKED_DOMAINS = {
+    "pornhub.com", "xvideos.com", "xnxx.com", "redtube.com", "youporn.com",
+    "xhamster.com", "spankbang.com", "onlyfans.com", "chaturbate.com",
+    "stripchat.com", "brazzers.com", "fansly.com", "rule34.xxx", "nhentai.net",
+}
+BLOCKED_TOKENS = ("porn", "xxx", "hentai", "camgirl", "escort", "nsfw")
+
+def is_safe_url(url: str) -> bool:
+    """False per non-http, siti per adulti noti, TLD/keyword sospette."""
+    from urllib.parse import urlparse
     url = (url or "").strip()
     if not url.startswith(("http://", "https://")):
+        return False
+    host = (urlparse(url).hostname or "").lower()
+    if not host:
+        return False
+    if host.endswith(BLOCKED_TLDS):
+        return False
+    # dominio registrabile (es. "pornhub.com" da "www.pornhub.com")
+    parts = host.split(".")
+    registrable = ".".join(parts[-2:]) if len(parts) >= 2 else host
+    if registrable in BLOCKED_DOMAINS:
+        return False
+    # token adulti come "parola" nei segmenti del dominio (evita falsi positivi tipo "essex")
+    if any(tok in parts for tok in BLOCKED_TOKENS):
+        return False
+    return True
+
+def safe_url(url: str) -> str:
+    """URL sicuro escapato per attributo HTML, altrimenti '#'."""
+    if not is_safe_url(url):
         return "#"
-    return html_lib.escape(url, quote=True)
+    return html_lib.escape(url.strip(), quote=True)
 
 def render_story(story: dict, index: int) -> str:
     color  = topic_color(story.get("topic", ""))
@@ -184,6 +216,8 @@ def render_also_noting(items: list) -> str:
         return ""
     rows = ""
     for item in items:
+        if not is_safe_url(item.get("url", "")):
+            continue   # le menzioni rapide sono solo link: se non è sicuro, niente da mostrare
         color = topic_color(item.get("topic", ""))
         topic = html_lib.escape(item.get("topic", ""))
         title = html_lib.escape(item.get("title", ""))

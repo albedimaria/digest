@@ -15,6 +15,34 @@ from config import PROFILES, PROMPT_TEMPLATE
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
+GIORNI = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
+MESI   = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
+          "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"]
+
+def italian_date(d: date) -> str:
+    return f"{GIORNI[d.weekday()]} {d.day} {MESI[d.month - 1]} {d.year}"
+
+def parse_response(raw: str) -> tuple[list, list]:
+    """Estrae stories e also_noting da una risposta LLM, tollerando markdown e testo extra."""
+    raw = (raw or "").strip()
+    if not raw:
+        raise ValueError("risposta vuota dal provider")
+
+    if raw.startswith("```"):
+        raw = raw.split("```")[1]
+        if raw.startswith("json"):
+            raw = raw[4:]
+        raw = raw.strip()
+
+    # fallback: estrai il primo oggetto JSON bilanciato se c'è testo intorno
+    if not raw.startswith("{"):
+        start, end = raw.find("{"), raw.rfind("}")
+        if start != -1 and end > start:
+            raw = raw[start:end + 1]
+
+    data = json.loads(raw)
+    return data.get("stories", []), (data.get("also_noting", []) or [])[:6]
+
 SENDER         = "ing.albertodimaria@gmail.com"
 SMTP_PASS      = os.environ["GMAIL_APP_PASSWORD"]
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -44,18 +72,7 @@ def fetch_with_gemini(profile: dict, today: str) -> tuple[list, list]:
         ),
     )
 
-    raw = (response.text or "").strip()
-    if not raw:
-        raise ValueError("Gemini ha restituito una risposta vuota")
-
-    if raw.startswith("```"):
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-        raw = raw.strip()
-
-    data = json.loads(raw)
-    return data.get("stories", []), data.get("also_noting", [])
+    return parse_response(response.text)
 
 
 # ── Perplexity ────────────────────────────────────────────────────────────────
@@ -73,18 +90,7 @@ def fetch_with_perplexity(profile: dict, today: str) -> tuple[list, list]:
         temperature=0.3,
     )
 
-    raw = (response.choices[0].message.content or "").strip()
-    if not raw:
-        raise ValueError("Perplexity ha restituito una risposta vuota")
-
-    if raw.startswith("```"):
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-        raw = raw.strip()
-
-    data = json.loads(raw)
-    return data.get("stories", []), data.get("also_noting", [])
+    return parse_response(response.choices[0].message.content)
 
 
 # ── Fetch with fallback ───────────────────────────────────────────────────────
@@ -247,7 +253,7 @@ def send_email(recipient: str, html: str, today: str, story_count: int):
 
 def main():
     import sys
-    today  = date.today().strftime("%A, %d %B %Y")
+    today  = italian_date(date.today())
     failed = False
 
     for profile in PROFILES:

@@ -11,17 +11,10 @@ from datetime import date
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+import store
 from config import PROMPT_TEMPLATE
 
 # ── Config ────────────────────────────────────────────────────────────────────
-
-PROFILES_FILE = "profiles.json"
-
-def load_profiles() -> list:
-    """Carica i profili da profiles.json, tenendo solo quelli attivi."""
-    with open(PROFILES_FILE, encoding="utf-8") as f:
-        profiles = json.load(f)
-    return [p for p in profiles if p.get("active", True)]
 
 GIORNI = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"]
 MESI   = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
@@ -29,54 +22,6 @@ MESI   = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
 
 def italian_date(d: date) -> str:
     return f"{GIORNI[d.weekday()]} {d.day} {MESI[d.month - 1]} {d.year}"
-
-HISTORY_FILE = "history.json"
-HISTORY_DAYS = 7
-
-def load_history() -> dict:
-    """Storico delle storie inviate per profilo. Robusto a file mancante/corrotto."""
-    try:
-        with open(HISTORY_FILE, encoding="utf-8") as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return {}
-
-def _recent_entries(history: dict, profile_name: str) -> list:
-    from datetime import timedelta
-    cutoff = (date.today() - timedelta(days=HISTORY_DAYS)).isoformat()
-    return [e for e in history.get(profile_name, []) if e.get("date", "") >= cutoff]
-
-def recent_titles(history: dict, profile_name: str) -> list:
-    """Titoli inviati negli ultimi HISTORY_DAYS giorni per questo profilo."""
-    return [e["title"] for e in _recent_entries(history, profile_name)]
-
-def recent_topics(history: dict, profile_name: str) -> list:
-    """Temi trattati di recente, dal più frequente, per evitare di ripeterli."""
-    from collections import Counter
-    counts = Counter(
-        e.get("topic", "").strip() for e in _recent_entries(history, profile_name)
-        if e.get("topic", "").strip()
-    )
-    return [topic for topic, _ in counts.most_common()]
-
-def record_sent(history: dict, profile_name: str, stories: list) -> None:
-    """Aggiunge le storie inviate allo storico e pota le voci più vecchie di HISTORY_DAYS."""
-    from datetime import timedelta
-    cutoff = (date.today() - timedelta(days=HISTORY_DAYS)).isoformat()
-    today_iso = date.today().isoformat()
-    entries = [e for e in history.get(profile_name, []) if e.get("date", "") >= cutoff]
-    for s in stories:
-        entries.append({
-            "date": today_iso,
-            "title": s.get("title", ""),
-            "url": s.get("url", ""),
-            "topic": s.get("topic", ""),
-        })
-    history[profile_name] = entries
-
-def save_history(history: dict) -> None:
-    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(history, f, ensure_ascii=False, indent=2)
 
 def parse_response(raw: str) -> tuple[list, list]:
     """Estrae stories e also_noting da una risposta LLM, tollerando markdown e testo extra."""
@@ -323,16 +268,16 @@ def send_email(recipient: str, html: str, subject: str):
 def main():
     import sys
     today    = italian_date(date.today())
-    history  = load_history()
-    profiles = load_profiles()
+    profiles = store.get_profiles()
     failed   = False
+
+    print(f"Backend: {store.backend_name()} · {len(profiles)} profili attivi")
 
     for profile in profiles:
         name = profile["name"]
         print(f"\n[{name}] Fetching digest…")
         try:
-            recent = recent_titles(history, name)
-            topics = recent_topics(history, name)
+            recent, topics = store.get_recent(profile)
             if recent:
                 print(f"  ({len(recent)} storie recenti da evitare; temi: {', '.join(topics) or '—'})")
             stories, also_noting, provider = fetch_digest(profile, today, recent, topics)
@@ -343,12 +288,12 @@ def main():
             print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
             html = build_html(stories, also_noting, today, provider, name)
             send_email(profile["recipient"], html, build_subject(stories))
-            record_sent(history, name, stories)
+            store.record_sent(profile, stories)
         except Exception as e:
             print(f"  ✗ Errore per {name}: {e}")
             failed = True
 
-    save_history(history)
+    store.flush()
 
     if failed:
         sys.exit(1)

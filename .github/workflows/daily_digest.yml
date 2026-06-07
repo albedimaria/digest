@@ -25,10 +25,14 @@ jobs:
         env:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: python digest.py
 
-      - name: Persist history
-        if: always()   # salva lo storico anche se l'invio è fallito a metà
+      # Fallback: se SUPABASE_URL non è impostato il digest usa history.json,
+      # che va ricommittato. In modalità Supabase questo step non trova modifiche.
+      - name: Persist history (solo modalità JSON)
+        if: always()
         run: |
           if [[ -n "$(git status --porcelain history.json)" ]]; then
             git config user.name  "github-actions[bot]"

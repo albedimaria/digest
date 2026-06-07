@@ -34,17 +34,41 @@ Go to **Settings → Secrets and variables → Actions** and add:
 
 ## Profiles
 
-Profiles are defined in `digest.py` in the `PROFILES` list. Each profile has:
+Profiles live in `profiles.json` (JSON mode) or in the Supabase `profiles` table
+(production mode). Each profile has:
 
-```python
+```json
 {
-    "name": "Name",
-    "recipient": "email@example.com",
-    "interests": "...",  # free-text description of the reader's interests
+  "name": "Name",
+  "recipient": "email@example.com",
+  "active": true,
+  "interests": "...",
+  "prompt_template": "... (optional, overrides the default)"
 }
 ```
 
-To add a new recipient, just append an entry to the list.
+## Storage backends
+
+`store.py` picks the backend automatically:
+
+- **JSON mode** (default): profiles from `profiles.json`, history in `history.json`
+  (committed back by the workflow). Good for local/dev and the current 2-user setup.
+- **Supabase mode**: active when `SUPABASE_URL` and `SUPABASE_SERVICE_KEY` are set.
+  Profiles, sent-story history and feedback live in Postgres.
+
+### Supabase setup (production)
+
+1. Create a project in the Supabase account (the one with a free project slot).
+2. Open **SQL Editor**, paste and run `supabase_schema.sql`.
+3. Add two GitHub secrets:
+   - `SUPABASE_URL` — e.g. `https://xxxx.supabase.co`
+   - `SUPABASE_SERVICE_KEY` — the **service_role** key (Settings → API). Server-side only.
+4. Seed the current profiles into the DB (locally, with the two env vars set):
+   ```
+   python seed_supabase.py
+   ```
+Once the secrets are present in Actions, the daily run switches to Supabase
+automatically (no code change).
 
 ## Manual run
 
@@ -55,3 +79,4 @@ From the **Actions** tab on GitHub → **Daily Digest** → **Run workflow**.
 ```
 google-genai>=0.8.0
 ```
+(Supabase access uses the Python stdlib — no extra dependency.)

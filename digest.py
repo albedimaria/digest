@@ -1,6 +1,6 @@
 """
 daily-digest — 2-3 storie curate per persona, stile Breaking Italy.
-Primary: Gemini 2.5 Flash | Fallback: Perplexity Sonar
+Provider: Gemini 2.5 Flash (free tier) con Google Search.
 """
 
 import os
@@ -77,7 +77,6 @@ def parse_response(raw: str) -> tuple[list, list]:
 SENDER         = "ing.albertodimaria@gmail.com"
 SMTP_PASS      = os.environ["GMAIL_APP_PASSWORD"]
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-PERPLEXITY_KEY = os.environ.get("PERPLEXITY_API_KEY", "")
 
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
@@ -113,64 +112,38 @@ def fetch_with_gemini(profile: dict, today: str, recent: list | None = None) -> 
     return parse_response(response.text)
 
 
-# ── Perplexity ────────────────────────────────────────────────────────────────
-
-def fetch_with_perplexity(profile: dict, today: str, recent: list | None = None) -> tuple[list, list]:
-    try:
-        from openai import OpenAI
-    except ImportError:
-        raise RuntimeError("openai non installato — aggiungi 'openai' a requirements.txt")
-
-    client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
-    response = client.chat.completions.create(
-        model="sonar",
-        messages=[{"role": "user", "content": build_prompt(profile, today, recent)}],
-        temperature=0.3,
-    )
-
-    return parse_response(response.choices[0].message.content)
-
-
-# ── Fetch with fallback ───────────────────────────────────────────────────────
+# ── Fetch ─────────────────────────────────────────────────────────────────────
 
 def fetch_digest(profile: dict, today: str, recent: list | None = None) -> tuple[list, list, str]:
     import time
 
-    if GEMINI_API_KEY:
-        for attempt in range(4):  # 0 = initial, 1-3 = retries
-            if attempt > 0:
-                print(f"  Retry {attempt}/3…")
-                time.sleep(10)
-            try:
-                if attempt == 0:
-                    print("  Trying Gemini…")
-                stories, also_noting = fetch_with_gemini(profile, today, recent)
-                return stories, also_noting, "Gemini"
-            except Exception as e:
-                err = str(e)
-                if any(k in err for k in ("503", "UNAVAILABLE")) and attempt < 3:
-                    continue
-                if any(k in err for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
-                    print(f"  ⚠ GEMINI QUOTA ESAURITA: {err}")
-                elif any(k in err for k in ("503", "UNAVAILABLE")):
-                    print(f"  ⚠ GEMINI UNAVAILABLE dopo 3 tentativi: {err}")
-                else:
-                    print(f"  ⚠ GEMINI ERROR: {err}")
-                break
+    if not GEMINI_API_KEY:
+        raise RuntimeError("GEMINI_API_KEY non impostato")
 
-    if PERPLEXITY_KEY:
+    last_err = None
+    for attempt in range(4):  # 0 = initial, 1-3 = retries
+        if attempt > 0:
+            print(f"  Retry {attempt}/3…")
+            time.sleep(10)
         try:
-            print("  Trying Perplexity…")
-            stories, also_noting = fetch_with_perplexity(profile, today, recent)
-            return stories, also_noting, "Perplexity"
+            if attempt == 0:
+                print("  Trying Gemini…")
+            stories, also_noting = fetch_with_gemini(profile, today, recent)
+            return stories, also_noting, "Gemini"
         except Exception as e:
+            last_err = e
             err = str(e)
-            if any(k in err for k in ("429", "quota", "rate")):
-                print(f"  ⚠ PERPLEXITY QUOTA ESAURITA: {err}")
+            if any(k in err for k in ("503", "UNAVAILABLE")) and attempt < 3:
+                continue
+            if any(k in err for k in ("429", "RESOURCE_EXHAUSTED", "quota")):
+                print(f"  ⚠ GEMINI QUOTA ESAURITA: {err}")
+            elif any(k in err for k in ("503", "UNAVAILABLE")):
+                print(f"  ⚠ GEMINI UNAVAILABLE dopo 3 tentativi: {err}")
             else:
-                print(f"  ⚠ PERPLEXITY ERROR: {err}")
+                print(f"  ⚠ GEMINI ERROR: {err}")
+            break
 
-    raise RuntimeError("Nessun provider disponibile — controlla GEMINI_API_KEY e PERPLEXITY_API_KEY")
+    raise RuntimeError(f"Gemini non disponibile: {last_err}")
 
 
 # ── HTML ───────────────────────────────────────────────────────────────────────

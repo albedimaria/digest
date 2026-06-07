@@ -6,6 +6,8 @@ Roadmap degli interventi rimandati. Ordine indicativo per priorità.
 - [ ] **Switch provider** — Gemini 2.5 Flash free tier è il collo di bottiglia su
       qualità e quota. Valutare Claude o GPT con web search quando ci sono utenti
       paganti che ripagano l'API. Tenere il codice già astratto (vedi sotto).
+      NB: il fallback Perplexity è stato rimosso (non era free); il futuro fallback
+      sarà direttamente il provider a pagamento di cui sopra.
 - [ ] **Pre-fetch fonti reali** — invece di affidarsi solo alla ricerca del modello,
       tirare giù candidati VERI da fonti gratuite (Hacker News API, GitHub Trending,
       arXiv API, RSS) e passarli al modello. Risolve URL inventati e storie generiche

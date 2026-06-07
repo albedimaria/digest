@@ -22,6 +22,37 @@ MESI   = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
 def italian_date(d: date) -> str:
     return f"{GIORNI[d.weekday()]} {d.day} {MESI[d.month - 1]} {d.year}"
 
+HISTORY_FILE = "history.json"
+HISTORY_DAYS = 7
+
+def load_history() -> dict:
+    """Storico delle storie inviate per profilo. Robusto a file mancante/corrotto."""
+    try:
+        with open(HISTORY_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+def recent_titles(history: dict, profile_name: str) -> list:
+    """Titoli inviati negli ultimi HISTORY_DAYS giorni per questo profilo."""
+    from datetime import timedelta
+    cutoff = (date.today() - timedelta(days=HISTORY_DAYS)).isoformat()
+    return [e["title"] for e in history.get(profile_name, []) if e.get("date", "") >= cutoff]
+
+def record_sent(history: dict, profile_name: str, stories: list) -> None:
+    """Aggiunge le storie inviate allo storico e pota le voci più vecchie di HISTORY_DAYS."""
+    from datetime import timedelta
+    cutoff = (date.today() - timedelta(days=HISTORY_DAYS)).isoformat()
+    today_iso = date.today().isoformat()
+    entries = [e for e in history.get(profile_name, []) if e.get("date", "") >= cutoff]
+    for s in stories:
+        entries.append({"date": today_iso, "title": s.get("title", ""), "url": s.get("url", "")})
+    history[profile_name] = entries
+
+def save_history(history: dict) -> None:
+    with open(HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(history, f, ensure_ascii=False, indent=2)
+
 def parse_response(raw: str) -> tuple[list, list]:
     """Estrae stories e also_noting da una risposta LLM, tollerando markdown e testo extra."""
     raw = (raw or "").strip()
@@ -51,21 +82,28 @@ PERPLEXITY_KEY = os.environ.get("PERPLEXITY_API_KEY", "")
 
 # ── Prompt ────────────────────────────────────────────────────────────────────
 
-def build_prompt(profile: dict, today: str) -> str:
+def build_prompt(profile: dict, today: str, recent: list | None = None) -> str:
     template = profile.get("prompt_template", PROMPT_TEMPLATE)
-    return template.format(interests=profile["interests"], today=today)
+    prompt = template.format(interests=profile["interests"], today=today)
+    if recent:
+        avoid = "\n".join(f"- {t}" for t in recent)
+        prompt += (
+            "\n\nIMPORTANTE — queste storie sono già state inviate nei giorni scorsi. "
+            "NON riproporle e non scegliere notizie sostanzialmente equivalenti:\n" + avoid
+        )
+    return prompt
 
 
 # ── Gemini ────────────────────────────────────────────────────────────────────
 
-def fetch_with_gemini(profile: dict, today: str) -> tuple[list, list]:
+def fetch_with_gemini(profile: dict, today: str, recent: list | None = None) -> tuple[list, list]:
     from google import genai
     from google.genai import types
 
     client = genai.Client(api_key=GEMINI_API_KEY)
     response = client.models.generate_content(
         model="gemini-2.5-flash",
-        contents=build_prompt(profile, today),
+        contents=build_prompt(profile, today, recent),
         config=types.GenerateContentConfig(
             tools=[types.Tool(google_search=types.GoogleSearch())],
             temperature=0.3,
@@ -77,7 +115,7 @@ def fetch_with_gemini(profile: dict, today: str) -> tuple[list, list]:
 
 # ── Perplexity ────────────────────────────────────────────────────────────────
 
-def fetch_with_perplexity(profile: dict, today: str) -> tuple[list, list]:
+def fetch_with_perplexity(profile: dict, today: str, recent: list | None = None) -> tuple[list, list]:
     try:
         from openai import OpenAI
     except ImportError:
@@ -86,7 +124,7 @@ def fetch_with_perplexity(profile: dict, today: str) -> tuple[list, list]:
     client = OpenAI(api_key=PERPLEXITY_KEY, base_url="https://api.perplexity.ai")
     response = client.chat.completions.create(
         model="sonar",
-        messages=[{"role": "user", "content": build_prompt(profile, today)}],
+        messages=[{"role": "user", "content": build_prompt(profile, today, recent)}],
         temperature=0.3,
     )
 
@@ -95,7 +133,7 @@ def fetch_with_perplexity(profile: dict, today: str) -> tuple[list, list]:
 
 # ── Fetch with fallback ───────────────────────────────────────────────────────
 
-def fetch_digest(profile: dict, today: str) -> tuple[list, list, str]:
+def fetch_digest(profile: dict, today: str, recent: list | None = None) -> tuple[list, list, str]:
     import time
 
     if GEMINI_API_KEY:
@@ -106,7 +144,7 @@ def fetch_digest(profile: dict, today: str) -> tuple[list, list, str]:
             try:
                 if attempt == 0:
                     print("  Trying Gemini…")
-                stories, also_noting = fetch_with_gemini(profile, today)
+                stories, also_noting = fetch_with_gemini(profile, today, recent)
                 return stories, also_noting, "Gemini"
             except Exception as e:
                 err = str(e)
@@ -123,7 +161,7 @@ def fetch_digest(profile: dict, today: str) -> tuple[list, list, str]:
     if PERPLEXITY_KEY:
         try:
             print("  Trying Perplexity…")
-            stories, also_noting = fetch_with_perplexity(profile, today)
+            stories, also_noting = fetch_with_perplexity(profile, today, recent)
             return stories, also_noting, "Perplexity"
         except Exception as e:
             err = str(e)
@@ -253,23 +291,31 @@ def send_email(recipient: str, html: str, today: str, story_count: int):
 
 def main():
     import sys
-    today  = italian_date(date.today())
-    failed = False
+    today   = italian_date(date.today())
+    history = load_history()
+    failed  = False
 
     for profile in PROFILES:
-        print(f"\n[{profile['name']}] Fetching digest…")
+        name = profile["name"]
+        print(f"\n[{name}] Fetching digest…")
         try:
-            stories, also_noting, provider = fetch_digest(profile, today)
+            recent = recent_titles(history, name)
+            if recent:
+                print(f"  ({len(recent)} storie recenti da evitare)")
+            stories, also_noting, provider = fetch_digest(profile, today, recent)
             if not stories:
-                print(f"  ✗ Nessuna storia trovata per {profile['name']}, skip.")
+                print(f"  ✗ Nessuna storia trovata per {name}, skip.")
                 failed = True
                 continue
             print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
             html = build_html(stories, also_noting, today, provider)
             send_email(profile["recipient"], html, today, len(stories))
+            record_sent(history, name, stories)
         except Exception as e:
-            print(f"  ✗ Errore per {profile['name']}: {e}")
+            print(f"  ✗ Errore per {name}: {e}")
             failed = True
+
+    save_history(history)
 
     if failed:
         sys.exit(1)

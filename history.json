@@ -1,1 +1,30 @@
-{}
+{
+  "Alberto": [
+    {
+      "date": "2026-06-08",
+      "title": "Microsoft Lancia Sette Nuovi Modelli MAI a Build 2026, Riducendo la Dipendenza da Partner Esterni",
+      "url": "https://microsoft.ai",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Colombia al Voto: Ballottaggio Presidenziale tra Destra e Sinistra con Accuse di Interferenza USA",
+      "url": "https://www.cbsnews.com",
+      "topic": "Colombia"
+    }
+  ],
+  "Laura": [
+    {
+      "date": "2026-06-08",
+      "title": "Microsoft Svela Sette Nuovi Modelli AI con Focus sull'Intelligenza Superumana Umanista",
+      "url": "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/",
+      "topic": "AI generativa applicata al design e all'arte"
+    },
+    {
+      "date": "2026-06-08",
+      "title": "Studio Rivoluzionario su Science: Migliorare Biodiversità, Clima ed Economia con l'Uso del Suolo",
+      "url": "https://twin-cities.umn.edu/news-events/better-land-use-and-management-could-improve-biodiversity-climate-and-economic-development",
+      "topic": "Ambiente & sostenibilità"
+    }
+  ]
+}

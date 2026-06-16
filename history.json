@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-06-08",
-      "title": "Microsoft Lancia Sette Nuovi Modelli MAI a Build 2026, Riducendo la Dipendenza da Partner Esterni",
-      "url": "https://microsoft.ai",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-06-08",
-      "title": "Colombia al Voto: Ballottaggio Presidenziale tra Destra e Sinistra con Accuse di Interferenza USA",
-      "url": "https://www.cbsnews.com",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-06-10",
       "title": "Anthropic Lancia Claude Fable 5, il Suo Modello 'Mythos-class' Più Capace",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpMdDI76hoRmyOaV0CFO3BE2cdbS4IlTPHyki8RYSvI5z_gljJxIvlcstvG8-jUX8vmvuspJWH231ihmzqpkDliGtIIe_LoaYO2GEt6VbEWyocdEZynCbbrcHXeFx_r4CMFPz26mI2nYn0sqDUTb0jcpP-HQzJ_h-KsvbIKrQDd2KV3wasYNnW9XwpPyVeqKc=",
@@ -71,21 +59,21 @@
       "title": "Elma Correa Vince il Premio Biblioteca Breve 2026 con 'Donde Termina el Verano'",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHPTxutO5ZsvqtK3Ek8nuAMPtAWoRqAGwUtHAx7Yztt-6g-NFqzpYe3jkFfWd6bIslW60oEZ2mtfduifnBv46op3i7V1-HNPFfVZtFhAqGKBNn9CaFhlBxmAdeilM8O4M_VW5RjqltU6ej87eNgnuQ4k2akIHEMCZIgEs2L1J-NOoU4O2tebWU38nRNljN8vQobjt4fx6jmiDI4DC8DkqQrY6s1ifHBRQUMtE7yAVf4i9S62Qih3aExKFIN1c0mdr8JI3elO2Xl6fHr634h",
       "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-06-16",
+      "title": "Boy George Reclama 'Karma Chameleon' con l'AI, Lanciando una Nuova Era per i Diritti Musicali",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-GU4_w0LutfZiauY-j9QYkXKkTMV5wgtkw0Cp86qC3fgFCPpUhTMUq6xo7jW_yuJkXvWS6QSeWZt3U-6dkzuoy-dBRbLy71Hf0sNITByeKITcx5pHo01blLXogy6emTtJOw3Odc1HuCTy2k9ftceP-8WHHqw43IK7aEAJ7c0-UsgEwEZ3yTA7byQSRW4ncKHnbFBcD-CYKTl6Vi5PQORVUVWM0AWuAnJ8lggKDiCPDKuYaSovXsAnnxwKcoiqmhMEmgJBzTSejW683iI6NnE5Mv6sX_FyogQwyxBT9AdxxLLoQHA=",
+      "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-06-16",
+      "title": "GitHub Rilascia un Nuovo Dataset Multilingue per Accelerare lo Sviluppo AI",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEkBjkMCOC3iBNn9D4ZLDLDJxKjw20P5ca8kLS2jI5pG9UrlvQegAVGjYAOQt6sP_R-ITo-FfjZOrifl2WpSwhTJgcQfDF4-H_W1xcrnojv2Uzj_0xB7irqBSDm5E6qAD-nagFV__Sze4x15aS3pToppPkDaa6BDuEuJ6fYYrTUOXFreYoo08zo0XExoMxE_zILJhbZr2vLe1r-_ArodBCq_tJqZ5722zIY_h_zVeIJF5wQfquzHQ=",
+      "topic": "AI & developer tools"
     }
   ],
   "Laura": [
-    {
-      "date": "2026-06-08",
-      "title": "Microsoft Svela Sette Nuovi Modelli AI con Focus sull'Intelligenza Superumana Umanista",
-      "url": "https://microsoft.ai/news/building-a-hillclimbing-machine-launching-seven-new-mai-models/",
-      "topic": "AI generativa applicata al design e all'arte"
-    },
-    {
-      "date": "2026-06-08",
-      "title": "Studio Rivoluzionario su Science: Migliorare Biodiversità, Clima ed Economia con l'Uso del Suolo",
-      "url": "https://twin-cities.umn.edu/news-events/better-land-use-and-management-could-improve-biodiversity-climate-and-economic-development",
-      "topic": "Ambiente & sostenibilità"
-    },
     {
       "date": "2026-06-11",
       "title": "Figma Ridefinisce il Flusso di Lavoro del Design con l'AI: Arrivano AI Agent e Figma Make",
@@ -145,6 +133,18 @@
       "title": "Architetti globali discutono le città del futuro al BRICK AWARD 26 Symposium",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFpXSd9dMN3OymFz96h1CwozT8pRquKk1Fp5tn7Pc414pNzanLF9w10BzJe8JCaZysAmC2lVfKS9ZqrNFC-7zBU6K-ypo5wLjzOKQMAtqBKJilpAVTZuXJcmytfIet4PnQ2HezvlkDQyr8xXyyQvlhQSeW2NOGu3-vlzC_p16Tbb_h1CAjVwuguT9RoGkrMUWQD7ttJcdqQbZzWHn78e8wgtYt9NrVKTmvc2T-gdKiFJisCh7sbLZ0rf3AsOeMXo4uvf_Iwkg53XznvSsQ7bbd5QTUd570TZKS5UvXAOif985yS2fPoD1ogAhJ708-Ck6E",
       "topic": "Ambiente & sostenibilità"
+    },
+    {
+      "date": "2026-06-16",
+      "title": "L'Intelligenza Artificiale e la Digitalizzazione Trasformano la Lotta all'Estinzione Globale",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLvPpsTMHmVv5pd3QWKkseru0aTnzRCHCy7MfZg8ElYRhe4eS3V62e3KrkwZiqtJGvd3T3jgKckSIBn9najpOePf_fhuIULgoUVBCN4OBB40Xb8G4S7SmkiPHnUDcdkNDOsIYkDUaY1CUl-w==",
+      "topic": "Ambiente & Sostenibilità / AI generativa applicata al design e all'arte"
+    },
+    {
+      "date": "2026-06-16",
+      "title": "Stati Uniti e Iran Annunciano un Accordo Quadro per il Cessate il Fuoco e la Riapertura dello Stretto di Hormuz",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_ve7-JeGYE6jL5_GCdxOTumNJ0aEI-ggguYywrI0PO8UalAm5dDsHVRbcdzgX6VN8QkqYQbqwDtEF0rHSLkvP5n2_bMHKKQFMLGxewFTm28nzaapy0hZ2GwC4CCq920aeKGeGRpckslmeCVDQSQuUknmbn5uqDipp2s2MsUR7BAR-aqTHneFOI8J1z70Vw1U==",
+      "topic": "Attualità generale"
     }
   ]
 }

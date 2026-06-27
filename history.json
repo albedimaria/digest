@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-06-19",
-      "title": "Nuova Indagine Penale per l'Ex Presidente Colombiano Álvaro Uribe per Presunti Legami Paramilitari",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvnhp0_EgHoDs9AZrfG2aPAbwebzddpdKuwWWmAWZ4JrTatQNyJ48Wv3os3aIhSVrZB0DBFwYnJVl_PqY0RszXXXT7h0PJHe7RVi8GdJqjdZOPhqvMScvxYcobsNp5FWSSh3APO2fagRKKcuQXSaxBgnlX_68cqaOmWsqwU3g_yt8U9srCUk83IxzV8GaavvkcAxOZ1EmQqnqw3URgoxJM41st7Clc-m1pWdWY1vh8WxxjjkXLLZnAhQ==",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-06-19",
-      "title": "La Startup Tringbox Raccoglie 5 Crore di Rupie in Finanziamenti Seed per la Piattaforma Musicale AI",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMH_IPTWq7O1lfbiG5M5KzCIFaQ5PQeeKlMjoPQFoUgmiSDmc2pPUAPczCmpJzrG-4gvzQbHq5dfJBMEwnFinBYlhKoh8hqlx0RkjBMXq_Kd0Rk3T1XdZqwE11fTI1TPknyO6SEx7Ka73bAbLIzWTuRcN_XnFlRUilOEP9do2cx_0bdgUPWkOWPTJC-mx7bHew_Ya40HupQHH2TAYT55AIHqqRJg==",
-      "topic": "Audio AI & Music Tech"
-    },
-    {
       "date": "2026-06-20",
       "title": "Un Sistema AI Risolve un Problema Aperto in Algebra con Verifica Formale",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-WTQzrFkH-CVWtO08n7qiqt6RN2AjAmKV2G_EsW-IUYStei7GsW2k3HKFfL9CU5G95V34J-GAwsKcCXQGN1gaeo_qjKp3sZ5sk1kdnTNeSzHo8KbHnBbSl1fa8_mjFJ7dgLDu8evT1G7I638rmOOsdhOMXJnueohQ",
@@ -95,21 +83,21 @@
       "title": "Aumento del 3,5% delle Coltivazioni Illecite di Coca in Colombia, Raggiungendo 261.000 Ettari",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuOCv5IoQNqY21w9JqcueslP8Xcb_QD_k3IiV4DyU4uAPzL7Bl4ul27sA9L-0S_djIvwzYx1BQNj3ZE-jQ78XrBPT-uaIZz4LMyDmGCvIrSnGFdBCTQNLwvP6o2IzE8kL6CghvYFR9oX5MpGWC4B5weMBXm5XnJ9nK5drdEmZ86xyQZjGgTwh0lAwuPO5MwfVeI4Y6F7oTJ93RmzRg1T4qhXb-n_E=",
       "topic": "Colombia: economia, ambiente"
+    },
+    {
+      "date": "2026-06-27",
+      "title": "Il Governo USA Consente il Rilascio Limitato del Modello AI Mythos di Anthropic",
+      "url": "https://localnews8.com/news/cnn-newsource/2026/06/26/us-government-allows-anthropic-limited-release-of-ai-model-that-sparked-cybersecurity-concerns/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-06-27",
+      "title": "De la Espriella Dà un Mese ai Gruppi Armati Illegali per Arrendersi in Colombia",
+      "url": "https://www.bogotacitypaper.com/colombia/de-la-espriella-gives-colombias-armed-groups-one-month-to-surrender/",
+      "topic": "Colombia: attualità, politica"
     }
   ],
   "Laura": [
-    {
-      "date": "2026-06-19",
-      "title": "L'IA si Integra Profondamente negli Strumenti di Design: Figma e Adobe Premiere Pro in Testa",
-      "url": "https://www.hp.com/us-en/shop/tech-takes/best-ai-creativity-tools",
-      "topic": "AI generativa applicata al design e all'arte / UX/UI design"
-    },
-    {
-      "date": "2026-06-19",
-      "title": "Nguyen Gobber Trasforma la Musica Live in Arte Visiva con Nuove Serie di Poster e un Carattere Tipografico Innovativo",
-      "url": "https://www.itsnicethat.com/articles/nguyen-gobber-salon-skug-poster-series-graphic-design-180626",
-      "topic": "Illustrazione editoriale & poster"
-    },
     {
       "date": "2026-06-20",
       "title": "Accordo USA-Iran Firmato a Versailles, Ma la Minaccia di Pedaggio su Hormuz Inasprisce le Tensioni",
@@ -193,6 +181,18 @@
       "title": "La Conferenza \"Our Ocean\" Raccoglie 6.4 Miliardi di Dollari per la Conservazione Marina",
       "url": "https://news.mongabay.com/2026/06/our-ocean-conference-in-kenya-ends-with-6-4-billion-in-pledges-review-of-past-promises/",
       "topic": "Ambiente & sostenibilità"
+    },
+    {
+      "date": "2026-06-27",
+      "title": "L'ONU Lancia il Premio 'AI for Climate Action Award 2026' per Soluzioni Climatiche Innovative",
+      "url": "https://unfccc.int/news/technology-mechanism-showcases-partnerships-to-deliver-climate-action-at-scale",
+      "topic": "AI generativa applicata al design e all'arte / Ambiente & sostenibilità"
+    },
+    {
+      "date": "2026-06-27",
+      "title": "La Tensione Geopolitica Supera la Politica Commerciale come Principale Preoccupazione per i Mercati Globali, Secondo l'UNCTAD",
+      "url": "https://www.ipsnews.net/2026/06/unctad-shift-risk-geopolitical-tension-weighs-global-markets-heavier-trade-policy/",
+      "topic": "Attualità generale"
     }
   ]
 }

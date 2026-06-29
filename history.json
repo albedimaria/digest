@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-06-21",
-      "title": "La Colombia al Bivio: Elezioni Presidenziali Decisive con Abelardo de la Espriella e Iván Cepeda",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFY_rniCz0WNiGR5EvsoCkQoSJ5M72RDLWH0io3EdiP9hCmg2I-24vkF8TqX99baxjaFo0gkO6Kj2Uw8WgP7VZ0Pz7QAjO_3ElyG59tl3w8SnnPfGpfE6xbr9fOxWDDCOB0NojAHvMgOV0RD7TtReNtbagV4P5g0Rdyvbyf61cE9-XOkKRetMaFrjWeAWvbBUzAdw==",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-06-21",
-      "title": "Crisi di Dipendenza AI: Gli Stati Uniti Bloccano l'Accesso Estero ai Modelli Anthropic, Scuotendo l'Europa",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9mod4wJnosYsW4GOroO2kfqmEu4avCHFDKrIVVc_hPv0meH40btm-3VzHBcYeoCLkCfsYhsALmk9gMy7eOCYBAzR6AbWlQ6PXwgXwxcfOUBd6xM1SddSqYAsiscB-SyEf1tCQl_8Q6HiA-M_HFZHQPahq2Vi0NKc9vAMJB4zutUjG8ZHi0nc_7xTfz3rphw6OyJF_7n7wUgpeojbh8wSO1WPbHJY=",
-      "topic": "AI & developer tools"
-    },
-    {
       "date": "2026-06-22",
       "title": "Anthropic Sotto Pressione: Fable 5 Offline e Accuse di 'Sconsideratezza'",
       "url": "https://aitoolsrecap.com/ai-news-june-2026",
@@ -95,21 +83,21 @@
       "title": "La Colombia Avanza agli Ottavi di Finale della Coppa del Mondo FIFA 2026",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-r-RQki1eufIDWaz60TD07ZqKzFCoXJF31X-HyFB1UgFSXgLEVURqJZLoi_7qBA_iWeSQQ7EGL7xOWmA9W4fV4xI4nxvkIVT6fliHus-HhoVR5XlLerwvxygSNBQrraceYZ0kfoHUeeiL6L7Cdj6pE3UMPbCGsh43cJ4xcabyJcJrQDZ8YAfRbJiKcWaaDFAUms4K2rKZBXreoWoAFSLj5Fqz-oLDmziI4DdLtN1vqlDuqn0E4SsClLPQYAOVShj-toEqTkojPHCpKfZxM-",
       "topic": "Colombia: attualità, cultura"
+    },
+    {
+      "date": "2026-06-29",
+      "title": "OpenAI Svela GPT-5.6 e il Chip AI Personalizzato \"Jalapeño\", Diventando un Colosso Full-Stack",
+      "url": "https://mlq.ai",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-06-29",
+      "title": "La Colombia Conquista il Primo Posto nel Gruppo K della Coppa del Mondo FIFA 2026 con un Pareggio Contro il Portogallo",
+      "url": "https://www.washingtonpost.com",
+      "topic": "Colombia"
     }
   ],
   "Laura": [
-    {
-      "date": "2026-06-21",
-      "title": "Google inaugura Dataland, il primo museo d'arte AI al mondo a Los Angeles",
-      "url": "https://www.neowin.net/",
-      "topic": "Arte contemporanea & gallerie / AI generativa applicata al design e all'arte"
-    },
-    {
-      "date": "2026-06-21",
-      "title": "Figma potenzia la collaborazione e la prototipazione con nuove funzionalità AI",
-      "url": "https://www.figma.com/blog/",
-      "topic": "UX/UI design / AI generativa applicata al design e all'arte"
-    },
     {
       "date": "2026-06-22",
       "title": "Il Cinema Ritrovato di Bologna celebra 40 anni di storia con oltre 500 film",
@@ -193,6 +181,18 @@
       "title": "Annecy International Animation Film Festival Annuncia i Vincitori del 2026",
       "url": "https://www.screendaily.com/news/annecy-film-festival-unveils-2026-winners/5212507.article",
       "topic": "Cinema & Serie"
+    },
+    {
+      "date": "2026-06-29",
+      "title": "Escalation nello Stretto di Hormuz: Cessate il Fuoco USA-Iran a Rischio Collasso",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEWWJMAKbz_s5j-5rlizugICg4ekEMVbLgsQchZRze-MaI3UDMrxs2C4_FY-HMYTJ4sxuqiHEPlRiN4xlCodak_jpVkLSPEge1FzIb-Jcgrziuv_leLwcnhCXGZnyqZrL2vihJvJc8ajJQRrfFRcMcGPznF0ZhUgJ7SS0KHok7Z8RZhzQ==",
+      "topic": "Attualità generale (Geopolitica)"
+    },
+    {
+      "date": "2026-06-29",
+      "title": "Karlovy Vary Svela il Programma Completo con il Vincitore della Palma d'Oro di Cannes 2026",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAi2VL75hdM0wyqQ2z-ndBBwte5ETBQWtWhr5K2GnB7f2EVLsYb4uD-10Nj6wSSehnFZzE5lv4r_gTtvGp5tnS9_yXXGMYLxYN_Cd_x4sl2g5SLQUw04Jpe5LPks20eHSfsPfEhdeEAKqk-GexGfiPUvX5ML_Bdny47wWbjKDH1DJrOmll21gQkASNtbnOrQU0stgwbtsfncXcvuyIOQU6eKOzxZQaopMjFefsn21Uylr5w_ITBOlcU5GEr42fpKJhvokZgSKNCJ6vBEZcXeaZsf7MC3aZ",
+      "topic": "Cinema & serie"
     }
   ]
 }

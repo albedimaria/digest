@@ -57,13 +57,14 @@ def profile_settings(profile: dict) -> tuple[int, str, str]:
     """Ritorna (num_stories, depth, mode) con default e clamp.
     NB: 'depth' è solo predisposto, non ancora cablato nel prompt (feature futura)."""
     mode = profile.get("mode") or "full"
-    if mode not in ("full", "links"):
+    if mode not in ("full", "links", "recap"):
         mode = "full"
+    cap = {"links": 5, "recap": 4, "full": 2}[mode]
     try:
         num = int(profile.get("num_stories") or (5 if mode == "links" else 2))
     except (TypeError, ValueError):
         num = 5 if mode == "links" else 2
-    num   = max(1, min(num, 5 if mode == "links" else 2))
+    num   = max(1, min(num, cap))
     depth = profile.get("depth") or "standard"
     return num, depth, mode
 
@@ -84,21 +85,29 @@ def build_prompt(profile: dict, today: str, recent: list | None = None,
                  recent_topics: list | None = None) -> str:
     template = profile.get("prompt_template", PROMPT_TEMPLATE)
     prompt = template.format(interests=profile["interests"], today=today)
+    num, depth, mode = profile_settings(profile)
+
     if recent:
         avoid = "\n".join(f"- {t}" for t in recent)
         prompt += (
-            "\n\nIMPORTANTE — queste storie sono già state inviate nei giorni scorsi. "
-            "NON riproporle e non scegliere notizie sostanzialmente equivalenti:\n" + avoid
+            "\n\nIMPORTANTE — questi contenuti sono già stati inviati di recente. "
+            "NON riproporli e non scegliere notizie sostanzialmente equivalenti:\n" + avoid
         )
-    if recent_topics:
+    # la varietà dei temi non si applica alla modalità recap (mono-tema voluto)
+    if recent_topics and mode != "recap":
         temi = ", ".join(recent_topics)
         prompt += (
             "\n\nVARIETÀ — nei giorni scorsi hai già trattato spesso questi temi: " + temi + ". "
             "Per le storie dopo la prima, privilegia temi DIVERSI da questi e diversi tra loro."
         )
 
-    num, depth, mode = profile_settings(profile)
-    if mode == "links":
+    if mode == "recap":
+        prompt += (
+            "\n\nRIASSUNTO SETTIMANALE (prioritario): copri gli ULTIMI 7 GIORNI, non le ultime ore. "
+            f"Produci esattamente {num} sezioni di sintesi, ognuna che riassume PIÙ eventi della "
+            "settimana (non una singola notizia)."
+        )
+    elif mode == "links":
         prompt += (
             "\n\nMODALITÀ SOLO LINK (PRIORITARIA, sovrascrive quanto detto sopra sulle storie): "
             "NON scrivere testi di analisi. Lascia \"stories\" vuoto ([]). "
@@ -287,7 +296,7 @@ def render_also_noting(items: list, heading: str = "NB — anche oggi") -> str:
     )
 
 def build_html(stories: list, also_noting: list, today: str, provider: str,
-               name: str = "", links_mode: bool = False) -> str:
+               name: str = "", links_mode: bool = False, recap_mode: bool = False) -> str:
     # togli dalle menzioni rapide gli URL e i titoli già usati nelle storie principali
     used_urls   = {(s.get("url") or "").strip() for s in stories}
     used_titles = {(s.get("title") or "").strip().lower() for s in stories}
@@ -297,13 +306,17 @@ def build_html(stories: list, also_noting: list, today: str, provider: str,
         and (it.get("title") or "").strip().lower() not in used_titles
     ]
     stories_html     = "".join(render_story(s, i) for i, s in enumerate(stories))
-    heading          = "Spunti di oggi" if links_mode else "NB — anche oggi"
+    heading          = "Approfondimenti" if recap_mode else ("Spunti di oggi" if links_mode else "NB — anche oggi")
     also_noting_html = render_also_noting(also_noting, heading)
-    if links_mode:
-        count_label = f"{len(also_noting)} spunt{'o' if len(also_noting)==1 else 'i'} oggi"
+    if recap_mode:
+        count_label  = "riassunto settimanale"
+        header_title = ("weekly recap of " + html_lib.escape(name)) if name else "weekly recap"
     else:
-        count_label = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
-    header_title     = "daily news of " + html_lib.escape(name) if name else "daily news"
+        if links_mode:
+            count_label = f"{len(also_noting)} spunt{'o' if len(also_noting)==1 else 'i'} oggi"
+        else:
+            count_label = f"{len(stories)} stori{'a' if len(stories)==1 else 'e'} oggi"
+        header_title = ("daily news of " + html_lib.escape(name)) if name else "daily news"
     return (
         '<!DOCTYPE html>\n<html><head><meta charset="UTF-8"></head>\n'
         '<body style="margin:0;padding:0;background:#f3f4f6;'
@@ -388,9 +401,12 @@ def main():
                     print(f"  ✗ Nessuna storia trovata per {name}, skip.")
                     failed = True
                     continue
-                print(f"  → {len(stories)} stories, {len(also_noting)} also-noting via {provider}")
-                html = build_html(stories, also_noting, today, provider, name)
-                send_email(profile["recipient"], html, build_subject(stories))
+                recap = (mode == "recap")
+                label = "sezioni" if recap else "stories"
+                print(f"  → {len(stories)} {label}, {len(also_noting)} also-noting via {provider}")
+                html = build_html(stories, also_noting, today, provider, name, recap_mode=recap)
+                subject = (f"🗞️ Riassunto settimanale — {today}" if recap else build_subject(stories))
+                send_email(profile["recipient"], html, subject)
                 store.record_sent(profile, stories)
         except Exception as e:
             print(f"  ✗ Errore per {name}: {e}")

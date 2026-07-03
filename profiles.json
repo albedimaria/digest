@@ -17,13 +17,14 @@
     "name": "Laura",
     "recipient": "zanch.laura@gmail.com",
     "active": true,
-    "interests": "\n- Arte contemporanea & gallerie: mostre, artisti emergenti, mercato dell'arte\n- Illustrazione editoriale & poster: illustratori da seguire, nuove pubblicazioni, campagne visive\n- Fotografia: fotografi, tendenze, progetti documentari, fotogiornalismo\n- UX/UI design: tool e novità (Figma, Framer...), design system, accessibilità, trend visivi & tipografia\n- AI generativa applicata al design e all'arte: nuovi modelli, tool creativi, impatto sul mondo visivo\n- Cinema & serie — con focus su backstage e processo creativo, non recensioni:\n  film d'autore, festival (Cannes, Venezia, Berlino e indipendenti), curiosità di produzione\n- Ambiente & sostenibilità: cambiamento climatico, biodiversità, design etico e sostenibile\n- Attualità generale (geopolitica, società) — solo se c'è qualcosa di davvero importante\n",
+    "interests": "\n- Politica italiana: governo, parlamento, partiti, misure economiche, elezioni, scandali\n- Politica estera e internazionale: conflitti, elezioni, vertici, UE, USA, geopolitica, diplomazia\n- Economia e società quando si intreccia con la politica\n",
     "satisfaction": null,
     "feedback_log": [],
-    "frequency": "daily",
+    "frequency": "weekly",
     "weekly_day": 0,
     "num_stories": 2,
     "depth": "standard",
-    "mode": "full"
+    "mode": "recap",
+    "prompt_template": "Sei un editor che prepara un RIASSUNTO SETTIMANALE da leggere il lunedì mattina.\n\nFocus del lettore:\n{interests}\n\nOggi è {today}. Copri gli eventi degli ULTIMI 7 GIORNI (lunedì scorso → oggi), NON solo le ultime ore.\n\nIl tuo compito:\n1. Cerca sul web i principali eventi della settimana di politica italiana ed estera. Fonti: ANSA, Il Post, Corriere, Repubblica, Reuters, AP, Politico, The Guardian, Financial Times. Ricerca anche in inglese, ma scrivi in italiano.\n2. Produci esattamente 2 sezioni di sintesi:\n   - topic \"Politica italiana\": cosa è successo in settimana (governo, parlamento, partiti, misure, scandali).\n   - topic \"Politica estera\": conflitti, elezioni, vertici, decisioni UE/USA, geopolitica.\n   Ogni sezione: 6-10 frasi che RIASSUMONO e collegano i PRINCIPALI eventi della settimana (non una singola notizia), con contesto e perché contano. Testo fluente e giornalistico, no elenchi.\n3. Solo fatti verificabili: nomi, date, numeri, luoghi.\n4. Aggiungi 3 menzioni rapide (also_noting): titolo breve + URL ad approfondimenti reali della settimana.\n\nREGOLA URL: usa SOLO URL trovati davvero durante la ricerca. Mai inventare. Se manca l URL preciso, usa l homepage della testata (es. \"https://www.ansa.it\").\n\nRispondi SOLO con JSON valido, zero testo fuori dal JSON, zero markdown:\n{{\n  \"stories\": [\n    {{\n      \"topic\": \"Politica italiana\",\n      \"title\": \"Titolo di sintesi della settimana\",\n      \"body\": \"Riassunto 6-10 frasi...\",\n      \"source\": \"Nome fonte\",\n      \"url\": \"https://...\"\n    }}\n  ],\n  \"also_noting\": [\n    {{\n      \"topic\": \"Politica\",\n      \"title\": \"Titolo breve\",\n      \"url\": \"https://...\"\n    }}\n  ]\n}}"
   }
 ]

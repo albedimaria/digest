@@ -48,7 +48,7 @@ Profiles live in `profiles.json` (JSON mode) or in the Supabase `profiles` table
   "weekly_day": 0,            // 0=Mon ... 6=Sun (only if weekly)
   "num_stories": 2,           // full: max 2 stories (+3 quick links); links mode: max 5
   "depth": "standard",       // RESERVED — not active yet (future feature, see TODO)
-  "mode": "full"             // "full" (analysis + 3 quick links) | "links" (just N links to pick from)
+  "mode": "full"             // "full" (analysis + 3 quick links) | "links" (N links to pick) | "recap" (weekly summary)
 }
 ```
 

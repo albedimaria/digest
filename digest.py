@@ -236,6 +236,36 @@ def safe_url(url: str) -> str:
         return "#"
     return html_lib.escape(url.strip(), quote=True)
 
+
+GROUNDING_HOST = "vertexaisearch.cloud.google.com"
+
+def resolve_url(url: str) -> str:
+    """Segue i redirect di grounding di Gemini fino all'URL reale. Non-grounding intatti."""
+    from urllib.parse import urlparse
+    import urllib.request
+    url = (url or "").strip()
+    try:
+        host = urlparse(url).hostname or ""
+    except ValueError:
+        return url
+    if GROUNDING_HOST not in host:
+        return url
+    for method in ("HEAD", "GET"):
+        try:
+            req = urllib.request.Request(url, method=method, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=8) as r:
+                if r.url and GROUNDING_HOST not in r.url:
+                    return r.url
+        except Exception:
+            continue
+    return url
+
+def resolve_links(items: list) -> None:
+    """Risolve in-place gli URL di grounding in una lista di dict stile story/also_noting."""
+    for it in items:
+        if it.get("url"):
+            it["url"] = resolve_url(it["url"])
+
 def render_story(story: dict, index: int) -> str:
     color  = topic_color(story.get("topic", ""))
     num    = ["①", "②", "③"][index] if index < 3 else f"{index+1}."
@@ -382,6 +412,8 @@ def main():
             if recent:
                 print(f"  ({len(recent)} storie recenti da evitare; temi: {', '.join(topics) or '—'})")
             stories, also_noting, provider = fetch_digest(profile, today, recent, topics)
+            resolve_links(stories)
+            resolve_links(also_noting)
 
             if mode == "links":
                 also_noting = also_noting[:num]

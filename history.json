@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-06-26",
-      "title": "Qualcomm Acquisisce Modular per Quasi 4 Miliardi di Dollari, Rafforzando la Sua Presenza nell'AI",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAUROMysWikxvWMb-rcc_skKYEOyGnhqlYOahvoCpmUqCFQCPb_fmL2Hdw5L7ZgmIi5efzs-7RMAUExGOh_KmOKoMfUfAbuqyMKNQa8bIGVOQNt7y7-kX8J85dKJPwC4tDmDIWHv0=",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-06-26",
-      "title": "Aumento del 3,5% delle Coltivazioni Illecite di Coca in Colombia, Raggiungendo 261.000 Ettari",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuOCv5IoQNqY21w9JqcueslP8Xcb_QD_k3IiV4DyU4uAPzL7Bl4ul27sA9L-0S_djIvwzYx1BQNj3ZE-jQ78XrBPT-uaIZz4LMyDmGCvIrSnGFdBCTQNLwvP6o2IzE8kL6CghvYFR9oX5MpGWC4B5weMBXm5XnJ9nK5drdEmZ86xyQZjGgTwh0lAwuPO5MwfVeI4Y6F7oTJ93RmzRg1T4qhXb-n_E=",
-      "topic": "Colombia: economia, ambiente"
-    },
-    {
       "date": "2026-06-27",
       "title": "Il Governo USA Consente il Rilascio Limitato del Modello AI Mythos di Anthropic",
       "url": "https://localnews8.com/news/cnn-newsource/2026/06/26/us-government-allows-anthropic-limited-release-of-ai-model-that-sparked-cybersecurity-concerns/",
@@ -95,6 +83,18 @@
       "title": "WME Firma il Cantautore Colombiano Fonseca per la Rappresentanza Mondiale",
       "url": "https://www.pollstar.com/article/wme-signs-colombian-singer-songwriter-fonseca-150000",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-07-04",
+      "title": "Anthropic Lancia 'Claude Science' per la Ricerca Scientifica",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbpVXPHJm2Qt01WfYWvGCfysBycLS7DvQ03i-n8adKtZ7nd4FFUfmnvAHNWbbDKSwz-D1v0vLWHo9ghVRkQvSCHpmQ_HNw9CcfZQJULxlMQKp77a37lc_k2v3h7NoJnJCcg9Hq8FfH4Rnmv0IrMTF5vTzobq7IJSB7jLLWKZQ=",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-04",
+      "title": "L'Instituto Cervantes di New York Ospita la Settimana Mondiale della Letteratura in Spagnolo 'Benengeli 2026'",
+      "url": "https://cultura.cervantes.es/nuevayork/en-US/benengeli-2026.-la-semana-de-las-letras-en-espa%C3%B1ol/189342",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-06-28",
-      "title": "OpenAI Presenta GPT-5.6 Sol con Rilascio Limitato a Causa di Revisione di Sicurezza Governativa",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV6jZJ1BK55IIyIOBQEKzqnt9ohD4UWaUHJVUa_sMX9ycQMZ0jBWnIetQosRbe5XaxD_FsifhJlUdkMns1wOaIIPQnEL4Ex_oJv0kGu64mHhVpLnghdqL_snUpQlHG9_gzgpl1Utwc-tQgP8c2V0VbiI3Lp68tXtk-3wCYrIxBt3sTs97V_0ge2j4VWVhqyFK2HCJXfswZYnQgRL7Q9DEAMPxC9qycsqlbPF8YpE6UDArrFlfZLe9ENxbZTPdaWlPoTPMNDEcQUMhcsPtI_2Y3gnsnWUw1h1QGTIYVY0YesQTTVKuxzuiPaWwPLarZDlw",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-06-28",
-      "title": "La Colombia Avanza agli Ottavi di Finale della Coppa del Mondo FIFA 2026",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-r-RQki1eufIDWaz60TD07ZqKzFCoXJF31X-HyFB1UgFSXgLEVURqJZLoi_7qBA_iWeSQQ7EGL7xOWmA9W4fV4xI4nxvkIVT6fliHus-HhoVR5XlLerwvxygSNBQrraceYZ0kfoHUeeiL6L7Cdj6pE3UMPbCGsh43cJ4xcabyJcJrQDZ8YAfRbJiKcWaaDFAUms4K2rKZBXreoWoAFSLj5Fqz-oLDmziI4DdLtN1vqlDuqn0E4SsClLPQYAOVShj-toEqTkojPHCpKfZxM-",
-      "topic": "Colombia: attualità, cultura"
-    },
-    {
       "date": "2026-06-29",
       "title": "OpenAI Svela GPT-5.6 e il Chip AI Personalizzato \"Jalapeño\", Diventando un Colosso Full-Stack",
       "url": "https://mlq.ai",
@@ -95,45 +83,21 @@
       "title": "AIsa Raccoglie 6,5 Milioni di Dollari per Facilitare i Pagamenti degli 'Impiegati AI'",
       "url": "https://www.forbes.com/sites/elainepofeldt/2026/07/03/startup-raises-65-million-by-making-it-easier-for-ai-employees-to-make-payments-online/",
       "topic": "Startup audio/AI lanciate da piccoli team o solo dev"
+    },
+    {
+      "date": "2026-07-06",
+      "title": "Tesla Limita la Spesa per i Token AI a 200 Dollari Settimanali per i Dipendenti",
+      "url": "https://unrot.co/ai-news/top-10-ai-news-july-4-2026-daily-roundup/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-06",
+      "title": "Scoperto il Circuito Cerebrale che Collega Sonno Profondo e Ormone della Crescita",
+      "url": "https://www.sciencedaily.com/news/health_medicine/",
+      "topic": "Crescita personale"
     }
   ],
   "Laura": [
-    {
-      "date": "2026-06-26",
-      "title": "Figma Rivoluziona il Workflow con 'Code Layers' e 'Figma Motion' a Config 2026",
-      "url": "https://www.figma.com/blog/config-2026-recap/",
-      "topic": "UX/UI design & AI generativa applicata al design e all'arte"
-    },
-    {
-      "date": "2026-06-26",
-      "title": "La Conferenza \"Our Ocean\" Raccoglie 6.4 Miliardi di Dollari per la Conservazione Marina",
-      "url": "https://news.mongabay.com/2026/06/our-ocean-conference-in-kenya-ends-with-6-4-billion-in-pledges-review-of-past-promises/",
-      "topic": "Ambiente & sostenibilità"
-    },
-    {
-      "date": "2026-06-27",
-      "title": "L'ONU Lancia il Premio 'AI for Climate Action Award 2026' per Soluzioni Climatiche Innovative",
-      "url": "https://unfccc.int/news/technology-mechanism-showcases-partnerships-to-deliver-climate-action-at-scale",
-      "topic": "AI generativa applicata al design e all'arte / Ambiente & sostenibilità"
-    },
-    {
-      "date": "2026-06-27",
-      "title": "La Tensione Geopolitica Supera la Politica Commerciale come Principale Preoccupazione per i Mercati Globali, Secondo l'UNCTAD",
-      "url": "https://www.ipsnews.net/2026/06/unctad-shift-risk-geopolitical-tension-weighs-global-markets-heavier-trade-policy/",
-      "topic": "Attualità generale"
-    },
-    {
-      "date": "2026-06-28",
-      "title": "Framer 3.0 Ridisegna il Workflow con Agenti AI e Funzionalità di Branching",
-      "url": "https://www.framer.com/3/",
-      "topic": "UX/UI Design & AI Generativa"
-    },
-    {
-      "date": "2026-06-28",
-      "title": "Annecy International Animation Film Festival Annuncia i Vincitori del 2026",
-      "url": "https://www.screendaily.com/news/annecy-film-festival-unveils-2026-winners/5212507.article",
-      "topic": "Cinema & Serie"
-    },
     {
       "date": "2026-06-29",
       "title": "Escalation nello Stretto di Hormuz: Cessate il Fuoco USA-Iran a Rischio Collasso",
@@ -193,6 +157,18 @@
       "title": "La Mostra del Cinema di Venezia 2026 Annuncia le Date e la Presidente di Giuria",
       "url": "https://www.labiennale.org/en/cinema",
       "topic": "Cinema & serie"
+    },
+    {
+      "date": "2026-07-06",
+      "title": "Dibattito su immigrazione e difesa al centro della politica italiana",
+      "url": "https://brusselssignal.eu/2026/07/italian-parliament-to-consider-remigration-bill-after-activists-submit-150000-signatures/",
+      "topic": "Politica italiana"
+    },
+    {
+      "date": "2026-07-06",
+      "title": "Tensioni USA-Iran, vertice NATO e decisioni UE dominano la scena internazionale",
+      "url": "https://www.ilpost.it/2026/06/29/stati-uniti-accordo-iran-cessare-attacchi-reciproci/",
+      "topic": "Politica estera"
     }
   ]
 }

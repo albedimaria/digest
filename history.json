@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-06-29",
-      "title": "OpenAI Svela GPT-5.6 e il Chip AI Personalizzato \"Jalapeño\", Diventando un Colosso Full-Stack",
-      "url": "https://mlq.ai",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-06-29",
-      "title": "La Colombia Conquista il Primo Posto nel Gruppo K della Coppa del Mondo FIFA 2026 con un Pareggio Contro il Portogallo",
-      "url": "https://www.washingtonpost.com",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-06-30",
       "title": "I Modelli AI di Frontiera Sotto Stretto Controllo Governativo: OpenAI e Anthropic Limitano l'Accesso",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFTKCWQ_0CcjEUWeeQc2ODCHSva3gnzsE_RvAYpEue6IRk9EGqMXs2-5BJ7DigSkUuE6FJCv3gCVOykq1jXLIz4v_17y04qaToC_eu-iMr83nkPzw-xb-tLKHQULipR2pwIIAWgoRDkLaEUxwaUkGlLTYZUtcaThzcTxOl-AMmE51LXnUFIV3bm",
@@ -94,6 +82,18 @@
       "date": "2026-07-06",
       "title": "Scoperto il Circuito Cerebrale che Collega Sonno Profondo e Ormone della Crescita",
       "url": "https://www.sciencedaily.com/news/health_medicine/",
+      "topic": "Crescita personale"
+    },
+    {
+      "date": "2026-07-07",
+      "title": "NVIDIA e Hugging Face Uniscono le Forze per l'Open Robotics con LeRobot",
+      "url": "https://blogs.nvidia.com/blog/2026/07/06/lerobot-open-robotics-community/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-07",
+      "title": "Lanciata la Piattaforma 'Mind Nourishment for the Soul' per il Benessere Emotivo Quotidiano",
+      "url": "https://markets.businessinsider.com/news/stocks/mind-nourishment-for-the-soul-launches-with-new-book-and-app-to-support-everyday-emotional-wellness-10352528",
       "topic": "Crescita personale"
     }
   ],

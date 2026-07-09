@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-01",
-      "title": "Crisi Politica in Colombia: Cepeda Chiede a De la Espriella di Rinunciare alla Cittadinanza USA",
-      "url": "https://www.washingtonpost.com/world/2026/07/01/colombia-election-de-la-espriella-cepeda-us-citizenship/",
-      "topic": "Colombia: attualità, politica"
-    },
-    {
-      "date": "2026-07-01",
-      "title": "DeepSeek Lancia Nuovi Modelli AI Open-Source con Finestra di Contesto da 1 Milione di Token",
-      "url": "https://evertune.com/ai-model-release-tracker/",
-      "topic": "AI & developer tools"
-    },
-    {
       "date": "2026-07-02",
       "title": "Anthropic Lancia Claude Sonnet 5: Performance da Top Model a Prezzo Accessibile",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAubAJQWrYUrFoxalJMz2M7kUATj2FBO8VR8ITdltffsBwQPKzRMGZyglsAYfrM6LD2iTurR1B_kPVI9j790KVVPoJAmWjLnbIYyYORU8pNJsv7U0_vGZMMtc4CWfHgK6XeKxCYpGcYHcfOzv7WArvPsPRYJjLSZG1eQ==",
@@ -95,6 +83,18 @@
       "title": "Il Cambio di Governo in Colombia Rimodella la Politica sui Combustibili Fossili",
       "url": "https://www.carbonbrief.org/what-change-of-power-in-colombia-could-mean-for-worlds-fossil-fuel-transition",
       "topic": "Colombia: attualità, politica, ambiente"
+    },
+    {
+      "date": "2026-07-09",
+      "title": "SpaceXAI Lancia Grok 4.5, un Nuovo Modello AI Potenziato per Codifica e Lavoro Agente",
+      "url": "https://digitalapplied.com/grok-4-5-ships-spacexais-coding-and-office-agent/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-09",
+      "title": "Crisi Politica in Colombia: Presidente Eletto Sospende la Transizione e Accusa Petro di Tentato Colpo di Stato",
+      "url": "https://www.wlrn.org/news/2026-07-08/colombias-president-elect-suspends-transition-after-petro-alleges-fraud",
+      "topic": "Colombia: attualità, politica"
     }
   ],
   "Laura": [

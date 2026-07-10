@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-02",
-      "title": "Anthropic Lancia Claude Sonnet 5: Performance da Top Model a Prezzo Accessibile",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFAubAJQWrYUrFoxalJMz2M7kUATj2FBO8VR8ITdltffsBwQPKzRMGZyglsAYfrM6LD2iTurR1B_kPVI9j790KVVPoJAmWjLnbIYyYORU8pNJsv7U0_vGZMMtc4CWfHgK6XeKxCYpGcYHcfOzv7WArvPsPRYJjLSZG1eQ==",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-02",
-      "title": "Antioquia Avvicina l'Apertura del Tunnel del Toyo, il Più Lungo dell'America Latina",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlsuRy0MwgLHZ1t3qUITxu0RJEkBgsrA1HLKS6qylu6dWGhTWe3DtvtxeLMzPlajk1yEqobl2wYMzSZNQD_MFApvNUGfn29PJjZF0K88qczcjjlH_fnDBeO3hiw0HJslVgJ9bRptaRHooVU8IfaD3lieHhPlj_kLSPQze6Pv9wufzIkcuGyg5fRMdr0d-GW3Ce6ZuAyPioIJ4l4R1CyresxC_Xs9fM4YI=",
-      "topic": "Colombia: infrastrutture"
-    },
-    {
       "date": "2026-07-03",
       "title": "Microsoft Lancia 'Microsoft Frontier Company' con un Investimento da 2.5 Miliardi di Dollari per Servizi AI",
       "url": "https://techcrunch.com/2026/07/02/microsoft-launches-ai-focused-professional-services-business-with-2-5b-investment/",
@@ -95,6 +83,18 @@
       "title": "Crisi Politica in Colombia: Presidente Eletto Sospende la Transizione e Accusa Petro di Tentato Colpo di Stato",
       "url": "https://www.wlrn.org/news/2026-07-08/colombias-president-elect-suspends-transition-after-petro-alleges-fraud",
       "topic": "Colombia: attualità, politica"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "OpenAI Lancia GPT-Live, un Nuovo Modello Vocale per Interazioni Agenti Naturali",
+      "url": "https://www.yutori.ai/scouts/new-ai-startups-and-tools-july-10-2026",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-10",
+      "title": "Attivisti Colombiani si Mobilitano Contro la Spinta Far-Right per i Combustibili Fossili",
+      "url": "https://www.theguardian.com/world/colombia",
+      "topic": "Colombia: attualità, politica, ambiente"
     }
   ],
   "Laura": [

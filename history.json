@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-03",
-      "title": "Microsoft Lancia 'Microsoft Frontier Company' con un Investimento da 2.5 Miliardi di Dollari per Servizi AI",
-      "url": "https://techcrunch.com/2026/07/02/microsoft-launches-ai-focused-professional-services-business-with-2-5b-investment/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-03",
-      "title": "WME Firma il Cantautore Colombiano Fonseca per la Rappresentanza Mondiale",
-      "url": "https://www.pollstar.com/article/wme-signs-colombian-singer-songwriter-fonseca-150000",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-07-04",
       "title": "Anthropic Lancia 'Claude Science' per la Ricerca Scientifica",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbpVXPHJm2Qt01WfYWvGCfysBycLS7DvQ03i-n8adKtZ7nd4FFUfmnvAHNWbbDKSwz-D1v0vLWHo9ghVRkQvSCHpmQ_HNw9CcfZQJULxlMQKp77a37lc_k2v3h7NoJnJCcg9Hq8FfH4Rnmv0IrMTF5vTzobq7IJSB7jLLWKZQ=",
@@ -95,6 +83,18 @@
       "title": "Attivisti Colombiani si Mobilitano Contro la Spinta Far-Right per i Combustibili Fossili",
       "url": "https://www.theguardian.com/world/colombia",
       "topic": "Colombia: attualità, politica, ambiente"
+    },
+    {
+      "date": "2026-07-11",
+      "title": "Ollama Raccoglie 65 Milioni di Dollari per Espandere la Piattaforma AI Open Source",
+      "url": "https://siliconangle.com/2026/07/09/open-source-ai-developer-tool-ollama-raises-65m-grow-platform/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-11",
+      "title": "Nuove Voci nella Narrativa Latinoamericana e Spagnola di Luglio 2026",
+      "url": "https://latinxinpublishing.com/blog/july-2026-latinx-releases",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

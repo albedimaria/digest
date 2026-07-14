@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-06",
-      "title": "Tesla Limita la Spesa per i Token AI a 200 Dollari Settimanali per i Dipendenti",
-      "url": "https://unrot.co/ai-news/top-10-ai-news-july-4-2026-daily-roundup/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-06",
-      "title": "Scoperto il Circuito Cerebrale che Collega Sonno Profondo e Ormone della Crescita",
-      "url": "https://www.sciencedaily.com/news/health_medicine/",
-      "topic": "Crescita personale"
-    },
-    {
       "date": "2026-07-07",
       "title": "NVIDIA e Hugging Face Uniscono le Forze per l'Open Robotics con LeRobot",
       "url": "https://blogs.nvidia.com/blog/2026/07/06/lerobot-open-robotics-community/",
@@ -94,6 +82,18 @@
       "date": "2026-07-13",
       "title": "Ex Direttore del DAS Implicato nell'Omicidio di Carlos Pizarro in Colombia",
       "url": "https://www.abcolombia.org.uk/10-07-2026-news-review/",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-07-14",
+      "title": "Ant Group Rilascia SingGuard-NSFA, un Framework Open Source per la Sicurezza degli Agenti AI",
+      "url": "https://www.businesswire.com/news/home/20260712722454/en/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-14",
+      "title": "Il Presidente Eletto della Colombia Promette di Smantellare la Giurisdizione Speciale per la Pace",
+      "url": "https://www.washingtonpost.com/world/2026/07/10/colombia-peace-court-farc-president-elect/",
       "topic": "Colombia"
     }
   ],

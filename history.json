@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-08",
-      "title": "OpenAI Lancia la Serie GPT-5.6 con Sol, Terra e Luna",
-      "url": "https://www.thestar.com.my/tech/tech-news/2026/07/08/openai-says-powerful-new-model-to-launch-publicly-on-july-9",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-08",
-      "title": "Il Cambio di Governo in Colombia Rimodella la Politica sui Combustibili Fossili",
-      "url": "https://www.carbonbrief.org/what-change-of-power-in-colombia-could-mean-for-worlds-fossil-fuel-transition",
-      "topic": "Colombia: attualità, politica, ambiente"
-    },
-    {
       "date": "2026-07-09",
       "title": "SpaceXAI Lancia Grok 4.5, un Nuovo Modello AI Potenziato per Codifica e Lavoro Agente",
       "url": "https://digitalapplied.com/grok-4-5-ships-spacexais-coding-and-office-agent/",
@@ -95,6 +83,18 @@
       "title": "Un Nuovo Articolo Ridefinisce la Brujería e le Sue Radici Culturali",
       "url": "https://www.llewellyn.com/journal/article/3147",
       "topic": "Brujería messicana"
+    },
+    {
+      "date": "2026-07-16",
+      "title": "Thinking Machines Rilascia Inkling, un Modello Multimodale Aperto da 1 Trilione di Parametri",
+      "url": "https://huggingface.co/thinkingmachines/Inkling",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-16",
+      "title": "La Colombia Dibatte la Settimana Lavorativa di 40 Ore Dopo l'Implementazione delle 42 Ore",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7V4XWCc43b5bZeQFuN-Oe7QFe4K8-X_Dx6mbDRvXMU3BiiyR5oWZXhd26WDkXU3udRbGoBnJjV4jquSBrLO4aQsnOi1xyKaSdjMZvkTwuRK677OykRIGml8eDWDOhPZAw3jtThrQIr_aRFiT-SCuwVGcY6D6phJrc3_SyFuRntzxyaEZLGXE_yLPva89LiCatLOrZmlPOGyT_Fi1JQo5XXbkfxg==",
+      "topic": "Colombia: attualità, politica, economia"
     }
   ],
   "Laura": [

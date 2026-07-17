@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-09",
-      "title": "SpaceXAI Lancia Grok 4.5, un Nuovo Modello AI Potenziato per Codifica e Lavoro Agente",
-      "url": "https://digitalapplied.com/grok-4-5-ships-spacexais-coding-and-office-agent/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-09",
-      "title": "Crisi Politica in Colombia: Presidente Eletto Sospende la Transizione e Accusa Petro di Tentato Colpo di Stato",
-      "url": "https://www.wlrn.org/news/2026-07-08/colombias-president-elect-suspends-transition-after-petro-alleges-fraud",
-      "topic": "Colombia: attualità, politica"
-    },
-    {
       "date": "2026-07-10",
       "title": "OpenAI Lancia GPT-Live, un Nuovo Modello Vocale per Interazioni Agenti Naturali",
       "url": "https://www.yutori.ai/scouts/new-ai-startups-and-tools-july-10-2026",
@@ -95,6 +83,18 @@
       "title": "La Colombia Dibatte la Settimana Lavorativa di 40 Ore Dopo l'Implementazione delle 42 Ore",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7V4XWCc43b5bZeQFuN-Oe7QFe4K8-X_Dx6mbDRvXMU3BiiyR5oWZXhd26WDkXU3udRbGoBnJjV4jquSBrLO4aQsnOi1xyKaSdjMZvkTwuRK677OykRIGml8eDWDOhPZAw3jtThrQIr_aRFiT-SCuwVGcY6D6phJrc3_SyFuRntzxyaEZLGXE_yLPva89LiCatLOrZmlPOGyT_Fi1JQo5XXbkfxg==",
       "topic": "Colombia: attualità, politica, economia"
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Le Maglie da Calcio del Mondiale Diventano Simbolo Politico in America Latina",
+      "url": "https://www.aljazeera.com/news/2026/7/16/how-world-cup-football-jerseys-became-political-fashion-in-latin-america",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-07-17",
+      "title": "Nuova Ricerca Esplora i Bias di Genere nell'AI Musicale",
+      "url": "https://arxiv.org/abs/2607.13903",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

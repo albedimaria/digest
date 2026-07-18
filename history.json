@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-10",
-      "title": "OpenAI Lancia GPT-Live, un Nuovo Modello Vocale per Interazioni Agenti Naturali",
-      "url": "https://www.yutori.ai/scouts/new-ai-startups-and-tools-july-10-2026",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-10",
-      "title": "Attivisti Colombiani si Mobilitano Contro la Spinta Far-Right per i Combustibili Fossili",
-      "url": "https://www.theguardian.com/world/colombia",
-      "topic": "Colombia: attualità, politica, ambiente"
-    },
-    {
       "date": "2026-07-11",
       "title": "Ollama Raccoglie 65 Milioni di Dollari per Espandere la Piattaforma AI Open Source",
       "url": "https://siliconangle.com/2026/07/09/open-source-ai-developer-tool-ollama-raises-65m-grow-platform/",
@@ -95,6 +83,18 @@
       "title": "Nuova Ricerca Esplora i Bias di Genere nell'AI Musicale",
       "url": "https://arxiv.org/abs/2607.13903",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Moonshot AI Lancia Kimi K3, un Gigante Multimodale da 2.8 Trilioni di Parametri",
+      "url": "https://www.opensourceforu.com/2026/07/github-trending-astryx-brings-ai-ready-open-source-to-react/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-18",
+      "title": "Chicago Celebra la Cultura Colombiana con il 12° Colombian Fest",
+      "url": "https://www.tickeri.com/events/403gxddkv73n/12th-colombian-fest-chicago",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

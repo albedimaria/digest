@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-12",
-      "title": "OpenAI Rende Disponibili i Modelli GPT-5.6 (Sol, Terra, Luna) e Potenzia le Interazioni Vocali con GPT-Live",
-      "url": "https://coursiv.io/blog/chatgpt-5-6",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-12",
-      "title": "L'Industria Musicale Introduce un Programma di Etichettatura per l'AI Generativa",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj4Hbj7wKBAsEhB5GwM5uI3rjlHM63MdXDkalWAnsmUqygQb6Bjo6Gt0-A9Z6IPMLcx-Z7SglOa3LZW-OqsAwYbsW0fk-Z_8ynNfpP4s0wnL5c4LJ4OpTKvyEWpc7r0oZo0asgnHZfoZDGiJlg2KdLgbBNa1W4j4v1YM_neaxKh1Oi58uY8Uo3gEdMvnwTENKTsAynDOGD5T2oUsbrRNeRllDTUipw-aDIzRO2mJGMtVi_etsckmfz-w==",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-07-13",
       "title": "Apple Fa Causa a OpenAI per Furto di Segreti Commerciali e Sottrazione di Dipendenti",
       "url": "https://aipster.com/news/ai-news-2026-07-11/",
@@ -95,21 +83,21 @@
       "title": "L'America Latina Si Prepara all'Intensificarsi di El Niño con Piani di Contingenza",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOHP4XeDe5qKcLjKHVw4HGuOyS7y2ku1q5waunBTRoj0Z7cyQLrfhjJ4oencD1wzIbIR2IzDthP-Pe_WueJgAWYUsTp5gm38ta7Dp0-OuXpH_CjDxihLIQDesj3in963e_Py6AJzfmCixGUNX4zfstSJ2BMZAw18qbAG9fXMUOru46VXkTIefx35NY_y-xVAKLmpIMrXHnHoTmn1pRNKvLEiUrvzQ5DbkGRecC7LxexnR21oPshBT-wIBtSP2cSMGi9-aepJVqXRD0IvfHAhW8Dg0cxqXMi1asNqoHcrf2rdlq5ZVhqYAQ79mds_4=",
       "topic": "Colombia: ambiente"
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Hugging Face Rileva Violazione di Sicurezza Causata da Agente AI Autonomo",
+      "url": "https://huggingface.co/blog/security-incident-disclosure-july-2026",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-20",
+      "title": "L'Hype dell'AI \"Eviscera la Capacità Decisionale Globale\", Secondo un Saggio Virale",
+      "url": "https://www.northeasttimes.com/a-tech-consultants-ai-essay-went-viral-heres-why/",
+      "topic": "Crescita personale"
     }
   ],
   "Laura": [
-    {
-      "date": "2026-07-06",
-      "title": "Dibattito su immigrazione e difesa al centro della politica italiana",
-      "url": "https://brusselssignal.eu/2026/07/italian-parliament-to-consider-remigration-bill-after-activists-submit-150000-signatures/",
-      "topic": "Politica italiana"
-    },
-    {
-      "date": "2026-07-06",
-      "title": "Tensioni USA-Iran, vertice NATO e decisioni UE dominano la scena internazionale",
-      "url": "https://www.ilpost.it/2026/06/29/stati-uniti-accordo-iran-cessare-attacchi-reciproci/",
-      "topic": "Politica estera"
-    },
     {
       "date": "2026-07-13",
       "title": "Dibattiti parlamentari e tensioni interne segnano la settimana politica italiana",
@@ -120,6 +108,18 @@
       "date": "2026-07-13",
       "title": "Escalation USA-Iran, vertice NATO e sfide UE dominano la scena internazionale",
       "url": "https://www.reuters.com",
+      "topic": "Politica estera"
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Scontro sulla legge elettorale e nuove misure di sicurezza al centro della settimana politica",
+      "url": "https://www.ilpost.it/2026/07/14/governo-sconfitto-voto-legge-elettorale-camera/",
+      "topic": "Politica italiana"
+    },
+    {
+      "date": "2026-07-20",
+      "title": "Escalation USA-Iran: Stretto di Hormuz bloccato e impennata dei prezzi del petrolio",
+      "url": "https://www.ilpost.it/2026/07/20/stati-uniti-attaccato-iran-nona-notte-consecutiva/",
       "topic": "Politica estera"
     }
   ]

@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-13",
-      "title": "Apple Fa Causa a OpenAI per Furto di Segreti Commerciali e Sottrazione di Dipendenti",
-      "url": "https://aipster.com/news/ai-news-2026-07-11/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-13",
-      "title": "Ex Direttore del DAS Implicato nell'Omicidio di Carlos Pizarro in Colombia",
-      "url": "https://www.abcolombia.org.uk/10-07-2026-news-review/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-07-14",
       "title": "Ant Group Rilascia SingGuard-NSFA, un Framework Open Source per la Sicurezza degli Agenti AI",
       "url": "https://www.businesswire.com/news/home/20260712722454/en/",
@@ -95,6 +83,18 @@
       "title": "L'Hype dell'AI \"Eviscera la Capacità Decisionale Globale\", Secondo un Saggio Virale",
       "url": "https://www.northeasttimes.com/a-tech-consultants-ai-essay-went-viral-heres-why/",
       "topic": "Crescita personale"
+    },
+    {
+      "date": "2026-07-21",
+      "title": "L'Unione Europea Ordina a Google di Aprire Android ai Rivali AI e Condividere i Dati di Ricerca",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwPnvW71f9xGpKeXnsEjJKjigr8vjjnL_RGRyezwos-xJkETHYTD0UziXVIOtWw5prIWCuoe6mtJJKh430C6UbAf0Aao9pZr7DjrpBmOrE0uc08kuJVSXyp9InXIvjcvQYn0bf3yr1Bxb3qDnRqLhkbkxjQOUjlj8kpuQAdZpmqTDTo2_rm9H7qwX2JXav",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-21",
+      "title": "La Colombia Celebra il Giorno dell'Indipendenza con le Chiamate di Petro alla Mobilitazione Nazionale",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ0VY1NgatZeFAwHEsrKiBX0fdhvwXXcnU98x1cAtbD2Os_5oEGoB6yMjX5MVYCWZLaGx9TqvSW7qoG-B6j_mCvdUQBApWB1y20Hqs7t83GH38XExwEtMsqdRUuenh0dKp1lKXD-WM_B4pIhVnOGU_9fHti3WeUX5SJFWW_yfUebBKL7D0RTi5p3YFz2R4JtsW9bTxOKnoXE00A==",
+      "topic": "Colombia: attualità, politica"
     }
   ],
   "Laura": [

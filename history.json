@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-14",
-      "title": "Ant Group Rilascia SingGuard-NSFA, un Framework Open Source per la Sicurezza degli Agenti AI",
-      "url": "https://www.businesswire.com/news/home/20260712722454/en/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-14",
-      "title": "Il Presidente Eletto della Colombia Promette di Smantellare la Giurisdizione Speciale per la Pace",
-      "url": "https://www.washingtonpost.com/world/2026/07/10/colombia-peace-court-farc-president-elect/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-07-15",
       "title": "Google e Microsoft si Alleano sui Protocolli AI Enterprise Contro i Rivali",
       "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026",
@@ -95,6 +83,18 @@
       "title": "La Colombia Celebra il Giorno dell'Indipendenza con le Chiamate di Petro alla Mobilitazione Nazionale",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ0VY1NgatZeFAwHEsrKiBX0fdhvwXXcnU98x1cAtbD2Os_5oEGoB6yMjX5MVYCWZLaGx9TqvSW7qoG-B6j_mCvdUQBApWB1y20Hqs7t83GH38XExwEtMsqdRUuenh0dKp1lKXD-WM_B4pIhVnOGU_9fHti3WeUX5SJFWW_yfUebBKL7D0RTi5p3YFz2R4JtsW9bTxOKnoXE00A==",
       "topic": "Colombia: attualità, politica"
+    },
+    {
+      "date": "2026-07-22",
+      "title": "Google DeepMind Lancia Gemini 3.5 Flash Cyber per la Sicurezza AI",
+      "url": "https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-22",
+      "title": "La Colombia Avvia il Suo Primo Progetto di Energia Geotermica",
+      "url": "https://colombiaone.com/colombia-launches-its-first-geothermal-energy-project/",
+      "topic": "Colombia: ambiente, economia"
     }
   ],
   "Laura": [

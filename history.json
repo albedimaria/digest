@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-16",
-      "title": "Thinking Machines Rilascia Inkling, un Modello Multimodale Aperto da 1 Trilione di Parametri",
-      "url": "https://huggingface.co/thinkingmachines/Inkling",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-16",
-      "title": "La Colombia Dibatte la Settimana Lavorativa di 40 Ore Dopo l'Implementazione delle 42 Ore",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7V4XWCc43b5bZeQFuN-Oe7QFe4K8-X_Dx6mbDRvXMU3BiiyR5oWZXhd26WDkXU3udRbGoBnJjV4jquSBrLO4aQsnOi1xyKaSdjMZvkTwuRK677OykRIGml8eDWDOhPZAw3jtThrQIr_aRFiT-SCuwVGcY6D6phJrc3_SyFuRntzxyaEZLGXE_yLPva89LiCatLOrZmlPOGyT_Fi1JQo5XXbkfxg==",
-      "topic": "Colombia: attualità, politica, economia"
-    },
-    {
       "date": "2026-07-17",
       "title": "Le Maglie da Calcio del Mondiale Diventano Simbolo Politico in America Latina",
       "url": "https://www.aljazeera.com/news/2026/7/16/how-world-cup-football-jerseys-became-political-fashion-in-latin-america",
@@ -95,6 +83,18 @@
       "title": "Sebastian Yatra Sarà la Star del Concerto Principale di Hispanidad 2026 a Madrid",
       "url": "https://colombiaone.com/2026/07/22/sebastian-yatra-hispanidad-madrid/",
       "topic": "Colombia: cultura, musica"
+    },
+    {
+      "date": "2026-07-24",
+      "title": "OpenAI Lancia Presence, la Piattaforma Enterprise per Agenti AI",
+      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-23-2026",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-24",
+      "title": "La Colombia Ospiterà un Ufficio dell'Alleanza Anti-Cartello di Trump",
+      "url": "https://www.nampa.org/text/22973064",
+      "topic": "Colombia: attualità, politica"
     }
   ],
   "Laura": [

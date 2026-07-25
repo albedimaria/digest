@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-17",
-      "title": "Le Maglie da Calcio del Mondiale Diventano Simbolo Politico in America Latina",
-      "url": "https://www.aljazeera.com/news/2026/7/16/how-world-cup-football-jerseys-became-political-fashion-in-latin-america",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-07-17",
-      "title": "Nuova Ricerca Esplora i Bias di Genere nell'AI Musicale",
-      "url": "https://arxiv.org/abs/2607.13903",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-07-18",
       "title": "Moonshot AI Lancia Kimi K3, un Gigante Multimodale da 2.8 Trilioni di Parametri",
       "url": "https://www.opensourceforu.com/2026/07/github-trending-astryx-brings-ai-ready-open-source-to-react/",
@@ -95,6 +83,18 @@
       "title": "La Colombia Ospiterà un Ufficio dell'Alleanza Anti-Cartello di Trump",
       "url": "https://www.nampa.org/text/22973064",
       "topic": "Colombia: attualità, politica"
+    },
+    {
+      "date": "2026-07-25",
+      "title": "Anthropic lancia Opus 5, un modello AI più efficiente e conveniente",
+      "url": "https://wtvb.com/2026/07/24/anthropic-rolls-out-opus-5-ai-model-in-efficiency-upgrade/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-25",
+      "title": "La Colombia dichiara lo stato di disastro nazionale per l'emergenza El Niño",
+      "url": "https://www.bignewsnetwork.com/news/274486242/colombia-declares-national-disaster-over-el-nino-risks",
+      "topic": "Colombia: ambiente"
     }
   ],
   "Laura": [

@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-20",
-      "title": "Hugging Face Rileva Violazione di Sicurezza Causata da Agente AI Autonomo",
-      "url": "https://huggingface.co/blog/security-incident-disclosure-july-2026",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-20",
-      "title": "L'Hype dell'AI \"Eviscera la Capacità Decisionale Globale\", Secondo un Saggio Virale",
-      "url": "https://www.northeasttimes.com/a-tech-consultants-ai-essay-went-viral-heres-why/",
-      "topic": "Crescita personale"
-    },
-    {
       "date": "2026-07-21",
       "title": "L'Unione Europea Ordina a Google di Aprire Android ai Rivali AI e Condividere i Dati di Ricerca",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwPnvW71f9xGpKeXnsEjJKjigr8vjjnL_RGRyezwos-xJkETHYTD0UziXVIOtWw5prIWCuoe6mtJJKh430C6UbAf0Aao9pZr7DjrpBmOrE0uc08kuJVSXyp9InXIvjcvQYn0bf3yr1Bxb3qDnRqLhkbkxjQOUjlj8kpuQAdZpmqTDTo2_rm9H7qwX2JXav",
@@ -95,6 +83,18 @@
       "title": "\"Postconflict Utopias\" di Tania Lizarazo Premiato per la Letteratura Latinoamericana",
       "url": "https://sections.lasaweb.org/sections/latino-studies/?category=1&pg=2",
       "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Moonshot AI Rilascia Kimi K3, il Modello AI Open-Weight Più Grande al Mondo",
+      "url": "https://www.tomshardware.com/ai/moonshot-ai-releases-weights-for-kimi-k3-firing-a-shot-across-the-bow-of-openai-and-anthropic-open-weight-model-performs-almost-as-well-as-frontier-models-while-being-2-3x-easier-to-run",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-28",
+      "title": "Il Presidente Eletto De la Espriella Annuncia la Chiusura di 14 Ambasciate Colombiane",
+      "url": "https://bogotapost.com/colombias-de-la-espriella-to-close-14-embassies-cut-ties-with-cuba-and-nicaragua/",
+      "topic": "Colombia: attualità, politica"
     }
   ],
   "Laura": [

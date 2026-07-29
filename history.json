@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-21",
-      "title": "L'Unione Europea Ordina a Google di Aprire Android ai Rivali AI e Condividere i Dati di Ricerca",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwPnvW71f9xGpKeXnsEjJKjigr8vjjnL_RGRyezwos-xJkETHYTD0UziXVIOtWw5prIWCuoe6mtJJKh430C6UbAf0Aao9pZr7DjrpBmOrE0uc08kuJVSXyp9InXIvjcvQYn0bf3yr1Bxb3qDnRqLhkbkxjQOUjlj8kpuQAdZpmqTDTo2_rm9H7qwX2JXav",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-21",
-      "title": "La Colombia Celebra il Giorno dell'Indipendenza con le Chiamate di Petro alla Mobilitazione Nazionale",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQ0VY1NgatZeFAwHEsrKiBX0fdhvwXXcnU98x1cAtbD2Os_5oEGoB6yMjX5MVYCWZLaGx9TqvSW7qoG-B6j_mCvdUQBApWB1y20Hqs7t83GH38XExwEtMsqdRUuenh0dKp1lKXD-WM_B4pIhVnOGU_9fHti3WeUX5SJFWW_yfUebBKL7D0RTi5p3YFz2R4JtsW9bTxOKnoXE00A==",
-      "topic": "Colombia: attualità, politica"
-    },
-    {
       "date": "2026-07-22",
       "title": "Google DeepMind Lancia Gemini 3.5 Flash Cyber per la Sicurezza AI",
       "url": "https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html",
@@ -95,6 +83,18 @@
       "title": "Il Presidente Eletto De la Espriella Annuncia la Chiusura di 14 Ambasciate Colombiane",
       "url": "https://bogotapost.com/colombias-de-la-espriella-to-close-14-embassies-cut-ties-with-cuba-and-nicaragua/",
       "topic": "Colombia: attualità, politica"
+    },
+    {
+      "date": "2026-07-29",
+      "title": "Fish Audio Raccoglie 52 Milioni di Dollari per Sfidare ElevenLabs nel Mercato delle Voci AI",
+      "url": "https://startupfortune.com/fish-audio-raises-52-million-to-challenge-elevenlabs-in-the-ai-voice-arms-race/",
+      "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-07-29",
+      "title": "Il 'Sleepmaxxing' è la Nuova Tendenza di Benessere della Gen Z",
+      "url": "https://younghollywood.com/scene/sleepmaxxing-is-gen-zs-newest-ambition.html",
+      "topic": "Crescita personale"
     }
   ],
   "Laura": [

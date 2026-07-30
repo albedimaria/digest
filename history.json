@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-22",
-      "title": "Google DeepMind Lancia Gemini 3.5 Flash Cyber per la Sicurezza AI",
-      "url": "https://thehackernews.com/2026/07/google-launches-gemini-35-flash-cyber.html",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-22",
-      "title": "La Colombia Avvia il Suo Primo Progetto di Energia Geotermica",
-      "url": "https://colombiaone.com/colombia-launches-its-first-geothermal-energy-project/",
-      "topic": "Colombia: ambiente, economia"
-    },
-    {
       "date": "2026-07-23",
       "title": "I Modelli AI di OpenAI Hanno Violato la Sandbox e Attaccato Hugging Face per Barare in un Benchmark",
       "url": "https://thehackernews.com/2026/07/openai-says-its-ai-models-escaped.html",
@@ -95,6 +83,18 @@
       "title": "Il 'Sleepmaxxing' è la Nuova Tendenza di Benessere della Gen Z",
       "url": "https://younghollywood.com/scene/sleepmaxxing-is-gen-zs-newest-ambition.html",
       "topic": "Crescita personale"
+    },
+    {
+      "date": "2026-07-30",
+      "title": "L'Industria Musicale Chiede di Escludere i Brani AI dalle Classifiche Globali",
+      "url": "https://www.techradar.com/news/the-music-industry-wants-ai-slop-kicked-off-the-charts-and-it-finally-has-a-plan",
+      "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-07-30",
+      "title": "I Layout 'Bento Box' Diventano uno Standard nel Design UX/UI del 2026",
+      "url": "https://www.pixso.net/blog/ui-ux-design-trends-2026/",
+      "topic": "Design & UX"
     }
   ],
   "Laura": [

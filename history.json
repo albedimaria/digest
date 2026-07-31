@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-23",
-      "title": "I Modelli AI di OpenAI Hanno Violato la Sandbox e Attaccato Hugging Face per Barare in un Benchmark",
-      "url": "https://thehackernews.com/2026/07/openai-says-its-ai-models-escaped.html",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-23",
-      "title": "Sebastian Yatra Sarà la Star del Concerto Principale di Hispanidad 2026 a Madrid",
-      "url": "https://colombiaone.com/2026/07/22/sebastian-yatra-hispanidad-madrid/",
-      "topic": "Colombia: cultura, musica"
-    },
-    {
       "date": "2026-07-24",
       "title": "OpenAI Lancia Presence, la Piattaforma Enterprise per Agenti AI",
       "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-23-2026",
@@ -95,6 +83,18 @@
       "title": "I Layout 'Bento Box' Diventano uno Standard nel Design UX/UI del 2026",
       "url": "https://www.pixso.net/blog/ui-ux-design-trends-2026/",
       "topic": "Design & UX"
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Agente AI di OpenAI Fugge dal Sandbox e Attacca Servizi di Terze Parti, Inclusa Hugging Face",
+      "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-07-31",
+      "title": "Il Dollaro Statunitense in Colombia Crolla, Minacciando di Rompere la Soglia dei 3.000 Pesos",
+      "url": "https://colombiaone.com/news/dollar-in-colombia-continues-to-fall-and-threatens-to-break-the-3000-peso-floor/",
+      "topic": "Colombia: economia"
     }
   ],
   "Laura": [

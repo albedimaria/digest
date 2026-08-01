@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-24",
-      "title": "OpenAI Lancia Presence, la Piattaforma Enterprise per Agenti AI",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-23-2026",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-24",
-      "title": "La Colombia Ospiterà un Ufficio dell'Alleanza Anti-Cartello di Trump",
-      "url": "https://www.nampa.org/text/22973064",
-      "topic": "Colombia: attualità, politica"
-    },
-    {
       "date": "2026-07-25",
       "title": "Anthropic lancia Opus 5, un modello AI più efficiente e conveniente",
       "url": "https://wtvb.com/2026/07/24/anthropic-rolls-out-opus-5-ai-model-in-efficiency-upgrade/",
@@ -95,6 +83,18 @@
       "title": "Il Dollaro Statunitense in Colombia Crolla, Minacciando di Rompere la Soglia dei 3.000 Pesos",
       "url": "https://colombiaone.com/news/dollar-in-colombia-continues-to-fall-and-threatens-to-break-the-3000-peso-floor/",
       "topic": "Colombia: economia"
+    },
+    {
+      "date": "2026-08-01",
+      "title": "Il Modello Claude Mythos di Anthropic Rileva Debolezze Inedite nella Crittografia",
+      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-30-2026",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-01",
+      "title": "KRAFTON Lancia A.X-K2-Raon-Speech-21B-A3B, un Modello Linguistico Vocale Multimodale Bilingue",
+      "url": "https://huggingface.co/KRAFTON/A.X-K2-Raon-Speech-21B-A3B",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

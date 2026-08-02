@@ -16,7 +16,7 @@
   {
     "name": "Laura",
     "recipient": "zanch.laura@gmail.com",
-    "active": true,
+    "active": false,
     "interests": "\n- Politica italiana: governo, parlamento, partiti, misure economiche, elezioni, scandali\n- Politica estera e internazionale: conflitti, elezioni, vertici, UE, USA, geopolitica, diplomazia\n- Economia e società quando si intreccia con la politica\n",
     "satisfaction": null,
     "feedback_log": [],

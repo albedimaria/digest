@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-25",
-      "title": "Anthropic lancia Opus 5, un modello AI più efficiente e conveniente",
-      "url": "https://wtvb.com/2026/07/24/anthropic-rolls-out-opus-5-ai-model-in-efficiency-upgrade/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-25",
-      "title": "La Colombia dichiara lo stato di disastro nazionale per l'emergenza El Niño",
-      "url": "https://www.bignewsnetwork.com/news/274486242/colombia-declares-national-disaster-over-el-nino-risks",
-      "topic": "Colombia: ambiente"
-    },
-    {
       "date": "2026-07-26",
       "title": "Stripe in Trattative per Acquisire OpenRouter per 10 Miliardi di Dollari",
       "url": "https://www.buttondown.email/ai-industry-daily/archive/ai-industry-daily-saturday-july-25-2026/",
@@ -95,6 +83,18 @@
       "title": "KRAFTON Lancia A.X-K2-Raon-Speech-21B-A3B, un Modello Linguistico Vocale Multimodale Bilingue",
       "url": "https://huggingface.co/KRAFTON/A.X-K2-Raon-Speech-21B-A3B",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-08-02",
+      "title": "Google Lancia Gemini Robotics ER 2 in Public Preview, Potenziando l'AI per la Robotica",
+      "url": "https://ai.google.dev/docs/release_notes",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-02",
+      "title": "Abelardo de la Espriella Assume la Presidenza della Colombia, Inizia una Nuova Era Politica",
+      "url": "https://www.stratfor.com/the-weekly-rundown-colombias-new-president-takes-office-brussels-gains-ai-act-enforcement-powers",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

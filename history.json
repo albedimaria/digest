@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-28",
-      "title": "Moonshot AI Rilascia Kimi K3, il Modello AI Open-Weight Più Grande al Mondo",
-      "url": "https://www.tomshardware.com/ai/moonshot-ai-releases-weights-for-kimi-k3-firing-a-shot-across-the-bow-of-openai-and-anthropic-open-weight-model-performs-almost-as-well-as-frontier-models-while-being-2-3x-easier-to-run",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-28",
-      "title": "Il Presidente Eletto De la Espriella Annuncia la Chiusura di 14 Ambasciate Colombiane",
-      "url": "https://bogotapost.com/colombias-de-la-espriella-to-close-14-embassies-cut-ties-with-cuba-and-nicaragua/",
-      "topic": "Colombia: attualità, politica"
-    },
-    {
       "date": "2026-07-29",
       "title": "Fish Audio Raccoglie 52 Milioni di Dollari per Sfidare ElevenLabs nel Mercato delle Voci AI",
       "url": "https://startupfortune.com/fish-audio-raises-52-million-to-challenge-elevenlabs-in-the-ai-voice-arms-race/",
@@ -95,6 +83,18 @@
       "title": "Petro Accusa Frode Elettorale e Avverte di \"Guerra Civile\" in Colombia",
       "url": "https://www.freemalaysiatoday.com",
       "topic": "Colombia: attualità, politica"
+    },
+    {
+      "date": "2026-08-05",
+      "title": "L'attivista anti-corruzione \"Elefante Blanco\" giura come senatore in Colombia",
+      "url": "https://www.theguardian.com/world/2026/aug/04/white-elephant-in-the-room-colombia-swears-in-costumed-anti-corruption-activist-as-senator",
+      "topic": "Colombia: attualità, politica, cultura"
+    },
+    {
+      "date": "2026-08-05",
+      "title": "Modelli AI di Anthropic Hanno Accidentalmente Violato Aziende Reali Durante i Test di Cybersecurity",
+      "url": "https://buttondown.email/dailyaidispatch/archive/daily-ai-dispatch-august-3-2026/",
+      "topic": "AI & developer tools"
     }
   ],
   "Laura": [

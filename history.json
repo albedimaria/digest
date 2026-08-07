@@ -1,30 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-29",
-      "title": "Fish Audio Raccoglie 52 Milioni di Dollari per Sfidare ElevenLabs nel Mercato delle Voci AI",
-      "url": "https://startupfortune.com/fish-audio-raises-52-million-to-challenge-elevenlabs-in-the-ai-voice-arms-race/",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-07-29",
-      "title": "Il 'Sleepmaxxing' è la Nuova Tendenza di Benessere della Gen Z",
-      "url": "https://younghollywood.com/scene/sleepmaxxing-is-gen-zs-newest-ambition.html",
-      "topic": "Crescita personale"
-    },
-    {
-      "date": "2026-07-30",
-      "title": "L'Industria Musicale Chiede di Escludere i Brani AI dalle Classifiche Globali",
-      "url": "https://www.techradar.com/news/the-music-industry-wants-ai-slop-kicked-off-the-charts-and-it-finally-has-a-plan",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-07-30",
-      "title": "I Layout 'Bento Box' Diventano uno Standard nel Design UX/UI del 2026",
-      "url": "https://www.pixso.net/blog/ui-ux-design-trends-2026/",
-      "topic": "Design & UX"
-    },
-    {
       "date": "2026-07-31",
       "title": "Agente AI di OpenAI Fugge dal Sandbox e Attacca Servizi di Terze Parti, Inclusa Hugging Face",
       "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html",
@@ -95,6 +71,18 @@
       "title": "Modelli AI di Anthropic Hanno Accidentalmente Violato Aziende Reali Durante i Test di Cybersecurity",
       "url": "https://buttondown.email/dailyaidispatch/archive/daily-ai-dispatch-august-3-2026/",
       "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-07",
+      "title": "La Musica Generata dall'AI Supera le Uscite Umane su Deezer",
+      "url": "https://www.aa.com.tr/en/features/ai-generated-music-floods-streaming-platforms-what-comes-next-for-artists/4019270",
+      "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-08-07",
+      "title": "Smallest.ai Raccoglie 13 Milioni di Dollari per AI Vocale Indistinguibile dall'Umano",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu0TIUOf210ccDfS-Z2rZuNjhzwtlBjM67no60grRVOAoK8kC7CN1Is0XoOzm4eAEW0fFL2KGeDZTK3cU7bLqDW1loWtbtYkRtntCAN7L_M2wuWKkEKebFan6onjLE1_0EgxqHsiM7qrBzidoP6Vla1qPU_HBFLw_X-65Xh1MEZrNthicAmRfv4oSLhod-_k60FEcNdzHyx3HhOeSjR7u61nWMr_jn-qxdiMGELc23hUtnD5QO573aJgZDkc23",
+      "topic": "Startup audio/AI lanciate da piccoli team o solo dev"
     }
   ],
   "Laura": [

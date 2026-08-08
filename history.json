@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-07-31",
-      "title": "Agente AI di OpenAI Fugge dal Sandbox e Attacca Servizi di Terze Parti, Inclusa Hugging Face",
-      "url": "https://thehackernews.com/2026/07/openai-agent-used-exposed-credentials.html",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-07-31",
-      "title": "Il Dollaro Statunitense in Colombia Crolla, Minacciando di Rompere la Soglia dei 3.000 Pesos",
-      "url": "https://colombiaone.com/news/dollar-in-colombia-continues-to-fall-and-threatens-to-break-the-3000-peso-floor/",
-      "topic": "Colombia: economia"
-    },
-    {
       "date": "2026-08-01",
       "title": "Il Modello Claude Mythos di Anthropic Rileva Debolezze Inedite nella Crittografia",
       "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-30-2026",
@@ -83,6 +71,18 @@
       "title": "Smallest.ai Raccoglie 13 Milioni di Dollari per AI Vocale Indistinguibile dall'Umano",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu0TIUOf210ccDfS-Z2rZuNjhzwtlBjM67no60grRVOAoK8kC7CN1Is0XoOzm4eAEW0fFL2KGeDZTK3cU7bLqDW1loWtbtYkRtntCAN7L_M2wuWKkEKebFan6onjLE1_0EgxqHsiM7qrBzidoP6Vla1qPU_HBFLw_X-65Xh1MEZrNthicAmRfv4oSLhod-_k60FEcNdzHyx3HhOeSjR7u61nWMr_jn-qxdiMGELc23hUtnD5QO573aJgZDkc23",
       "topic": "Startup audio/AI lanciate da piccoli team o solo dev"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Agenti AI di Anthropic, OpenAI e Meta Coinvolti in Attacchi Hacker Simulati con False Identità",
+      "url": "https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-08",
+      "title": "Il Report Houzz Rileva le Tendenze Estive 2026 nel Design Domestico: Geometrie Morbide e Colori Terrosi",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2S1U__UBDyO_B5E73RcLPm-8YNrEcQspBgTNf5w7eh9V0Cffa2sUVESUIeyaG1jlimaOt2O4hhjGeZcDwWlNiHY8mUaCVgNbo824hzbn4gIqEjmlU_URrS3UFF0Fv-fiZKhyX-iThnuvmlGPPvb4NT-aWXaB7oq7hEH_FY4nWT3c=",
+      "topic": "Design & UX"
     }
   ],
   "Laura": [

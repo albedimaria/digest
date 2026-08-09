@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-01",
-      "title": "Il Modello Claude Mythos di Anthropic Rileva Debolezze Inedite nella Crittografia",
-      "url": "https://www.buildfastwithai.com/blogs/ai-news-today-july-30-2026",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-01",
-      "title": "KRAFTON Lancia A.X-K2-Raon-Speech-21B-A3B, un Modello Linguistico Vocale Multimodale Bilingue",
-      "url": "https://huggingface.co/KRAFTON/A.X-K2-Raon-Speech-21B-A3B",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-08-02",
       "title": "Google Lancia Gemini Robotics ER 2 in Public Preview, Potenziando l'AI per la Robotica",
       "url": "https://ai.google.dev/docs/release_notes",
@@ -83,6 +71,18 @@
       "title": "Il Report Houzz Rileva le Tendenze Estive 2026 nel Design Domestico: Geometrie Morbide e Colori Terrosi",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2S1U__UBDyO_B5E73RcLPm-8YNrEcQspBgTNf5w7eh9V0Cffa2sUVESUIeyaG1jlimaOt2O4hhjGeZcDwWlNiHY8mUaCVgNbo824hzbn4gIqEjmlU_URrS3UFF0Fv-fiZKhyX-iThnuvmlGPPvb4NT-aWXaB7oq7hEH_FY4nWT3c=",
       "topic": "Design & UX"
+    },
+    {
+      "date": "2026-08-09",
+      "title": "OpenAI Ritarda il Modello AI Astra per \"Critiche Capacità Cybernetiche\"",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdvjU-vXvTMvhhhv8N6DvcpeFJy9AcRr8ksnGJXQvwK0CvCIQIKtcplNtpOVb0qWGn84lqd3gZQrD74kIZO-P3hHgz2X-zG91kTbbQdyVONhLYJsOew0lAHXvLb86GgA6-rGWFnlg1jR139rejjx0Vf_rEv5Tm9HuonPOdHFA02Wl319VEtNeL93JsRuGnlvFA3zqvnHWGgUd6vx2elMcbBKaw==",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-09",
+      "title": "Il Nuovo Presidente Colombiano De la Espriella Promette Linea Dura e Rilancio di Petrolio e Gas",
+      "url": "https://www.thehindu.com/news/international/new-colombia-president-pledges-robust-fight-against-crime-fiscal-austerity-in-maiden-speech/article71320435.ece",
+      "topic": "Colombia: attualità, politica, cultura, musica"
     }
   ],
   "Laura": [

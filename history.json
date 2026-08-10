@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-02",
-      "title": "Google Lancia Gemini Robotics ER 2 in Public Preview, Potenziando l'AI per la Robotica",
-      "url": "https://ai.google.dev/docs/release_notes",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-02",
-      "title": "Abelardo de la Espriella Assume la Presidenza della Colombia, Inizia una Nuova Era Politica",
-      "url": "https://www.stratfor.com/the-weekly-rundown-colombias-new-president-takes-office-brussels-gains-ai-act-enforcement-powers",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-08-03",
       "title": "OpenAI Astra Risolve Dieci Problemi Matematici Aperti con Prove Verificate su GitHub",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYdQNeokjBNT02x-9Et1tSr7eqCKk8cLX2lhWmlLSFEbJs7WlhQzoyhLD5w2-BQcdCAYXZIKFg9QvU89Z5buMfJ-HiHmuwfSONDHlWBf51BMpc3clmzl5mdfJm2LZFnabho2mQiQ9WiZUnQzU64ZWn4fiPOVR9SEn_H_irQPkJxvZUf0g=",
@@ -83,6 +71,18 @@
       "title": "Il Nuovo Presidente Colombiano De la Espriella Promette Linea Dura e Rilancio di Petrolio e Gas",
       "url": "https://www.thehindu.com/news/international/new-colombia-president-pledges-robust-fight-against-crime-fiscal-austerity-in-maiden-speech/article71320435.ece",
       "topic": "Colombia: attualità, politica, cultura, musica"
+    },
+    {
+      "date": "2026-08-10",
+      "title": "MiniMax Lancia H3, il Modello Omni-Modale per Video con Audio Nativo",
+      "url": "https://huggingface.co/blog/ResterChed/minimax-h3-hailuo-3-0",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-10",
+      "title": "La Ricerca Svela Come la Vita da Single Favorisca la Crescita Personale",
+      "url": "https://www.news-medical.net/news/20260807/New-research-shows-how-singlehood-drives-personal-growth-and-happiness.aspx",
+      "topic": "Crescita personale"
     }
   ],
   "Laura": [

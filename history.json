@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-03",
-      "title": "OpenAI Astra Risolve Dieci Problemi Matematici Aperti con Prove Verificate su GitHub",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYdQNeokjBNT02x-9Et1tSr7eqCKk8cLX2lhWmlLSFEbJs7WlhQzoyhLD5w2-BQcdCAYXZIKFg9QvU89Z5buMfJ-HiHmuwfSONDHlWBf51BMpc3clmzl5mdfJm2LZFnabho2mQiQ9WiZUnQzU64ZWn4fiPOVR9SEn_H_irQPkJxvZUf0g=",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-03",
-      "title": "Il Festival Petronio Álvarez di Cali Celebra 30 Anni di Musica Afro-Pacifica Colombiana",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGayeNh28dRQLT2ics9a8_1zHHJJY__QDYvoZV_x4ArmJ4BqkgarwAaq1d54kUQbk0lSffAnFsykO2sufL1W_u_N66hgdHufRFXofkt17jIQN7pAxPPGWy8baYEsTgsIjR6MG80Mm667PBKBuVZNBQL0e0dGMeEpFP4VENdetm7-GSqBYbF3k6uvA==",
-      "topic": "Colombia: attualità, politica, cultura, musica"
-    },
-    {
       "date": "2026-08-04",
       "title": "La Corte Tedesca Condanna Suno AI per Violazione di Copyright Musicale",
       "url": "https://startupfortune.com",
@@ -83,6 +71,18 @@
       "title": "La Ricerca Svela Come la Vita da Single Favorisca la Crescita Personale",
       "url": "https://www.news-medical.net/news/20260807/New-research-shows-how-singlehood-drives-personal-growth-and-happiness.aspx",
       "topic": "Crescita personale"
+    },
+    {
+      "date": "2026-08-11",
+      "title": "Meta lancia Muse Glimmer, un modello AI open-source per PC",
+      "url": "https://mashable.com/article/meta-muse-glimmer-ai-model-laptops",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-11",
+      "title": "Terremoto di magnitudo 7.4 colpisce la Colombia occidentale, decine di vittime",
+      "url": "https://www.ncregister.com/news/earthquake-in-colombia-causes-at-least-20-deaths-partial-collapse-of-neo-gothic-cathedral",
+      "topic": "Colombia: attualità, società"
     }
   ],
   "Laura": [

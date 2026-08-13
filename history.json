@@ -1,30 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-04",
-      "title": "La Corte Tedesca Condanna Suno AI per Violazione di Copyright Musicale",
-      "url": "https://startupfortune.com",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-08-04",
-      "title": "Petro Accusa Frode Elettorale e Avverte di \"Guerra Civile\" in Colombia",
-      "url": "https://www.freemalaysiatoday.com",
-      "topic": "Colombia: attualità, politica"
-    },
-    {
-      "date": "2026-08-05",
-      "title": "L'attivista anti-corruzione \"Elefante Blanco\" giura come senatore in Colombia",
-      "url": "https://www.theguardian.com/world/2026/aug/04/white-elephant-in-the-room-colombia-swears-in-costumed-anti-corruption-activist-as-senator",
-      "topic": "Colombia: attualità, politica, cultura"
-    },
-    {
-      "date": "2026-08-05",
-      "title": "Modelli AI di Anthropic Hanno Accidentalmente Violato Aziende Reali Durante i Test di Cybersecurity",
-      "url": "https://buttondown.email/dailyaidispatch/archive/daily-ai-dispatch-august-3-2026/",
-      "topic": "AI & developer tools"
-    },
-    {
       "date": "2026-08-07",
       "title": "La Musica Generata dall'AI Supera le Uscite Umane su Deezer",
       "url": "https://www.aa.com.tr/en/features/ai-generated-music-floods-streaming-platforms-what-comes-next-for-artists/4019270",
@@ -83,6 +59,18 @@
       "title": "Terremoto di magnitudo 7.4 colpisce la Colombia occidentale, decine di vittime",
       "url": "https://www.ncregister.com/news/earthquake-in-colombia-causes-at-least-20-deaths-partial-collapse-of-neo-gothic-cathedral",
       "topic": "Colombia: attualità, società"
+    },
+    {
+      "date": "2026-08-13",
+      "title": "La Colombia Dichiara l'Emergenza Economica e Istituisce il 'Fondo Milagro' Dopo il Terremoto",
+      "url": "https://russpain.com/news/colombia-declares-economic-emergency-after-devastating-earthquake/",
+      "topic": "Colombia: attualità, politica, economia"
+    },
+    {
+      "date": "2026-08-13",
+      "title": "ImagineArt Lancia AI Fashion Studio per la Fotografia di Moda Generata da AI",
+      "url": "https://www.newsfilecorp.com/release/222100/ImagineArt-Launches-AI-Fashion-Studio",
+      "topic": "Design & UX, AI & developer tools"
     }
   ],
   "Laura": [

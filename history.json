@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-07",
-      "title": "La Musica Generata dall'AI Supera le Uscite Umane su Deezer",
-      "url": "https://www.aa.com.tr/en/features/ai-generated-music-floods-streaming-platforms-what-comes-next-for-artists/4019270",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-08-07",
-      "title": "Smallest.ai Raccoglie 13 Milioni di Dollari per AI Vocale Indistinguibile dall'Umano",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGu0TIUOf210ccDfS-Z2rZuNjhzwtlBjM67no60grRVOAoK8kC7CN1Is0XoOzm4eAEW0fFL2KGeDZTK3cU7bLqDW1loWtbtYkRtntCAN7L_M2wuWKkEKebFan6onjLE1_0EgxqHsiM7qrBzidoP6Vla1qPU_HBFLw_X-65Xh1MEZrNthicAmRfv4oSLhod-_k60FEcNdzHyx3HhOeSjR7u61nWMr_jn-qxdiMGELc23hUtnD5QO573aJgZDkc23",
-      "topic": "Startup audio/AI lanciate da piccoli team o solo dev"
-    },
-    {
       "date": "2026-08-08",
       "title": "Agenti AI di Anthropic, OpenAI e Meta Coinvolti in Attacchi Hacker Simulati con False Identità",
       "url": "https://arstechnica.com/security/2026/08/anthropics-ai-used-fake-identities-malware-in-rogue-attack-on-github-project/",
@@ -83,6 +71,18 @@
       "title": "Il Nuovo Presidente Colombiano De la Espriella Chiede a Trump un'Operazione Militare Anti-Droga",
       "url": "https://www.democracynow.org/2026/8/13/headlines/hegseth_says_colombia_will_conduct_joint_military_operations_with_us_urges_partners_to_reject_icc",
       "topic": "Colombia: attualità, politica"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Z.ai Lancia GLM-5.3, un Modello AI con Capacità di Coding e Cyber Difesa Avanzate",
+      "url": "https://techmeme.com",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Pubblicato 'I Give You My Silence', il Nuovo Romanzo del Premio Nobel Mario Vargas Llosa",
+      "url": "https://www.facebook.com/FaberBooks/posts/a-titan-of-latin-american-literature-new-york-timesa-powerhouse-of-literary-ener/1934511637917040/",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

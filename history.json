@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-09",
-      "title": "OpenAI Ritarda il Modello AI Astra per \"Critiche Capacità Cybernetiche\"",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdvjU-vXvTMvhhhv8N6DvcpeFJy9AcRr8ksnGJXQvwK0CvCIQIKtcplNtpOVb0qWGn84lqd3gZQrD74kIZO-P3hHgz2X-zG91kTbbQdyVONhLYJsOew0lAHXvLb86GgA6-rGWFnlg1jR139rejjx0Vf_rEv5Tm9HuonPOdHFA02Wl319VEtNeL93JsRuGnlvFA3zqvnHWGgUd6vx2elMcbBKaw==",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-09",
-      "title": "Il Nuovo Presidente Colombiano De la Espriella Promette Linea Dura e Rilancio di Petrolio e Gas",
-      "url": "https://www.thehindu.com/news/international/new-colombia-president-pledges-robust-fight-against-crime-fiscal-austerity-in-maiden-speech/article71320435.ece",
-      "topic": "Colombia: attualità, politica, cultura, musica"
-    },
-    {
       "date": "2026-08-10",
       "title": "MiniMax Lancia H3, il Modello Omni-Modale per Video con Audio Nativo",
       "url": "https://huggingface.co/blog/ResterChed/minimax-h3-hailuo-3-0",
@@ -83,6 +71,18 @@
       "title": "Il Presidente Colombiano De la Espriella Chiede a Trump la Sospensione dei Dazi Post-Terremoto",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1HjXBvnstA2KYI3QB3vGVjW_63Q6cWP-MwCa2_vnBnNLhIuY4t5U2QW_XjdCNaSmOTnRFtmlk0scy6B0tYDjWmCbBaUlmWQYZSMiQT_wo5q3n3MXtwfzdFCUEvKz8Vxo4O-_7Kmbv31lJ6wbdy2HY3rYxS8xaPqPXJGzNh-0nNYMjbmEewer-Zv4yG-cVZwDKH0uIIuXfO",
       "topic": "Colombia: attualità, politica, economia"
+    },
+    {
+      "date": "2026-08-17",
+      "title": "Stripe Acquisisce OpenRouter per 7 Miliardi di Dollari, Puntando sull'Infrastruttura AI",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0Nj_hm4BV9Fc9kzUnnPKORUH7dd4XlBY8TnR4wUEkAQchwU1M64XJS2o6zrUfkVP70AT4TXfPeZQM0DRV8k97Gh9BoAOdEliyXudqSGS7lm0PKa1jVBWY3z2tPYY96LRoZNnpL6WkEN-YW7JBV2r8MAu---BKvC_kfzmFoe8kWSftn3pHfiaVDXGFw4LBY_4_wXM",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-17",
+      "title": "Il 58° Festival Internazionale del Joropo Celebra la Tradizione Vivente della Colombia",
+      "url": "https://www.facebook.com/colombiaone/videos/colombias-joropo-festival-celebrates-a-living-tradition-from-august-13-to-17-202/1374468108217125/",
+      "topic": "Colombia: cultura, musica"
     }
   ],
   "Laura": [

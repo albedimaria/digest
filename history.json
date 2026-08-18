@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-10",
-      "title": "MiniMax Lancia H3, il Modello Omni-Modale per Video con Audio Nativo",
-      "url": "https://huggingface.co/blog/ResterChed/minimax-h3-hailuo-3-0",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-10",
-      "title": "La Ricerca Svela Come la Vita da Single Favorisca la Crescita Personale",
-      "url": "https://www.news-medical.net/news/20260807/New-research-shows-how-singlehood-drives-personal-growth-and-happiness.aspx",
-      "topic": "Crescita personale"
-    },
-    {
       "date": "2026-08-11",
       "title": "Meta lancia Muse Glimmer, un modello AI open-source per PC",
       "url": "https://mashable.com/article/meta-muse-glimmer-ai-model-laptops",
@@ -83,6 +71,18 @@
       "title": "Il 58° Festival Internazionale del Joropo Celebra la Tradizione Vivente della Colombia",
       "url": "https://www.facebook.com/colombiaone/videos/colombias-joropo-festival-celebrates-a-living-tradition-from-august-13-to-17-202/1374468108217125/",
       "topic": "Colombia: cultura, musica"
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Sacerdote e Suora Recuperano Ostie Consacrate dalle Macerie del Terremoto in Colombia",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMSgUOTRiW2ByShMYoRDS92tLgJb7ORfR5bsjmz-oaUsulQe8XA_v6Do9GLUMeWb1czubyz3-_HwVTkwYklvsEkYgJvLJ45QrczyjcL2dAD6QleepVDre6QDIXAam5ln3zb0DiGlZ0g2SQTC08hljJXjMuoI3oHlMUfIkE5rUSqth3OqCz_xfxADH2DfgoFIlMrRTy7h-c5LsxTOwXiecQcl_joKHLyfiY7JZ0ONZng==",
+      "topic": "Colombia: Cultura e Società"
+    },
+    {
+      "date": "2026-08-18",
+      "title": "Google Lancia Gemini 3.7 Flash, Nuovo Modello AI per Sviluppatori",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcws8rZLpIwh6TrG-VDh8iL-pKdps1_n6FezUJE2Ir5A8aa0fuQkY71U4ufQI2vqr1DphEFtXUcmnz0ft44JeayXHLq2vV3tZ008_j3TJifIuZgI1xnQmTNaklo3aMtk38UQsGnuDprBxNMo0x3YbeFwIDrM1zX6cVH1W_OWJ5vJuBytpus5Bg",
+      "topic": "AI & Developer Tools"
     }
   ],
   "Laura": [

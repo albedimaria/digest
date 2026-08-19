@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-11",
-      "title": "Meta lancia Muse Glimmer, un modello AI open-source per PC",
-      "url": "https://mashable.com/article/meta-muse-glimmer-ai-model-laptops",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-11",
-      "title": "Terremoto di magnitudo 7.4 colpisce la Colombia occidentale, decine di vittime",
-      "url": "https://www.ncregister.com/news/earthquake-in-colombia-causes-at-least-20-deaths-partial-collapse-of-neo-gothic-cathedral",
-      "topic": "Colombia: attualità, società"
-    },
-    {
       "date": "2026-08-13",
       "title": "La Colombia Dichiara l'Emergenza Economica e Istituisce il 'Fondo Milagro' Dopo il Terremoto",
       "url": "https://russpain.com/news/colombia-declares-economic-emergency-after-devastating-earthquake/",
@@ -83,6 +71,18 @@
       "title": "Google Lancia Gemini 3.7 Flash, Nuovo Modello AI per Sviluppatori",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcws8rZLpIwh6TrG-VDh8iL-pKdps1_n6FezUJE2Ir5A8aa0fuQkY71U4ufQI2vqr1DphEFtXUcmnz0ft44JeayXHLq2vV3tZ008_j3TJifIuZgI1xnQmTNaklo3aMtk38UQsGnuDprBxNMo0x3YbeFwIDrM1zX6cVH1W_OWJ5vJuBytpus5Bg",
       "topic": "AI & Developer Tools"
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Grok 4.6 di Cursor e SpaceXAI Ridefinisce gli Agenti AI per lo Sviluppo",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgZLBPm3v_wjhcBHOVn-UREZavxAwC7jJGVlu9nPwMZcpzAbSATnUoLIpGC0IHTH9O-wzPMz-8viIqMdaX1hP5kvwCk-VerGaDj1dbepWTSuj8R1mG9haOesp6FHPPegE-43o2f1yK6v9oQhbH-k_Xpbn_o7l5uml0V73YX8CRbQtF65VLSLwkZg==",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-19",
+      "title": "Silvia Moreno-Garcia Annuncia 'The Intrigue', un Nuovo Romanzo di Suspense e Romance",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwxQ2saFPGwA2VsFR9QuAA8DqGy3AKqYo5R2clbNsNeA7-jDA3N5wBv2BdwLRlGxD6QyyuXNlwHeGnUfT4RUg2o4HLA0z1RSmpr6VNwcHeqA4YiMDOjGlrM9cx4n6Ca65M_fvmbb5FaHcVRU27G6mN9xxfmbjR7ups6ri_JtvyH4uJtac=",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

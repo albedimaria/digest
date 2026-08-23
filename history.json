@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-15",
-      "title": "Z.ai Lancia GLM-5.3, un Modello AI con Capacità di Coding e Cyber Difesa Avanzate",
-      "url": "https://techmeme.com",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-15",
-      "title": "Pubblicato 'I Give You My Silence', il Nuovo Romanzo del Premio Nobel Mario Vargas Llosa",
-      "url": "https://www.facebook.com/FaberBooks/posts/a-titan-of-latin-american-literature-new-york-timesa-powerhouse-of-literary-ener/1934511637917040/",
-      "topic": "Letteratura latinoamericana e spagnola"
-    },
-    {
       "date": "2026-08-16",
       "title": "Qwen3.8-27B di Alibaba Ridefinisce il Modello AI Open-Source per lo Sviluppo Agente",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9mvG7wKGz4yT75MOs9ES1P_hJyQT60_IZ_LwS6UqREkpXx53FiIxrdZzzEs6Xjqh06UgSs6QYuPJRitjDiVcU4voBlO39gH3iUtGAA7XQkGxeGPjiQ4uGH0Ap2aw6TDL4PtI8JxEihxo2IDW-WFw1sFiqsivKIvlYF4A=",
@@ -95,6 +83,18 @@
       "title": "\"Colombia: Voces Por La Vida\", Concerto Benefico per le Vittime del Terremoto con Star Internazionali",
       "url": "https://www.pollstar.com/news/karol-g-miguel-bose-sebastian-yatra-maluma-and-many-more-to-gather-for-colombian-benefit-concert-1502479",
       "topic": "Colombia: Cultura e Società"
+    },
+    {
+      "date": "2026-08-23",
+      "title": "Slack Lancia \"Slack Code\" per la Programmazione Collaborativa con Agenti AI",
+      "url": "https://www.infoworld.com/article/4122340/salesforce-wants-to-move-ai-coding-into-a-shared-workspace-with-slack-code.html",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-23",
+      "title": "Round Hill Music Fa Causa a Suno e Anthropic per Violazione di Copyright",
+      "url": "https://www.alancross.ca/a-journal-of-musical-things/2026/08/21/random-music-news-for-friday-august-21-2026/",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

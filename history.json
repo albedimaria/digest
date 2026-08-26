@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-18",
-      "title": "Sacerdote e Suora Recuperano Ostie Consacrate dalle Macerie del Terremoto in Colombia",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMSgUOTRiW2ByShMYoRDS92tLgJb7ORfR5bsjmz-oaUsulQe8XA_v6Do9GLUMeWb1czubyz3-_HwVTkwYklvsEkYgJvLJ45QrczyjcL2dAD6QleepVDre6QDIXAam5ln3zb0DiGlZ0g2SQTC08hljJXjMuoI3oHlMUfIkE5rUSqth3OqCz_xfxADH2DfgoFIlMrRTy7h-c5LsxTOwXiecQcl_joKHLyfiY7JZ0ONZng==",
-      "topic": "Colombia: Cultura e Società"
-    },
-    {
-      "date": "2026-08-18",
-      "title": "Google Lancia Gemini 3.7 Flash, Nuovo Modello AI per Sviluppatori",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcws8rZLpIwh6TrG-VDh8iL-pKdps1_n6FezUJE2Ir5A8aa0fuQkY71U4ufQI2vqr1DphEFtXUcmnz0ft44JeayXHLq2vV3tZ008_j3TJifIuZgI1xnQmTNaklo3aMtk38UQsGnuDprBxNMo0x3YbeFwIDrM1zX6cVH1W_OWJ5vJuBytpus5Bg",
-      "topic": "AI & Developer Tools"
-    },
-    {
       "date": "2026-08-19",
       "title": "Grok 4.6 di Cursor e SpaceXAI Ridefinisce gli Agenti AI per lo Sviluppo",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgZLBPm3v_wjhcBHOVn-UREZavxAwC7jJGVlu9nPwMZcpzAbSATnUoLIpGC0IHTH9O-wzPMz-8viIqMdaX1hP5kvwCk-VerGaDj1dbepWTSuj8R1mG9haOesp6FHPPegE-43o2f1yK6v9oQhbH-k_Xpbn_o7l5uml0V73YX8CRbQtF65VLSLwkZg==",
@@ -95,6 +83,18 @@
       "title": "Il Presidente Colombiano De la Espriella Ordina un Giro di Vite sull'Immigrazione Irregolare",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJm6i3YjPm4xIhWY97U5Mpojzp4sLBl0k8kJCoY4j8rvc34pOCsskQvvmKGshWb4MLbTzD5QrynojhWET7FrHhLYnuGtIqONjHKk4w5KoL1-JDGrmdEEzpGKa2DyeHIUlMzBzq_j_Ff2lMrRVk0e-7JESQccRXfy0U4FZwTlhIk__2j-Gyk9CV0oi-nTpgNpD9I6btvuQpXu_-",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "La Colombia Sospende le 'Stazioni di Pace', Unica Parte Pienamente Attuata dell'Accordo del 2016",
+      "url": "https://www.aa.com.tr/en/americas/colombia-suspends-peace-stations-only-fully-implemented-part-of-2016-peace-agreement/4037395",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-08-26",
+      "title": "Startup Ucraina Lancia 'Startup Due Dil', un Servizio AI per l'Automazione della Due Diligence",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwxllS50zVbCQAQbSnRHGlKJf7j6ECsnmdUgtlMSrxXYRxFRrxas2-PfKMbwPr2sc10hErsW2LO4SEIN89p3h1sDOI7HNuNprQUUhQdLAf5osbmy9vnYb1HNMPePwYvTcrRE9bDEepC2z6IWg==",
+      "topic": "AI & developer tools"
     }
   ],
   "Laura": [

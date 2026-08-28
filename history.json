@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-20",
-      "title": "Il Panorama delle Piattaforme Voice AI si Rimodella nel 2026",
-      "url": "https://filmthreat.com/features/top-10-voice-ai-platforms-for-2026/",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-08-20",
-      "title": "Terremoto in Colombia: Danni Estesi al Patrimonio Culturale e Impatto Sociale Profondo",
-      "url": "https://www.theartnewspaper.com/2026/08/19/colombia-earthquake-ministry-culture-report-heritage-damage",
-      "topic": "Colombia: cultura, società"
-    },
-    {
       "date": "2026-08-21",
       "title": "Adobe Firefly Espande il Suo Studio Creativo AI con Strumenti Audio e Integrazione Gemini Omni Flash",
       "url": "https://blog.adobe.com/en/publish/2026/08/20/adobe-firefly-expands-its-creative-ai-studio-generate-music-speech-and-sound-effects-in-one-place",
@@ -95,6 +83,18 @@
       "title": "Il Presidente Colombiano De la Espriella Dichiara i Gruppi Criminali 'Terroristi'",
       "url": "https://bogotacitypaper.com/news/de-la-espriella-declares-all-criminal-groups-in-colombia-terrorists-in-sweeping-security-crackdown/",
       "topic": "Colombia: politica"
+    },
+    {
+      "date": "2026-08-28",
+      "title": "Nvidia Acquisisce Hugging Face per 12,9 Miliardi di Dollari, Rimodellando il Paesaggio dell'AI Open Source",
+      "url": "https://futuretools.io/news",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-28",
+      "title": "La Colombia Valuta l'Utilizzo di Navi Prigione per Criminali Pericolosi",
+      "url": "https://www.scmp.com/topics/colombia",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

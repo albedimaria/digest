@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-22",
-      "title": "Agente AI Crea Exploit per macOS in Quattro Ore, Evidenziando Nuovi Rischi di Sicurezza",
-      "url": "https://thenextweb.com/news/ai-agent-built-working-exploit-macos-flaw-four-hours",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-22",
-      "title": "\"Colombia: Voces Por La Vida\", Concerto Benefico per le Vittime del Terremoto con Star Internazionali",
-      "url": "https://www.pollstar.com/news/karol-g-miguel-bose-sebastian-yatra-maluma-and-many-more-to-gather-for-colombian-benefit-concert-1502479",
-      "topic": "Colombia: Cultura e Società"
-    },
-    {
       "date": "2026-08-23",
       "title": "Slack Lancia \"Slack Code\" per la Programmazione Collaborativa con Agenti AI",
       "url": "https://www.infoworld.com/article/4122340/salesforce-wants-to-move-ai-coding-into-a-shared-workspace-with-slack-code.html",
@@ -94,6 +82,18 @@
       "date": "2026-08-29",
       "title": "Cresce il Dibattito: Proposto un Bando sulla Musica Generata dall'AI",
       "url": "https://www.facebook.com/Reuters/",
+      "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-08-30",
+      "title": "Google Lancia Gemini Omni 1.1 Flash, Portando il Controllo Creativo nell'AI Video",
+      "url": "https://northeasttimes.com/2026/08/28/google-s-gemini-omni-1-1-flash-brings-controllable-ai-video-to-developers/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-08-30",
+      "title": "Stability AI Raccoglie 76 Milioni di Dollari in Finanziamenti di Serie B da Giganti dell'Intrattenimento",
+      "url": "https://dot.la/stability-ai-entertainment-industry-funding-2677791499.html",
       "topic": "Audio AI & music tech"
     }
   ],

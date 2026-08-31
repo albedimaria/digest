@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-23",
-      "title": "Slack Lancia \"Slack Code\" per la Programmazione Collaborativa con Agenti AI",
-      "url": "https://www.infoworld.com/article/4122340/salesforce-wants-to-move-ai-coding-into-a-shared-workspace-with-slack-code.html",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-23",
-      "title": "Round Hill Music Fa Causa a Suno e Anthropic per Violazione di Copyright",
-      "url": "https://www.alancross.ca/a-journal-of-musical-things/2026/08/21/random-music-news-for-friday-august-21-2026/",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-08-24",
       "title": "Un Misterioso Modello AI, Ox Alpha, Stupisce gli Sviluppatori con Capacità Illimitate e Gratuite",
       "url": "https://thenextweb.com/news/ox-alpha-stealth-model-openrouter-anonymous-provider",
@@ -95,6 +83,18 @@
       "title": "Stability AI Raccoglie 76 Milioni di Dollari in Finanziamenti di Serie B da Giganti dell'Intrattenimento",
       "url": "https://dot.la/stability-ai-entertainment-industry-funding-2677791499.html",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "Colombia Sospende i Negoziati di Pace con i Gruppi Ribelli",
+      "url": "https://unn.ua/en/news/colombia-has-halted-negotiations-with-rebel-groups-and-shelved-the-peace-process-petro",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-08-31",
+      "title": "Esce 'Raise the Bar' di Fernanda Frick H., Un Romanzo YA sul Weightlifting in Cile",
+      "url": "https://latinxinpublishing.com/blog/august-2026-latinx-releases",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

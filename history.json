@@ -1,30 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-24",
-      "title": "Un Misterioso Modello AI, Ox Alpha, Stupisce gli Sviluppatori con Capacità Illimitate e Gratuite",
-      "url": "https://thenextweb.com/news/ox-alpha-stealth-model-openrouter-anonymous-provider",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-24",
-      "title": "La Colombia Ristabilisce i Rapporti Diplomatici con Israele e Riprende l'Esportazione di Carbone, Invertendo le Politiche di Petro",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiSmdRBvXI52YmiMn4TkoFcpmEx4lnJSGfiH-zoPJ7yvXgbBFNgzJ4HsMXtozPL0ZuhWN8VmVmmkSfc5z7_vYsCqEamjUUpetiWunVGfjRomwZtmVDeW7LXtFWKTUa8jPij3SmRvxMKt0gJPkaA-8IeDRdBHeFO5gGQ8ylNhKGAQloSxmEJvjN0nKitkjZziW6rFCj7vHdFXre",
-      "topic": "Colombia: politica, economia"
-    },
-    {
-      "date": "2026-08-25",
-      "title": "OpenAI Rallenta lo Sviluppo di Modelli AI di Punta per la Sicurezza",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElWEEvKVoUahCvEccZFQYOLp0znTjLgILFkACUCW6u-3gC3tUosRHyfWyOia_g-0uiobCaGmVrwEnhbcjiUS0welaDaCwdpUmWnwAJMzWwPnZjyKYsP6Ve1WbM_kUhWmU9dd05MdgPxYVkgr7k6tpjiQjTmH3v5rkWLtCq2z6xyfVyMugG-I558ffRfTVP4z_1-O39QfmFplE24p1r60T",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-25",
-      "title": "Il Presidente Colombiano De la Espriella Ordina un Giro di Vite sull'Immigrazione Irregolare",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJm6i3YjPm4xIhWY97U5Mpojzp4sLBl0k8kJCoY4j8rvc34pOCsskQvvmKGshWb4MLbTzD5QrynojhWET7FrHhLYnuGtIqONjHKk4w5KoL1-JDGrmdEEzpGKa2DyeHIUlMzBzq_j_Ff2lMrRVk0e-7JESQccRXfy0U4FZwTlhIk__2j-Gyk9CV0oi-nTpgNpD9I6btvuQpXu_-",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-08-26",
       "title": "La Colombia Sospende le 'Stazioni di Pace', Unica Parte Pienamente Attuata dell'Accordo del 2016",
       "url": "https://www.aa.com.tr/en/americas/colombia-suspends-peace-stations-only-fully-implemented-part-of-2016-peace-agreement/4037395",
@@ -95,6 +71,18 @@
       "title": "Esce 'Raise the Bar' di Fernanda Frick H., Un Romanzo YA sul Weightlifting in Cile",
       "url": "https://latinxinpublishing.com/blog/august-2026-latinx-releases",
       "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Hugging Face Lancia @huggingface/kernels per l'AI Locale nel Browser",
+      "url": "https://huggingface.co/blog/webgpu-kernels",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-02",
+      "title": "La Colombia si Anima con il Jazz: Festival in Quattro Città a Settembre",
+      "url": "https://thecitypaperbogota.com/colombia-celebrates-jazz-in-september-with-festivals-in-4-cities-across-the-country/",
+      "topic": "Colombia: cultura, musica"
     }
   ],
   "Laura": [

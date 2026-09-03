@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-26",
-      "title": "La Colombia Sospende le 'Stazioni di Pace', Unica Parte Pienamente Attuata dell'Accordo del 2016",
-      "url": "https://www.aa.com.tr/en/americas/colombia-suspends-peace-stations-only-fully-implemented-part-of-2016-peace-agreement/4037395",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-08-26",
-      "title": "Startup Ucraina Lancia 'Startup Due Dil', un Servizio AI per l'Automazione della Due Diligence",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGwxllS50zVbCQAQbSnRHGlKJf7j6ECsnmdUgtlMSrxXYRxFRrxas2-PfKMbwPr2sc10hErsW2LO4SEIN89p3h1sDOI7HNuNprQUUhQdLAf5osbmy9vnYb1HNMPePwYvTcrRE9bDEepC2z6IWg==",
-      "topic": "AI & developer tools"
-    },
-    {
       "date": "2026-08-27",
       "title": "Google Lancia Gemini 3.5 Transcribe per una Trascrizione Vocale Intelligente",
       "url": "https://blog.google/technology/ai/gemini-3-5-transcribe-intelligent-transcription/",
@@ -83,6 +71,18 @@
       "title": "La Colombia si Anima con il Jazz: Festival in Quattro Città a Settembre",
       "url": "https://thecitypaperbogota.com/colombia-celebrates-jazz-in-september-with-festivals-in-4-cities-across-the-country/",
       "topic": "Colombia: cultura, musica"
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Meta Lancia Muse Voice Transcribe: Trascrizione Audio Multilingue e Multi-Speaker in Tempo Reale",
+      "url": "https://engadget.com/2026/09/01/meta-ai-transcription-model-multiple-speakers-languages-real-time/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Terremoto in Colombia: Oltre 466.000 Persone Colpite e 331 Vittime",
+      "url": "https://reliefweb.int/report/colombia/colombia-flash-update-011-update-impact-earthquake-colombia-september-2-2026",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

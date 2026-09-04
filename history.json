@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-27",
-      "title": "Google Lancia Gemini 3.5 Transcribe per una Trascrizione Vocale Intelligente",
-      "url": "https://blog.google/technology/ai/gemini-3-5-transcribe-intelligent-transcription/",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-08-27",
-      "title": "Il Presidente Colombiano De la Espriella Dichiara i Gruppi Criminali 'Terroristi'",
-      "url": "https://bogotacitypaper.com/news/de-la-espriella-declares-all-criminal-groups-in-colombia-terrorists-in-sweeping-security-crackdown/",
-      "topic": "Colombia: politica"
-    },
-    {
       "date": "2026-08-28",
       "title": "Nvidia Acquisisce Hugging Face per 12,9 Miliardi di Dollari, Rimodellando il Paesaggio dell'AI Open Source",
       "url": "https://futuretools.io/news",
@@ -82,6 +70,18 @@
       "date": "2026-09-03",
       "title": "Terremoto in Colombia: Oltre 466.000 Persone Colpite e 331 Vittime",
       "url": "https://reliefweb.int/report/colombia/colombia-flash-update-011-update-impact-earthquake-colombia-september-2-2026",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-04",
+      "title": "OpenAI Lancia GPT-6 Astra, Annunciando una Nuova Era dell'Intelligenza Artificiale",
+      "url": "https://www.northeasttimes.com/2026/09/03/openai-launches-gpt-6-astra-and-claims-a-new-era-of-artificial-intelligence/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-04",
+      "title": "La Colombia Elimina Dieci Restrizioni Minerarie per Attrarre Investimenti Esteri",
+      "url": "https://www.northernminer.com/news/colombia-scraps-10-mining-restrictions-to-lure-investors/1003867625/",
       "topic": "Colombia"
     }
   ],

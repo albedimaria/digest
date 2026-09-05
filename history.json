@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-28",
-      "title": "Nvidia Acquisisce Hugging Face per 12,9 Miliardi di Dollari, Rimodellando il Paesaggio dell'AI Open Source",
-      "url": "https://futuretools.io/news",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-28",
-      "title": "La Colombia Valuta l'Utilizzo di Navi Prigione per Criminali Pericolosi",
-      "url": "https://www.scmp.com/topics/colombia",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-08-29",
       "title": "NVIDIA Sigla Accordo da 6 Miliardi con Poolside AI per Modelli Open-Weight",
       "url": "https://nextbigteng.com/",
@@ -82,6 +70,18 @@
       "date": "2026-09-04",
       "title": "La Colombia Elimina Dieci Restrizioni Minerarie per Attrarre Investimenti Esteri",
       "url": "https://www.northernminer.com/news/colombia-scraps-10-mining-restrictions-to-lure-investors/1003867625/",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-05",
+      "title": "Google Rende Disponibile Lyria 3.5 per la Generazione Musicale nell'App Gemini e API",
+      "url": "https://www.unite.ai/google-brings-lyria-3-5-music-generation-to-the-gemini-app-and-api/",
+      "topic": "Audio AI & Music Tech"
+    },
+    {
+      "date": "2026-09-05",
+      "title": "Gli Stati Uniti Valutano il Supporto a Lungo Termine per la Ricostruzione Post-Terremoto in Colombia",
+      "url": "https://www.atlanticcouncil.org/dispatches/how-the-us-can-support-colombias-post-earthquake-recovery-for-the-long-term/",
       "topic": "Colombia"
     }
   ],

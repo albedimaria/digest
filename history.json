@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-08-29",
-      "title": "NVIDIA Sigla Accordo da 6 Miliardi con Poolside AI per Modelli Open-Weight",
-      "url": "https://nextbigteng.com/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-08-29",
-      "title": "Cresce il Dibattito: Proposto un Bando sulla Musica Generata dall'AI",
-      "url": "https://www.facebook.com/Reuters/",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-08-30",
       "title": "Google Lancia Gemini Omni 1.1 Flash, Portando il Controllo Creativo nell'AI Video",
       "url": "https://northeasttimes.com/2026/08/28/google-s-gemini-omni-1-1-flash-brings-controllable-ai-video-to-developers/",
@@ -83,6 +71,18 @@
       "title": "Gli Stati Uniti Valutano il Supporto a Lungo Termine per la Ricostruzione Post-Terremoto in Colombia",
       "url": "https://www.atlanticcouncil.org/dispatches/how-the-us-can-support-colombias-post-earthquake-recovery-for-the-long-term/",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-06",
+      "title": "Nuovi Modelli AI di Anthropic, Google e Meta Rivoluzionano il Settore",
+      "url": "https://local-ai-zone.github.io/blog/September_2026_AI_Model_Updates.html",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-06",
+      "title": "Le Tendenze del Design d'Interni per l'Autunno 2026 Puntano su Calore e Personalizzazione",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWcV3rPcSigppZqztvFREJoTpwgcopfu0tTcOO_-I7PPsmWgePyfEG6XrZwDkDzd19L3VvOswB80B0cgAgMPaAPvPwkwey7SaSdmM5R5QOep0wDuhFuUwNxVax-r3QiZOpTfrluwoZLW2-IJVIAjcw2FhadC6tzF328xRyr7X_YCx0WhNaX2ztoJPXjtL9xKDpUL6spQitFGlWlw7enAmjhnlrXm2nEAM=",
+      "topic": "Design & UX"
     }
   ],
   "Laura": [

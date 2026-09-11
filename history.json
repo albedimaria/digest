@@ -1,30 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-02",
-      "title": "Hugging Face Lancia @huggingface/kernels per l'AI Locale nel Browser",
-      "url": "https://huggingface.co/blog/webgpu-kernels",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-02",
-      "title": "La Colombia si Anima con il Jazz: Festival in Quattro Città a Settembre",
-      "url": "https://thecitypaperbogota.com/colombia-celebrates-jazz-in-september-with-festivals-in-4-cities-across-the-country/",
-      "topic": "Colombia: cultura, musica"
-    },
-    {
-      "date": "2026-09-03",
-      "title": "Meta Lancia Muse Voice Transcribe: Trascrizione Audio Multilingue e Multi-Speaker in Tempo Reale",
-      "url": "https://engadget.com/2026/09/01/meta-ai-transcription-model-multiple-speakers-languages-real-time/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-03",
-      "title": "Terremoto in Colombia: Oltre 466.000 Persone Colpite e 331 Vittime",
-      "url": "https://reliefweb.int/report/colombia/colombia-flash-update-011-update-impact-earthquake-colombia-september-2-2026",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-04",
       "title": "OpenAI Lancia GPT-6 Astra, Annunciando una Nuova Era dell'Intelligenza Artificiale",
       "url": "https://www.northeasttimes.com/2026/09/03/openai-launches-gpt-6-astra-and-claims-a-new-era-of-artificial-intelligence/",
@@ -83,6 +59,18 @@
       "title": "Bogotá Avvia la Gara per la Seconda Linea della Metropolitana",
       "url": "https://colombiaone.com/",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-11",
+      "title": "Google DeepMind Lancia 'Gemini 3.8 Flash' per Sviluppatori e Agenti AI",
+      "url": "https://auto-post.io/blog/gemini-3-8-sets-new-standard-for-ai-reasoning",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-11",
+      "title": "La Scrittrice Messicana Elena Rojas Vince il Prestigioso Premio Alfaguara de Novela 2026",
+      "url": "https://elpais.com/cultura/2026-09-09/elena-rojas-premio-alfaguara-2026.html",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

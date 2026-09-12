@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-04",
-      "title": "OpenAI Lancia GPT-6 Astra, Annunciando una Nuova Era dell'Intelligenza Artificiale",
-      "url": "https://www.northeasttimes.com/2026/09/03/openai-launches-gpt-6-astra-and-claims-a-new-era-of-artificial-intelligence/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-04",
-      "title": "La Colombia Elimina Dieci Restrizioni Minerarie per Attrarre Investimenti Esteri",
-      "url": "https://www.northernminer.com/news/colombia-scraps-10-mining-restrictions-to-lure-investors/1003867625/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-05",
       "title": "Google Rende Disponibile Lyria 3.5 per la Generazione Musicale nell'App Gemini e API",
       "url": "https://www.unite.ai/google-brings-lyria-3-5-music-generation-to-the-gemini-app-and-api/",
@@ -71,6 +59,18 @@
       "title": "La Scrittrice Messicana Elena Rojas Vince il Prestigioso Premio Alfaguara de Novela 2026",
       "url": "https://elpais.com/cultura/2026-09-09/elena-rojas-premio-alfaguara-2026.html",
       "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "Attacco Cibernetico Orchestrato da AI Sfrutta Vulnerabilità in PaperCut, Compromettendo Centinaia di Server",
+      "url": "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-12",
+      "title": "Universal Music Group e ElevenLabs Annunciano Partnership Strategica per Piattaforma di Creazione Musicale AI Licenziata",
+      "url": "https://www.prnewswire.com/news-releases/universal-music-group-and-elevenlabs-announce-multi-year-strategic-agreement-beginning-with-a-new-licensed-ai-music-creation-platform-302875284.html",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

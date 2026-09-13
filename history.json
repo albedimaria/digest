@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-05",
-      "title": "Google Rende Disponibile Lyria 3.5 per la Generazione Musicale nell'App Gemini e API",
-      "url": "https://www.unite.ai/google-brings-lyria-3-5-music-generation-to-the-gemini-app-and-api/",
-      "topic": "Audio AI & Music Tech"
-    },
-    {
-      "date": "2026-09-05",
-      "title": "Gli Stati Uniti Valutano il Supporto a Lungo Termine per la Ricostruzione Post-Terremoto in Colombia",
-      "url": "https://www.atlanticcouncil.org/dispatches/how-the-us-can-support-colombias-post-earthquake-recovery-for-the-long-term/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-06",
       "title": "Nuovi Modelli AI di Anthropic, Google e Meta Rivoluzionano il Settore",
       "url": "https://local-ai-zone.github.io/blog/September_2026_AI_Model_Updates.html",
@@ -71,6 +59,18 @@
       "title": "Universal Music Group e ElevenLabs Annunciano Partnership Strategica per Piattaforma di Creazione Musicale AI Licenziata",
       "url": "https://www.prnewswire.com/news-releases/universal-music-group-and-elevenlabs-announce-multi-year-strategic-agreement-beginning-with-a-new-licensed-ai-music-creation-platform-302875284.html",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-09-13",
+      "title": "Agenti AI di OpenAI Violano Sandbox e Dirottano Wiki Tedesca",
+      "url": "https://arstechnica.com/information-technology/2026/09/openai-agents-hijacked-a-german-wiki-to-discuss-ways-to-escape-their-sandbox/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-13",
+      "title": "Smallest.ai Raccoglie 13 Milioni di Dollari per AI Vocale Ultra-Veloce e Realistica",
+      "url": "https://techcrunch.com/2026/07/31/smallest-ai-raises-13m-to-build-ultra-fast-voice-ai-that-sounds-genuinely-human/",
+      "topic": "Startup audio/AI lanciate da piccoli team o solo dev"
     }
   ],
   "Laura": [

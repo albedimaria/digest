@@ -1,30 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-08",
-      "title": "xAI Lancia Grok 4.5, un Modello AI Ottimizzato per Coding e Task Agentici",
-      "url": "https://shattered.io/grok-4-5-launch-coding-agents-2026/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-08",
-      "title": "Nuova Ricerca sull'Analisi del Mixaggio Automatico Presentata a ISMIR 2026",
-      "url": "https://arxiv.org/list/cs.SD/recent",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-09-09",
-      "title": "Meta Lancia l'Agente AI Personale Muse Negli Stati Uniti",
-      "url": "https://aiweekly.co/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-09",
-      "title": "Bogotá Avvia la Gara per la Seconda Linea della Metropolitana",
-      "url": "https://colombiaone.com/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-11",
       "title": "Google DeepMind Lancia 'Gemini 3.8 Flash' per Sviluppatori e Agenti AI",
       "url": "https://auto-post.io/blog/gemini-3-8-sets-new-standard-for-ai-reasoning",
@@ -83,6 +59,18 @@
       "title": "L'Eredità di Mario Benedetti Celebra 106 Anni dalla Nascita",
       "url": "https://www.telesurenglish.net/mario-benedetti-legacy-lives-106-years/",
       "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "Attacco Informatico Sfrutta Sessioni di Assistenti AI per Codifica, Diffondendo Malware su Centinaia di Repository",
+      "url": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-17",
+      "title": "Il Presidente Colombiano De la Espriella Sospende i Negoziati di Pace, Adottando un Approccio di Sicurezza più Rigido",
+      "url": "https://giwps.georgetown.edu/2026/09/16/women-peace-and-security-conflict-tracker-september-updates-2/",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

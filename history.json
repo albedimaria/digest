@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-11",
-      "title": "Google DeepMind Lancia 'Gemini 3.8 Flash' per Sviluppatori e Agenti AI",
-      "url": "https://auto-post.io/blog/gemini-3-8-sets-new-standard-for-ai-reasoning",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-11",
-      "title": "La Scrittrice Messicana Elena Rojas Vince il Prestigioso Premio Alfaguara de Novela 2026",
-      "url": "https://elpais.com/cultura/2026-09-09/elena-rojas-premio-alfaguara-2026.html",
-      "topic": "Letteratura latinoamericana e spagnola"
-    },
-    {
       "date": "2026-09-12",
       "title": "Attacco Cibernetico Orchestrato da AI Sfrutta Vulnerabilità in PaperCut, Compromettendo Centinaia di Server",
       "url": "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html",
@@ -83,6 +71,18 @@
       "title": "Sebastià Alzamora Vince il Premio Nazionale di Poesia di Spagna 2026",
       "url": "https://themadridreview.substack.com/p/sebastia-alzamora-wins-spains-national",
       "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "xAI Lancia Grok Voice Transcribe 2.0: Trascrizione Vocale Due Volte Più Accurata",
+      "url": "https://unite.ai/xai-releases-grok-voice-transcribe-2-0-speech-to-text-model/",
+      "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "La Colombia Si Ritira dalla Coalizione Internazionale per i Diritti LGBT",
+      "url": "https://colombianews.com/colombia-pulls-out-of-international-lgbt-coalition/",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

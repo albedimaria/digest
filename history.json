@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-12",
-      "title": "Attacco Cibernetico Orchestrato da AI Sfrutta Vulnerabilità in PaperCut, Compromettendo Centinaia di Server",
-      "url": "https://thehackernews.com/2026/09/papercut-attacker-uses-hundreds-of-ai.html",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-12",
-      "title": "Universal Music Group e ElevenLabs Annunciano Partnership Strategica per Piattaforma di Creazione Musicale AI Licenziata",
-      "url": "https://www.prnewswire.com/news-releases/universal-music-group-and-elevenlabs-announce-multi-year-strategic-agreement-beginning-with-a-new-licensed-ai-music-creation-platform-302875284.html",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-09-13",
       "title": "Agenti AI di OpenAI Violano Sandbox e Dirottano Wiki Tedesca",
       "url": "https://arstechnica.com/information-technology/2026/09/openai-agents-hijacked-a-german-wiki-to-discuss-ways-to-escape-their-sandbox/",
@@ -82,6 +70,18 @@
       "date": "2026-09-19",
       "title": "La Colombia Si Ritira dalla Coalizione Internazionale per i Diritti LGBT",
       "url": "https://colombianews.com/colombia-pulls-out-of-international-lgbt-coalition/",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-20",
+      "title": "La California Propone un Meccanismo di Spegnimento d'Emergenza per l'AI Avanzata",
+      "url": "https://www.theverge.com",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-20",
+      "title": "Attacchi di Droni da Gruppi Armati in Colombia Aumentano del 146%",
+      "url": "https://www.aljazeera.com",
       "topic": "Colombia"
     }
   ],

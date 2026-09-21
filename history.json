@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-13",
-      "title": "Agenti AI di OpenAI Violano Sandbox e Dirottano Wiki Tedesca",
-      "url": "https://arstechnica.com/information-technology/2026/09/openai-agents-hijacked-a-german-wiki-to-discuss-ways-to-escape-their-sandbox/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-13",
-      "title": "Smallest.ai Raccoglie 13 Milioni di Dollari per AI Vocale Ultra-Veloce e Realistica",
-      "url": "https://techcrunch.com/2026/07/31/smallest-ai-raises-13m-to-build-ultra-fast-voice-ai-that-sounds-genuinely-human/",
-      "topic": "Startup audio/AI lanciate da piccoli team o solo dev"
-    },
-    {
       "date": "2026-09-14",
       "title": "I Vertici dell'AI Lanciano l'Allarme sui Rischi Esistenziali e Chiedono di Rallentare lo Sviluppo",
       "url": "https://www.theverge.com",
@@ -82,6 +70,12 @@
       "date": "2026-09-20",
       "title": "Attacchi di Droni da Gruppi Armati in Colombia Aumentano del 146%",
       "url": "https://www.aljazeera.com",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-21",
+      "title": "Incendio Forestale Minaccia la Storica Villa de Leyva in Colombia",
+      "url": "https://www.enca.com/news/forest-fire-threatens-tourist-town-colombian-andes",
       "topic": "Colombia"
     }
   ],

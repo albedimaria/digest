@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-14",
-      "title": "I Vertici dell'AI Lanciano l'Allarme sui Rischi Esistenziali e Chiedono di Rallentare lo Sviluppo",
-      "url": "https://www.theverge.com",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-14",
-      "title": "Bogotá Celebra il Festival Cordillera 2026, un Omaggio ai Ritmi Latini",
-      "url": "https://thebogotapost.com",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-15",
       "title": "Microsoft Definisce Nuove Linee Guida per un'AI \"Umanista\"",
       "url": "https://northeasttimes.com/2026/09/14/microsoft-sets-human-control-as-a-hard-limit-in-new-ai-guidelines/",
@@ -77,6 +65,18 @@
       "title": "Incendio Forestale Minaccia la Storica Villa de Leyva in Colombia",
       "url": "https://www.enca.com/news/forest-fire-threatens-tourist-town-colombian-andes",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Google Lancia AX, un Nuovo Orchestratore Agente Open Source",
+      "url": "https://agentexecutor.io",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-22",
+      "title": "Studio Rileva Differenze Generazionali nell'Approccio al Rischio Finanziario",
+      "url": "https://www.northwesternmutual.com/",
+      "topic": "Crescita personale"
     }
   ],
   "Laura": [

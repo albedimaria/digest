@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-15",
-      "title": "Microsoft Definisce Nuove Linee Guida per un'AI \"Umanista\"",
-      "url": "https://northeasttimes.com/2026/09/14/microsoft-sets-human-control-as-a-hard-limit-in-new-ai-guidelines/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-15",
-      "title": "L'Eredità di Mario Benedetti Celebra 106 Anni dalla Nascita",
-      "url": "https://www.telesurenglish.net/mario-benedetti-legacy-lives-106-years/",
-      "topic": "Letteratura latinoamericana e spagnola"
-    },
-    {
       "date": "2026-09-17",
       "title": "Attacco Informatico Sfrutta Sessioni di Assistenti AI per Codifica, Diffondendo Malware su Centinaia di Repository",
       "url": "https://thehackernews.com/2026/09/attacker-hijacks-ai-coding-assistant.html",
@@ -77,6 +65,18 @@
       "title": "Studio Rileva Differenze Generazionali nell'Approccio al Rischio Finanziario",
       "url": "https://www.northwesternmutual.com/",
       "topic": "Crescita personale"
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Violazione di Sicurezza Rilevata negli Account OpenAI del Personale tramite Agenti AI",
+      "url": "https://aiweekly.co/ai-news-today/edition/2026-09-22",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-23",
+      "title": "Il Governo Colombiano Lancia un Piano di Emergenza per la Crisi Sanitaria Acuta",
+      "url": "https://colombiaone.com/",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

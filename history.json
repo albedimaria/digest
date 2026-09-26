@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-18",
-      "title": "Google Lancia Gemini 3.8 Live: Conversazioni Vocali AI Più Naturali e Intelligenti",
-      "url": "https://ai.google.dev/models/gemini/3.8-live-extended-thinking",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-18",
-      "title": "Sebastià Alzamora Vince il Premio Nazionale di Poesia di Spagna 2026",
-      "url": "https://themadridreview.substack.com/p/sebastia-alzamora-wins-spains-national",
-      "topic": "Letteratura latinoamericana e spagnola"
-    },
-    {
       "date": "2026-09-19",
       "title": "xAI Lancia Grok Voice Transcribe 2.0: Trascrizione Vocale Due Volte Più Accurata",
       "url": "https://unite.ai/xai-releases-grok-voice-transcribe-2-0-speech-to-text-model/",
@@ -89,6 +77,18 @@
       "title": "Colombia: Violenza a Santa Marta, il Presidente ordina il dispiegamento di truppe",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERfmEECdon1IgF5DSBtYcXwlFXrqWwWVMnsOEYc-MQ6h0XyPmgDOivZo-KEMxbI9t--GaF0x5EBeSWsze1QdcItkrAH42j_HLFSmAQ_O4Zi7DfuFwSXHm41OUvBr1oyPGhPBrtf5l5IgW22Iq_7TX_Tx9cYyRBFsqc0naAFozxdHZIaEDEBSufKbEc-pbH-TY-mWly5zrYdrFeTKIt4Pg==",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-26",
+      "title": "NVIDIA Acquisisce Hugging Face per 11.9 Miliardi di Dollari",
+      "url": "https://huggingface.co/blog",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-26",
+      "title": "Linciaggio per Accuse di Stregoneria in Chiapas, Messico",
+      "url": "https://holanews.com",
+      "topic": "Brujería messicana"
     }
   ],
   "Laura": [

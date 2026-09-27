@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-19",
-      "title": "xAI Lancia Grok Voice Transcribe 2.0: Trascrizione Vocale Due Volte Più Accurata",
-      "url": "https://unite.ai/xai-releases-grok-voice-transcribe-2-0-speech-to-text-model/",
-      "topic": "Audio AI & music tech"
-    },
-    {
-      "date": "2026-09-19",
-      "title": "La Colombia Si Ritira dalla Coalizione Internazionale per i Diritti LGBT",
-      "url": "https://colombianews.com/colombia-pulls-out-of-international-lgbt-coalition/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-20",
       "title": "La California Propone un Meccanismo di Spegnimento d'Emergenza per l'AI Avanzata",
       "url": "https://www.theverge.com",
@@ -89,6 +77,18 @@
       "title": "Linciaggio per Accuse di Stregoneria in Chiapas, Messico",
       "url": "https://holanews.com",
       "topic": "Brujería messicana"
+    },
+    {
+      "date": "2026-09-27",
+      "title": "OpenAI Lancia GPT-6 Sol e Luna, Microsoft Aggiorna Copilot con Nuove Funzionalità Agenti",
+      "url": "https://futuretools.io/ai-news",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-27",
+      "title": "Qobuz Inizia a Etichettare la Musica Generata dall'AI, Rivelando un Basso Tasso di Streaming e Frodi",
+      "url": "https://aimusicpreneur.com/ai-music-news-today/",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

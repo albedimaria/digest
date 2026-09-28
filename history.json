@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-20",
-      "title": "La California Propone un Meccanismo di Spegnimento d'Emergenza per l'AI Avanzata",
-      "url": "https://www.theverge.com",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-20",
-      "title": "Attacchi di Droni da Gruppi Armati in Colombia Aumentano del 146%",
-      "url": "https://www.aljazeera.com",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-21",
       "title": "Incendio Forestale Minaccia la Storica Villa de Leyva in Colombia",
       "url": "https://www.enca.com/news/forest-fire-threatens-tourist-town-colombian-andes",
@@ -89,6 +77,18 @@
       "title": "Qobuz Inizia a Etichettare la Musica Generata dall'AI, Rivelando un Basso Tasso di Streaming e Frodi",
       "url": "https://aimusicpreneur.com/ai-music-news-today/",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "Helen DeWitt Rifiuta il Prestigioso Premio Windham-Campbell 2026 per Impegni Promozionali",
+      "url": "https://english.elpais.com/culture/2026-09-26/helen-dewitt-publishers-treat-authors-like-outcasts-until-its-time-to-go-out-and-sell-books.html",
+      "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-09-28",
+      "title": "Studente Hult Guida gli Sforzi di Aiuto per il Terremoto a Balboa, Colombia",
+      "url": "https://www.cambridgeday.com/2026/09/26/hult-student-helps-organize-earthquake-relief-for-her-familys-hometown/",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

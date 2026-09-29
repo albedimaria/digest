@@ -1,12 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-21",
-      "title": "Incendio Forestale Minaccia la Storica Villa de Leyva in Colombia",
-      "url": "https://www.enca.com/news/forest-fire-threatens-tourist-town-colombian-andes",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-22",
       "title": "Google Lancia AX, un Nuovo Orchestratore Agente Open Source",
       "url": "https://agentexecutor.io",
@@ -88,6 +82,18 @@
       "date": "2026-09-28",
       "title": "Studente Hult Guida gli Sforzi di Aiuto per il Terremoto a Balboa, Colombia",
       "url": "https://www.cambridgeday.com/2026/09/26/hult-student-helps-organize-earthquake-relief-for-her-familys-hometown/",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "HuggingFace Lancia i Modelli Agentici Holo4, Potenziando l'Interazione AI con Software",
+      "url": "https://hcompany.ai/newsroom/holo4",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-29",
+      "title": "La Colombia si Ritira dalla Coalizione per l'Uguaglianza dei Diritti, Sollevando Preoccupazioni per i Diritti LGBTI",
+      "url": "https://justiceforcolombia.org",
       "topic": "Colombia"
     }
   ],

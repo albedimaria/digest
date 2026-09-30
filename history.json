@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-22",
-      "title": "Google Lancia AX, un Nuovo Orchestratore Agente Open Source",
-      "url": "https://agentexecutor.io",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-22",
-      "title": "Studio Rileva Differenze Generazionali nell'Approccio al Rischio Finanziario",
-      "url": "https://www.northwesternmutual.com/",
-      "topic": "Crescita personale"
-    },
-    {
       "date": "2026-09-23",
       "title": "Violazione di Sicurezza Rilevata negli Account OpenAI del Personale tramite Agenti AI",
       "url": "https://aiweekly.co/ai-news-today/edition/2026-09-22",
@@ -94,6 +82,18 @@
       "date": "2026-09-29",
       "title": "La Colombia si Ritira dalla Coalizione per l'Uguaglianza dei Diritti, Sollevando Preoccupazioni per i Diritti LGBTI",
       "url": "https://justiceforcolombia.org",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "OpenAI Lancia GPT-6.1 Sol: Prestazioni da Astra a un Quinto del Costo",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3_lGVCG7kdFuZtt3-c5dmXYdJAGj_flHY-YmsovTi3Bxt25-U6lYPASU0DcDwbmb0RP_w0iGNFiztOSPbKs4ftaUHiNrEUv4afdsMyEBA2vOPJ5q3ILfXj3CpOvRI3tyYogovkWWFVXBjW5fhpRyXtXsFdj-eMzlRBECPa9NyHYtODIxSTV7nXmQ9t4dBtXdfGIjWEyOqzl09YoSCscpN1FOL6eVRShXbem5H-s_2C12xEigo0PkLgZq8U2Q==",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-09-30",
+      "title": "Colombia Stanzia Oltre 3 Miliardi di COP per il Turismo del Quindío Colpito dal Terremoto",
+      "url": "https://www.financecolombia.com/colombia-commits-more-than-3-billion-cop-to-quindios-earthquake-hit-tourism-sector/",
       "topic": "Colombia"
     }
   ],

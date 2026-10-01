@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-23",
-      "title": "Violazione di Sicurezza Rilevata negli Account OpenAI del Personale tramite Agenti AI",
-      "url": "https://aiweekly.co/ai-news-today/edition/2026-09-22",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-23",
-      "title": "Il Governo Colombiano Lancia un Piano di Emergenza per la Crisi Sanitaria Acuta",
-      "url": "https://colombiaone.com/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-24",
       "title": "Micro1, la startup AI di un 25enne, raccoglie 100 milioni di dollari con una valutazione di 4 miliardi",
       "url": "https://www.forbes.com.au/news/uncategorized/this-25-year-old-raised-us100-million-for-his-ai-startup-at-a-us4-billion-valuation/",
@@ -95,6 +83,18 @@
       "title": "Colombia Stanzia Oltre 3 Miliardi di COP per il Turismo del Quindío Colpito dal Terremoto",
       "url": "https://www.financecolombia.com/colombia-commits-more-than-3-billion-cop-to-quindios-earthquake-hit-tourism-sector/",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "OpenAI Presenta GPT-5.6 Sol, il Suo Modello di Punta con Capacità Agentiche Avanzate",
+      "url": "https://openai.com",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "L'AI Accelera la Produzione, ma la Vera Creatività Rimane Umana: Le Riflessioni di Settembre nel Design",
+      "url": "https://muz.li/",
+      "topic": "Design & UX"
     }
   ],
   "Laura": [

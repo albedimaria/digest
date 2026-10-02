@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-24",
-      "title": "Micro1, la startup AI di un 25enne, raccoglie 100 milioni di dollari con una valutazione di 4 miliardi",
-      "url": "https://www.forbes.com.au/news/uncategorized/this-25-year-old-raised-us100-million-for-his-ai-startup-at-a-us4-billion-valuation/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-24",
-      "title": "Piedad Bonnett, la scrittrice colombiana, riceve il Premio Internazionale di Letteratura ExLibris Murcia 2026",
-      "url": "https://www.facebook.com/colombiaone/videos/colombian-writer-piedad-bonnett-has-been-named-the-winner-of-the-2026-exlibris-m/1615492876647996/",
-      "topic": "Letteratura latinoamericana e spagnola"
-    },
-    {
       "date": "2026-09-25",
       "title": "I Framework per Agenti AI Dominano le Tendenze su GitHub",
       "url": "https://startupcorners.com/digest/devtools-digest-2026-09-23",
@@ -95,6 +83,18 @@
       "title": "L'AI Accelera la Produzione, ma la Vera Creatività Rimane Umana: Le Riflessioni di Settembre nel Design",
       "url": "https://muz.li/",
       "topic": "Design & UX"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "Google DeepMind Lancia Gemini 4 Argon, un Nuovo Modello AI di Frontiera con Accesso Limitato",
+      "url": "https://neuraltrust.ai/blog/gemini-4-argon",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-02",
+      "title": "La Colombia Avvia un Programma Pilota di Irrorazione Aerea con Glifosato per Eradicare le Coltivazioni Illecite",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbxXLSPqWdGN0vvGtv8YaNiUkRu--p-1g0l1iqFVXzPAbxbOQDUweA-ap-3eQo3QzwDihta3uLOxZXIgFf2D3KautB6de3aRDWhKifIw6sMNtyHfgGJqn2YmU6D4gEkbkz4Dli0k_iyaylhwJI7YBc6HRpgZg8oJHIIHR26VWbWED8irug3Tvdxvnl_BXWbrDoTWmAGE=",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

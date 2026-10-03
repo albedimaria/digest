@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-25",
-      "title": "I Framework per Agenti AI Dominano le Tendenze su GitHub",
-      "url": "https://startupcorners.com/digest/devtools-digest-2026-09-23",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-25",
-      "title": "Colombia: Violenza a Santa Marta, il Presidente ordina il dispiegamento di truppe",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERfmEECdon1IgF5DSBtYcXwlFXrqWwWVMnsOEYc-MQ6h0XyPmgDOivZo-KEMxbI9t--GaF0x5EBeSWsze1QdcItkrAH42j_HLFSmAQ_O4Zi7DfuFwSXHm41OUvBr1oyPGhPBrtf5l5IgW22Iq_7TX_Tx9cYyRBFsqc0naAFozxdHZIaEDEBSufKbEc-pbH-TY-mWly5zrYdrFeTKIt4Pg==",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-26",
       "title": "NVIDIA Acquisisce Hugging Face per 11.9 Miliardi di Dollari",
       "url": "https://huggingface.co/blog",
@@ -95,6 +83,18 @@
       "title": "La Colombia Avvia un Programma Pilota di Irrorazione Aerea con Glifosato per Eradicare le Coltivazioni Illecite",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbxXLSPqWdGN0vvGtv8YaNiUkRu--p-1g0l1iqFVXzPAbxbOQDUweA-ap-3eQo3QzwDihta3uLOxZXIgFf2D3KautB6de3aRDWhKifIw6sMNtyHfgGJqn2YmU6D4gEkbkz4Dli0k_iyaylhwJI7YBc6HRpgZg8oJHIIHR26VWbWED8irug3Tvdxvnl_BXWbrDoTWmAGE=",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-03",
+      "title": "Microsoft Aggiorna OpenAPI a Versione 3.2.0, Potenziando lo Sviluppo di API per l'AI",
+      "url": "https://opensource.microsoft.com/blog/2026/10/01/from-standards-to-software-microsofts-ongoing-work-on-openapi-and-developer-tooling/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-03",
+      "title": "Deepslate Raccoglie 8,8 Milioni di Dollari per Sviluppare un Modello AI Speech-to-Speech in Europa",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgAKsLwZrKebYmk0OQMblgRWBXbP-Z3F_7h2urWHPZG9-QneZRXbxLgXt_Xv1S_f7w4HnKp0vVsdHz_MpBN4LnNwuTEdUWrXApm-ckqOTwdE60jNJsMYdt_4mro9dhR9sKGl__qaQxXD_B6fr3UUYCKGvUZ-w0c5CqohfnnewO-OwS12wY5M7QZw8FnaAZNzfJzaPFYl2Gw3Obh38sUVZA",
+      "topic": "Startup audio/AI"
     }
   ],
   "Laura": [

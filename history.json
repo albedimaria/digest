@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-26",
-      "title": "NVIDIA Acquisisce Hugging Face per 11.9 Miliardi di Dollari",
-      "url": "https://huggingface.co/blog",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-26",
-      "title": "Linciaggio per Accuse di Stregoneria in Chiapas, Messico",
-      "url": "https://holanews.com",
-      "topic": "Brujería messicana"
-    },
-    {
       "date": "2026-09-27",
       "title": "OpenAI Lancia GPT-6 Sol e Luna, Microsoft Aggiorna Copilot con Nuove Funzionalità Agenti",
       "url": "https://futuretools.io/ai-news",
@@ -95,6 +83,18 @@
       "title": "Deepslate Raccoglie 8,8 Milioni di Dollari per Sviluppare un Modello AI Speech-to-Speech in Europa",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgAKsLwZrKebYmk0OQMblgRWBXbP-Z3F_7h2urWHPZG9-QneZRXbxLgXt_Xv1S_f7w4HnKp0vVsdHz_MpBN4LnNwuTEdUWrXApm-ckqOTwdE60jNJsMYdt_4mro9dhR9sKGl__qaQxXD_B6fr3UUYCKGvUZ-w0c5CqohfnnewO-OwS12wY5M7QZw8FnaAZNzfJzaPFYl2Gw3Obh38sUVZA",
       "topic": "Startup audio/AI"
+    },
+    {
+      "date": "2026-10-04",
+      "title": "arXiv Limita le Sottomissioni di Paper a Causa dell'Esplosione di Contenuti Generati dall'AI",
+      "url": "https://www.kucoin.com/news/flash/arxiv-implements-strict-monthly-paper-submission-limits-amid-ai-driven-surge",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-04",
+      "title": "Microsoft AI Lancia Nuovi Modelli di Trascrizione e Sintesi Vocale per Agenti Conversazionali",
+      "url": "https://www.thurrott.com/a-i/microsoft-ai/342335/microsoft-ai-releases-impressive-transcription-and-voice-models",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

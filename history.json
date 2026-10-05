@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-27",
-      "title": "OpenAI Lancia GPT-6 Sol e Luna, Microsoft Aggiorna Copilot con Nuove Funzionalità Agenti",
-      "url": "https://futuretools.io/ai-news",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-27",
-      "title": "Qobuz Inizia a Etichettare la Musica Generata dall'AI, Rivelando un Basso Tasso di Streaming e Frodi",
-      "url": "https://aimusicpreneur.com/ai-music-news-today/",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-09-28",
       "title": "Helen DeWitt Rifiuta il Prestigioso Premio Windham-Campbell 2026 per Impegni Promozionali",
       "url": "https://english.elpais.com/culture/2026-09-26/helen-dewitt-publishers-treat-authors-like-outcasts-until-its-time-to-go-out-and-sell-books.html",
@@ -95,6 +83,18 @@
       "title": "Microsoft AI Lancia Nuovi Modelli di Trascrizione e Sintesi Vocale per Agenti Conversazionali",
       "url": "https://www.thurrott.com/a-i/microsoft-ai/342335/microsoft-ai-releases-impressive-transcription-and-voice-models",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-10-05",
+      "title": "Aleph Alpha Lancia Kolibri-1, un Nuovo Modello MoE per Ragionamento e Tool Calling",
+      "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-05",
+      "title": "Coppia Bruciata Viva in Chiapas, Messico, Accusata di Stregoneria",
+      "url": "https://www.themirror.com/news/world-news/couple-burned-alive-villagers-horror-2045991",
+      "topic": "Brujería messicana"
     }
   ],
   "Laura": [

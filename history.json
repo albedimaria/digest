@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-28",
-      "title": "Helen DeWitt Rifiuta il Prestigioso Premio Windham-Campbell 2026 per Impegni Promozionali",
-      "url": "https://english.elpais.com/culture/2026-09-26/helen-dewitt-publishers-treat-authors-like-outcasts-until-its-time-to-go-out-and-sell-books.html",
-      "topic": "Letteratura latinoamericana e spagnola"
-    },
-    {
-      "date": "2026-09-28",
-      "title": "Studente Hult Guida gli Sforzi di Aiuto per il Terremoto a Balboa, Colombia",
-      "url": "https://www.cambridgeday.com/2026/09/26/hult-student-helps-organize-earthquake-relief-for-her-familys-hometown/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-09-29",
       "title": "HuggingFace Lancia i Modelli Agentici Holo4, Potenziando l'Interazione AI con Software",
       "url": "https://hcompany.ai/newsroom/holo4",
@@ -95,6 +83,18 @@
       "title": "Coppia Bruciata Viva in Chiapas, Messico, Accusata di Stregoneria",
       "url": "https://www.themirror.com/news/world-news/couple-burned-alive-villagers-horror-2045991",
       "topic": "Brujería messicana"
+    },
+    {
+      "date": "2026-10-06",
+      "title": "Reflection AI Lancia Beam, un Nuovo Modello Open-Weight per Agenti AI",
+      "url": "https://shattered.io/reflection-ai-beam-rivals-2026/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-06",
+      "title": "La Colombia Istituisce una Task Force Congiunta per Contrastare l'ELN e il Furto di Petrolio",
+      "url": "https://infonews.ca/news/2026/10/06/colombia-launches-joint-task-force-to-protect-pipeline-and-fight-eln-rebels.html",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

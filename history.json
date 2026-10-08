@@ -1,30 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-09-29",
-      "title": "HuggingFace Lancia i Modelli Agentici Holo4, Potenziando l'Interazione AI con Software",
-      "url": "https://hcompany.ai/newsroom/holo4",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-29",
-      "title": "La Colombia si Ritira dalla Coalizione per l'Uguaglianza dei Diritti, Sollevando Preoccupazioni per i Diritti LGBTI",
-      "url": "https://justiceforcolombia.org",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-09-30",
-      "title": "OpenAI Lancia GPT-6.1 Sol: Prestazioni da Astra a un Quinto del Costo",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3_lGVCG7kdFuZtt3-c5dmXYdJAGj_flHY-YmsovTi3Bxt25-U6lYPASU0DcDwbmb0RP_w0iGNFiztOSPbKs4ftaUHiNrEUv4afdsMyEBA2vOPJ5q3ILfXj3CpOvRI3tyYogovkWWFVXBjW5fhpRyXtXsFdj-eMzlRBECPa9NyHYtODIxSTV7nXmQ9t4dBtXdfGIjWEyOqzl09YoSCscpN1FOL6eVRShXbem5H-s_2C12xEigo0PkLgZq8U2Q==",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-09-30",
-      "title": "Colombia Stanzia Oltre 3 Miliardi di COP per il Turismo del Quindío Colpito dal Terremoto",
-      "url": "https://www.financecolombia.com/colombia-commits-more-than-3-billion-cop-to-quindios-earthquake-hit-tourism-sector/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-10-01",
       "title": "OpenAI Presenta GPT-5.6 Sol, il Suo Modello di Punta con Capacità Agentiche Avanzate",
       "url": "https://openai.com",
@@ -94,6 +70,18 @@
       "date": "2026-10-06",
       "title": "La Colombia Istituisce una Task Force Congiunta per Contrastare l'ELN e il Furto di Petrolio",
       "url": "https://infonews.ca/news/2026/10/06/colombia-launches-joint-task-force-to-protect-pipeline-and-fight-eln-rebels.html",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-08",
+      "title": "Google Lancia Nano Banana 2.1, Tagliando i Prezzi dell'Immagine AI del 50%",
+      "url": "https://shattered.io/nano-banana-2-1-google-cuts-image-price-50-2026/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-08",
+      "title": "La Colombia Sospende le Esportazioni di Energia all'Ecuador a Causa della Crisi Idrica",
+      "url": "",
       "topic": "Colombia"
     }
   ],

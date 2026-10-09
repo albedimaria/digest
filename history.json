@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-01",
-      "title": "OpenAI Presenta GPT-5.6 Sol, il Suo Modello di Punta con Capacità Agentiche Avanzate",
-      "url": "https://openai.com",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-01",
-      "title": "L'AI Accelera la Produzione, ma la Vera Creatività Rimane Umana: Le Riflessioni di Settembre nel Design",
-      "url": "https://muz.li/",
-      "topic": "Design & UX"
-    },
-    {
       "date": "2026-10-02",
       "title": "Google DeepMind Lancia Gemini 4 Argon, un Nuovo Modello AI di Frontiera con Accesso Limitato",
       "url": "https://neuraltrust.ai/blog/gemini-4-argon",
@@ -83,6 +71,18 @@
       "title": "La Colombia Sospende le Esportazioni di Energia all'Ecuador a Causa della Crisi Idrica",
       "url": "",
       "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Sonilo Raccoglie 11 Milioni di Dollari per l'AI che Sincronizza Audio e Video",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhVe_jOwYIBVq32vCES7sIaNtstBWPbf3W8VKJtpVlOpnfut8ItAjRD0Hyx6lssvcpOSGKfPgh_ywXdfHyxB7--UZosFXY89fZLjGS8alnWh14iNxTu7Aimyx0QOE1Q1FOZq-A7D_Z9d8g7cANvc1D4t9fSkc4oJEukfx0pRo4bcyped86kNaUG5pDvVyFG-jHRfpgRtsoFdmgUzdfIuEh6W-ng==",
+      "topic": "Startup audio/AI"
+    },
+    {
+      "date": "2026-10-09",
+      "title": "Il Premio Nobel per la Letteratura Potrebbe Andare a un'Autrice Latinoamericana o Caraibica",
+      "url": "https://www.bangkokpost.com/life/arts-and-entertainment/3333488/latin-american-caribbean-women-tipped-for-literature-nobel",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

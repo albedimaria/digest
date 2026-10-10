@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-02",
-      "title": "Google DeepMind Lancia Gemini 4 Argon, un Nuovo Modello AI di Frontiera con Accesso Limitato",
-      "url": "https://neuraltrust.ai/blog/gemini-4-argon",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-02",
-      "title": "La Colombia Avvia un Programma Pilota di Irrorazione Aerea con Glifosato per Eradicare le Coltivazioni Illecite",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbxXLSPqWdGN0vvGtv8YaNiUkRu--p-1g0l1iqFVXzPAbxbOQDUweA-ap-3eQo3QzwDihta3uLOxZXIgFf2D3KautB6de3aRDWhKifIw6sMNtyHfgGJqn2YmU6D4gEkbkz4Dli0k_iyaylhwJI7YBc6HRpgZg8oJHIIHR26VWbWED8irug3Tvdxvnl_BXWbrDoTWmAGE=",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-10-03",
       "title": "Microsoft Aggiorna OpenAPI a Versione 3.2.0, Potenziando lo Sviluppo di API per l'AI",
       "url": "https://opensource.microsoft.com/blog/2026/10/01/from-standards-to-software-microsofts-ongoing-work-on-openapi-and-developer-tooling/",
@@ -83,6 +71,18 @@
       "title": "Il Premio Nobel per la Letteratura Potrebbe Andare a un'Autrice Latinoamericana o Caraibica",
       "url": "https://www.bangkokpost.com/life/arts-and-entertainment/3333488/latin-american-caribbean-women-tipped-for-literature-nobel",
       "topic": "Letteratura latinoamericana e spagnola"
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Grok Bot di xAI Integrerà i Modelli di Musica AI di Suno",
+      "url": "https://musicbusinessworldwide.com/elon-musk-grok-bot-suno-ai-music-models-anthropic-claude-midjourney/",
+      "topic": "AI & developer tools, Audio AI & music tech"
+    },
+    {
+      "date": "2026-10-10",
+      "title": "Il Partito Politico delle FARC, Comunes, Perde lo Status Legale in Colombia",
+      "url": "https://thecitypaperbogota.com/news/with-farcs-political-party-over-colombias-peace-accord-faces-deadline/",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

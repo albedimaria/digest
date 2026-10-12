@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-04",
-      "title": "arXiv Limita le Sottomissioni di Paper a Causa dell'Esplosione di Contenuti Generati dall'AI",
-      "url": "https://www.kucoin.com/news/flash/arxiv-implements-strict-monthly-paper-submission-limits-amid-ai-driven-surge",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-04",
-      "title": "Microsoft AI Lancia Nuovi Modelli di Trascrizione e Sintesi Vocale per Agenti Conversazionali",
-      "url": "https://www.thurrott.com/a-i/microsoft-ai/342335/microsoft-ai-releases-impressive-transcription-and-voice-models",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-10-05",
       "title": "Aleph Alpha Lancia Kolibri-1, un Nuovo Modello MoE per Ragionamento e Tool Calling",
       "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
@@ -83,6 +71,18 @@
       "title": "CITY JAM Lancia INDUSTRY.AIFF per Potenziare gli Artisti nell'Era dell'AI Musicale",
       "url": "https://www.prnewswire.com/news-releases/ai-made-music-fast-city-jam-founder-pat-villaceran-says-the-real-asset-is-the-artists-own-sound-302905056.html",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-10-12",
+      "title": "OpenAI Rilascia 719 Manoscritti Matematici Generati da AI",
+      "url": "https://www.online-tech-tips.com/openai-math-solutions-release-722-proofs/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-12",
+      "title": "La Banca Mondiale Prevede una Crescita Economica Superiore per la Colombia nel 2026",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdB-rpzLzoJEKUABeCB0zjAV23OPBU5cv9onxEiDp5wYsiinqucKUfqrkFTrmJy9toTW1GXINIVMXQSG_OgsRsHYh1unFTuGFzFzhu1JpIcWniLY-1ppNCi_kf-Yd2LUg2lyWKoh7GVwWfDiiCpzhzBsWKqes1LCg-6Nb3_OQLVz5TLDR1U3_k3FaRVoB_vY=",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

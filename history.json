@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-05",
-      "title": "Aleph Alpha Lancia Kolibri-1, un Nuovo Modello MoE per Ragionamento e Tool Calling",
-      "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-05",
-      "title": "Coppia Bruciata Viva in Chiapas, Messico, Accusata di Stregoneria",
-      "url": "https://www.themirror.com/news/world-news/couple-burned-alive-villagers-horror-2045991",
-      "topic": "Brujería messicana"
-    },
-    {
       "date": "2026-10-06",
       "title": "Reflection AI Lancia Beam, un Nuovo Modello Open-Weight per Agenti AI",
       "url": "https://shattered.io/reflection-ai-beam-rivals-2026/",
@@ -82,6 +70,18 @@
       "date": "2026-10-12",
       "title": "La Banca Mondiale Prevede una Crescita Economica Superiore per la Colombia nel 2026",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdB-rpzLzoJEKUABeCB0zjAV23OPBU5cv9onxEiDp5wYsiinqucKUfqrkFTrmJy9toTW1GXINIVMXQSG_OgsRsHYh1unFTuGFzFzhu1JpIcWniLY-1ppNCi_kf-Yd2LUg2lyWKoh7GVwWfDiiCpzhzBsWKqes1LCg-6Nb3_OQLVz5TLDR1U3_k3FaRVoB_vY=",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Meta Lancia Muse Wonder, un Nuovo Modello AI per Agenti Intelligenti",
+      "url": "https://mashable.com/article/meta-muse-wonder-ai-model-launch",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-13",
+      "title": "La Colombia Chiede all'ONU di Rimuovere la Riforma Rurale dal Mandato della Missione di Pace",
+      "url": "https://www.riotimesonline.com/brazil-news/rio-politics/colombia-asks-un-to-remove-rural-reform-from-mission-mandate/",
       "topic": "Colombia"
     }
   ],

@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-10",
-      "title": "Grok Bot di xAI Integrerà i Modelli di Musica AI di Suno",
-      "url": "https://musicbusinessworldwide.com/elon-musk-grok-bot-suno-ai-music-models-anthropic-claude-midjourney/",
-      "topic": "AI & developer tools, Audio AI & music tech"
-    },
-    {
-      "date": "2026-10-10",
-      "title": "Il Partito Politico delle FARC, Comunes, Perde lo Status Legale in Colombia",
-      "url": "https://thecitypaperbogota.com/news/with-farcs-political-party-over-colombias-peace-accord-faces-deadline/",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-10-11",
       "title": "Cloudflare Lancia Clef-omni, un Modello Decisionale Multimodale per l'Edge",
       "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
@@ -83,6 +71,18 @@
       "title": "Reflection Lancia Beam: Un Modello MoEs Aperto da 501 Miliardi di Parametri per Sviluppatori",
       "url": "https://huggingface.co/blog/reflection/beam",
       "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "DeepSeek Lancia il Modello V4.1 Flash 1017 con Licenza MIT e Nuove API",
+      "url": "https://aitoolsrecap.com/latest-ai-model-releases-october-2026",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-18",
+      "title": "VoiceStudio di Deb Palash Emerge come Alternativa Open-Source a 11 Labs per l'AI Vocale Locale",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

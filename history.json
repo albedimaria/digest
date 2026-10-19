@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-11",
-      "title": "Cloudflare Lancia Clef-omni, un Modello Decisionale Multimodale per l'Edge",
-      "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-11",
-      "title": "CITY JAM Lancia INDUSTRY.AIFF per Potenziare gli Artisti nell'Era dell'AI Musicale",
-      "url": "https://www.prnewswire.com/news-releases/ai-made-music-fast-city-jam-founder-pat-villaceran-says-the-real-asset-is-the-artists-own-sound-302905056.html",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-10-12",
       "title": "OpenAI Rilascia 719 Manoscritti Matematici Generati da AI",
       "url": "https://www.online-tech-tips.com/openai-math-solutions-release-722-proofs/",
@@ -83,6 +71,18 @@
       "title": "VoiceStudio di Deb Palash Emerge come Alternativa Open-Source a 11 Labs per l'AI Vocale Locale",
       "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-10-19",
+      "title": "Meta e Apple Uniscono le Forze per Ottimizzare il Modello AI Muse Spark Open",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7DaHkILpEAdjwxvFVNVHT9SWYFforpDgfgYLTZb9GypGxz6b5hxOEs-OpN8Px1Zw6u5jRc6XMaRL_-qfxwj2_0SZy27UMAKeyUYV2V4QGkoo9bAF7OEjDBaOmFEIHNsENwN02PdzZAXDrZP5BI0Gb7E3RPLBSUSYTx_SzvitSa0ZnMbQGUm0FSmH6",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-19",
+      "title": "Isabel Allende Vince il Premio Planeta con un Sequel de 'La Casa degli Spiriti'",
+      "url": "http://www.bgnes.com/entertainment/isabel-allende-wins-spain-s-premio-planeta-literary-award",
+      "topic": "Letteratura latinoamericana e spagnola"
     }
   ],
   "Laura": [

@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-15",
-      "title": "Proteste Nazionali in Colombia Contro il Governo De la Espriella",
-      "url": "https://www.aljazeera.com/news/2026/10/14/colombia-opposition-groups-launch-protest-against-de-la-espriellas-cuts",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-10-15",
-      "title": "Figma Lancia Code Layers in Open Beta e Rende Disponibile Generalmente Figma Agent",
-      "url": "https://www.techzine.eu/news/devops/110967/figma-introduces-workflows-for-new-development-methods/",
-      "topic": "Design & UX"
-    },
-    {
       "date": "2026-10-16",
       "title": "Meta Lancia Muse Spark Open, un Nuovo Modello AI Multimodale Open-Weight",
       "url": "https://shattered.io/news/meta-muse-spark-open-816b-params-2026/",
@@ -95,6 +83,18 @@
       "title": "Francoobla Music Propone una Sfida AI vs. Intelligenza Umana e un Nuovo Framework Anti-Plagio Musicale",
       "url": "https://markets.businessinsider.com/news/stocks/francoobla-music-introduces-ai-vs-human-intelligence-challenge-and-new-anti-plagiarism-proposal-10358172",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "Rivoluzione negli Agenti AI: Nasce il Marketplace Universale di Plugin `wshobson/agents`",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiU2Pn6q_2aN5JZLKBJQCIwU14tDp11qCBGDcOZizLSqzvJF7RxsI1tELbIs_45ShcTFwJjAn4uIKA5Via6UW6GAUCsmXEybl09BX60YxoJPgEbS24hByp1PfmVf6k14j6OxbuO_ZFQah6tjpKxeMZVAuBLpNr29M2icptqvV2KIH_IgiuuOqSMl2dpEfchPJEug3BMCeIGNFQeDrQyJmmTBC-7nEu0mqp5iNCo5oy2t_Fo5C4mXs_jwkOTkZrBc80e3p6_zU=",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "Colombia: Taglio di 4,3 Miliardi di Dollari al Bilancio 2026 e Decreto per il 2027",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIX-oxYJcmj37SiEJjiK5RRHo5f5MyPYZ3VvV-zs7bwsrR7or7ZL72D61tdPUcsQSuYyAwFxEeGW5VuAut5MfDIgriTDoahqxeWAoKsfjyXe58fpXHEspcS-ScM3P8_zFWErJVLK65dglgx90G5egpqjbXy_H0nI5kPDJE4MPWjIETdIUz5A0Kprg5-o1npUF5hy8_8cquVio9DYluPDbknve7tgxl1Fw2uA=",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

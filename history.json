@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-17",
-      "title": "Il Governo Colombiano Ordina la Rimozione di Opere LGBTQ+ e Politiche dal Museo Nazionale",
-      "url": "https://www.cp24.com/world/colombian-government-orders-museum-to-remove-lgbtq2s-political-works-1.6603846",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-10-17",
-      "title": "Reflection Lancia Beam: Un Modello MoEs Aperto da 501 Miliardi di Parametri per Sviluppatori",
-      "url": "https://huggingface.co/blog/reflection/beam",
-      "topic": "AI & developer tools"
-    },
-    {
       "date": "2026-10-18",
       "title": "DeepSeek Lancia il Modello V4.1 Flash 1017 con Licenza MIT e Nuove API",
       "url": "https://aitoolsrecap.com/latest-ai-model-releases-october-2026",
@@ -95,6 +83,18 @@
       "title": "Manila Ospita la Fiera degli Artigiani Indipendenti: Un Faro per il Design Filipino Contemporaneo",
       "url": "https://www.instagram.com/spacekuting/",
       "topic": "Design & UX"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "OpenAI Abbandona l'Addestramento su Internet Aperto per i Modelli Frontier",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEc_TdpE4NkxMR9Cu6oWjV3oOBcFGJrrbiSlRcfdhL1jtg0pm8LpHmnNaOBKi2THnkGoZ0ma0xyI-OT_CEEiMAPnljjEWXIutf1B7wblxHDFYY4p_QU07AF5mI76eF4FmOhSgDZjxCf2AOwVS7WV1r5-Cs2w6F5y6N7nB64GcTIU1hFa4Va1HtSPlfqTK0KI2IcruJ5XnBS649etOikag==",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-25",
+      "title": "Block Lancia Dessa, un Modello AI Vocale Full-Duplex Addestrato Solo sulla Parola Umana",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8BtmjArFtn-67NnHLjC3p1hqwlwv9JJPdo5DF8KR3rT7JgSOJ_XBCi6MuxG5i80XQdylWrzAetzqB0yIEKp5znPB2cuPOjXnv5m8OtVhT4bH87ToxQUjeRUHjSPOGa7V5zgotgKofLYGOpqc5zMqCeJcg0HIyoW1qfDeuLjciwus-Cb13fT2mitpZ1np4W0O86rFzjhs==",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

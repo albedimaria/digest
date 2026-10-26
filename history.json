@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-18",
-      "title": "DeepSeek Lancia il Modello V4.1 Flash 1017 con Licenza MIT e Nuove API",
-      "url": "https://aitoolsrecap.com/latest-ai-model-releases-october-2026",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-18",
-      "title": "VoiceStudio di Deb Palash Emerge come Alternativa Open-Source a 11 Labs per l'AI Vocale Locale",
-      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-10-19",
       "title": "Meta e Apple Uniscono le Forze per Ottimizzare il Modello AI Muse Spark Open",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7DaHkILpEAdjwxvFVNVHT9SWYFforpDgfgYLTZb9GypGxz6b5hxOEs-OpN8Px1Zw6u5jRc6XMaRL_-qfxwj2_0SZy27UMAKeyUYV2V4QGkoo9bAF7OEjDBaOmFEIHNsENwN02PdzZAXDrZP5BI0Gb7E3RPLBSUSYTx_SzvitSa0ZnMbQGUm0FSmH6",
@@ -95,6 +83,18 @@
       "title": "Block Lancia Dessa, un Modello AI Vocale Full-Duplex Addestrato Solo sulla Parola Umana",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8BtmjArFtn-67NnHLjC3p1hqwlwv9JJPdo5DF8KR3rT7JgSOJ_XBCi6MuxG5i80XQdylWrzAetzqB0yIEKp5znPB2cuPOjXnv5m8OtVhT4bH87ToxQUjeRUHjSPOGa7V5zgotgKofLYGOpqc5zMqCeJcg0HIyoW1qfDeuLjciwus-Cb13fT2mitpZ1np4W0O86rFzjhs==",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Il Progetto Open Source 'Cindy' Ridisegna gli Agenti AI con un Approccio Zero-Friction",
+      "url": "https://github.com/makecindy/cindy",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-26",
+      "title": "Figma Introduce 'Code Layers' e 'Specs' per Rivoluzionare il Workflow di Design e Sviluppo",
+      "url": "https://help.figma.com/hc/en-us/articles/43663368947863-What-s-new-from-Config-India-2026",
+      "topic": "Design & UX"
     }
   ],
   "Laura": [

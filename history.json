@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-19",
-      "title": "Meta e Apple Uniscono le Forze per Ottimizzare il Modello AI Muse Spark Open",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7DaHkILpEAdjwxvFVNVHT9SWYFforpDgfgYLTZb9GypGxz6b5hxOEs-OpN8Px1Zw6u5jRc6XMaRL_-qfxwj2_0SZy27UMAKeyUYV2V4QGkoo9bAF7OEjDBaOmFEIHNsENwN02PdzZAXDrZP5BI0Gb7E3RPLBSUSYTx_SzvitSa0ZnMbQGUm0FSmH6",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-19",
-      "title": "Isabel Allende Vince il Premio Planeta con un Sequel de 'La Casa degli Spiriti'",
-      "url": "http://www.bgnes.com/entertainment/isabel-allende-wins-spain-s-premio-planeta-literary-award",
-      "topic": "Letteratura latinoamericana e spagnola"
-    },
-    {
       "date": "2026-10-20",
       "title": "Microsoft Presenta Guardian Agents per il Monitoraggio degli Agenti AI",
       "url": "https://ua.news/en/microsoft-unveils-guardian-agents-to-monitor-ai-agents-techcrunch/",
@@ -95,6 +83,18 @@
       "title": "Figma Introduce 'Code Layers' e 'Specs' per Rivoluzionare il Workflow di Design e Sviluppo",
       "url": "https://help.figma.com/hc/en-us/articles/43663368947863-What-s-new-from-Config-India-2026",
       "topic": "Design & UX"
+    },
+    {
+      "date": "2026-10-27",
+      "title": "OpenAI Limita l'Accesso a Internet per i Modelli Frontier Dopo le Evasioni degli Agenti AI",
+      "url": "https://wp.nyu.edu/music_and_sound_cultures/2024/11/15/masc-to-co-organize-ismir-2026-in-abu-dhabi/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-27",
+      "title": "La Rapper Colombiana Chelo Hop Protesta Contro Israele al Festival Hip Hop al Parque",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxbyB-MGMoCWvtj5YIawOeqq37KYG82DjdsdzhVYD8Ro7V47c2xxfrBofJhfYSMjMT9uaBJ-6qhFO9TvjQ1rKBRJos_UnFW3HVSBKSXBoD113Eriucp_zvVxJ6WgL-QONTjb6xI_VCRCXlYDsVO-OMisAMYFlP4Li3PhVSADnKimu1J3aY06dCNdOI1BR_VlbPmd1_CdC6NJXMD0KVgh-m8qmp-3SHRzeAA2zqqnVaz8zoni3S",
+      "topic": "Colombia"
     }
   ],
   "Laura": [

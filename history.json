@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-20",
-      "title": "Microsoft Presenta Guardian Agents per il Monitoraggio degli Agenti AI",
-      "url": "https://ua.news/en/microsoft-unveils-guardian-agents-to-monitor-ai-agents-techcrunch/",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-20",
-      "title": "Penguin Michael Joseph Lancia Coral Press, Nuova Impronta Editoriale per la Crescita Personale",
-      "url": "https://www.thebookseller.com/news/penguin-michael-joseph-to-launch-health-wellbeing-and-personal-development-imprint-1786967",
-      "topic": "Crescita personale"
-    },
-    {
       "date": "2026-10-21",
       "title": "Giudice Colombiano Ordina la Protezione degli Artefatti del Museo Nazionale Dopo la Purga Governativa",
       "url": "https://www.yourvalley.net/story/2026/10/19/world/colombia-judge-orders-protection-of-historical-artifacts-after-museum-purge-sparks-protests/172350.html",
@@ -94,6 +82,18 @@
       "date": "2026-10-27",
       "title": "La Rapper Colombiana Chelo Hop Protesta Contro Israele al Festival Hip Hop al Parque",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxbyB-MGMoCWvtj5YIawOeqq37KYG82DjdsdzhVYD8Ro7V47c2xxfrBofJhfYSMjMT9uaBJ-6qhFO9TvjQ1rKBRJos_UnFW3HVSBKSXBoD113Eriucp_zvVxJ6WgL-QONTjb6xI_VCRCXlYDsVO-OMisAMYFlP4Li3PhVSADnKimu1J3aY06dCNdOI1BR_VlbPmd1_CdC6NJXMD0KVgh-m8qmp-3SHRzeAA2zqqnVaz8zoni3S",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Google DeepMind Lancia Genie 4: Mondi Interattivi con Audio Nativo in Tempo Reale",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNEE1udLGuG4CE_Ou8gpmd905zt9yfk0LpQkuaEmdPUpHpLN98w4Q2GB2XjI3HaEIx8jql6AOsbYqPCsSUOd1KUjFtwVckdTWh_MGLNYMC0i3XvLUjBBE1tUzs_vlls9sXDWRm9-VuJmtliba7SyGe_s6sUT9FN0yBtEOpDXsrsua81qnkjE5daZhVdyRxwfpAq94EbiCxSCqQMk-x5ApoYU_-HHXXrjchP6g-",
+      "topic": "AI & developer tools, Audio AI & music tech"
+    },
+    {
+      "date": "2026-10-28",
+      "title": "Il Presidente Colombiano De la Espriella Spinge per l'Austerità in Vista di un Accordo con il FMI",
+      "url": "",
       "topic": "Colombia"
     }
   ],

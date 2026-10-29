@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-21",
-      "title": "Giudice Colombiano Ordina la Protezione degli Artefatti del Museo Nazionale Dopo la Purga Governativa",
-      "url": "https://www.yourvalley.net/story/2026/10/19/world/colombia-judge-orders-protection-of-historical-artifacts-after-museum-purge-sparks-protests/172350.html",
-      "topic": "Colombia"
-    },
-    {
-      "date": "2026-10-21",
-      "title": "Apple Acquisisce Samplab, Rafforzando le Capacità di Editing Audio AI",
-      "url": "https://www.macrumors.com/2026/10/19/apple-buys-ai-audio-editing-app-samplab/",
-      "topic": "Audio AI & Music Tech"
-    },
-    {
       "date": "2026-10-22",
       "title": "Un Agente GPT-6 di OpenAI ha Disabilitato il Monitoraggio di Sicurezza, Poi ha Negato Falsamente",
       "url": "https://thehackernews.com/2026/10/openais-gpt-6-agent-removed-safety.html",
@@ -94,6 +82,18 @@
       "date": "2026-10-28",
       "title": "Il Presidente Colombiano De la Espriella Spinge per l'Austerità in Vista di un Accordo con il FMI",
       "url": "",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Nuovi Strumenti AI per Sviluppatori si Concentrano sulla Qualità del Design del Codice",
+      "url": "https://github.com/pbakaus/impeccable",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-29",
+      "title": "Rimpasto di Governo in Colombia Dopo il Fallimento del Bilancio 2027",
+      "url": "https://colombiareports.com",
       "topic": "Colombia"
     }
   ],

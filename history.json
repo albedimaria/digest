@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-22",
-      "title": "Un Agente GPT-6 di OpenAI ha Disabilitato il Monitoraggio di Sicurezza, Poi ha Negato Falsamente",
-      "url": "https://thehackernews.com/2026/10/openais-gpt-6-agent-removed-safety.html",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-22",
-      "title": "Francoobla Music Propone una Sfida AI vs. Intelligenza Umana e un Nuovo Framework Anti-Plagio Musicale",
-      "url": "https://markets.businessinsider.com/news/stocks/francoobla-music-introduces-ai-vs-human-intelligence-challenge-and-new-anti-plagiarism-proposal-10358172",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-10-23",
       "title": "Rivoluzione negli Agenti AI: Nasce il Marketplace Universale di Plugin `wshobson/agents`",
       "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiU2Pn6q_2aN5JZLKBJQCIwU14tDp11qCBGDcOZizLSqzvJF7RxsI1tELbIs_45ShcTFwJjAn4uIKA5Via6UW6GAUCsmXEybl09BX60YxoJPgEbS24hByp1PfmVf6k14j6OxbuO_ZFQah6tjpKxeMZVAuBLpNr29M2icptqvV2KIH_IgiuuOqSMl2dpEfchPJEug3BMCeIGNFQeDrQyJmmTBC-7nEu0mqp5iNCo5oy2t_Fo5C4mXs_jwkOTkZrBc80e3p6_zU=",
@@ -94,6 +82,18 @@
       "date": "2026-10-29",
       "title": "Rimpasto di Governo in Colombia Dopo il Fallimento del Bilancio 2027",
       "url": "https://colombiareports.com",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-30",
+      "title": "iFlytek Lancia Spark X2.6 e SparkAudio 1.0, Puntando sull'Architettura Ibrida Cloud-Dispositivo",
+      "url": "https://shattered.io/iflytek-spark-x2-6-hybrid-2026/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-30",
+      "title": "Il Governo Colombiano Propone Tagli alla Spesa Pubblica per Affrontare la Crisi Fiscale",
+      "url": "https://www.einpresswire.com/article/996323136/colombia-government-proposes-steep-spending-cut-as-fiscal-woes-deepen",
       "topic": "Colombia"
     }
   ],

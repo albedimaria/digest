@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-23",
-      "title": "Rivoluzione negli Agenti AI: Nasce il Marketplace Universale di Plugin `wshobson/agents`",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiU2Pn6q_2aN5JZLKBJQCIwU14tDp11qCBGDcOZizLSqzvJF7RxsI1tELbIs_45ShcTFwJjAn4uIKA5Via6UW6GAUCsmXEybl09BX60YxoJPgEbS24hByp1PfmVf6k14j6OxbuO_ZFQah6tjpKxeMZVAuBLpNr29M2icptqvV2KIH_IgiuuOqSMl2dpEfchPJEug3BMCeIGNFQeDrQyJmmTBC-7nEu0mqp5iNCo5oy2t_Fo5C4mXs_jwkOTkZrBc80e3p6_zU=",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-23",
-      "title": "Colombia: Taglio di 4,3 Miliardi di Dollari al Bilancio 2026 e Decreto per il 2027",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIX-oxYJcmj37SiEJjiK5RRHo5f5MyPYZ3VvV-zs7bwsrR7or7ZL72D61tdPUcsQSuYyAwFxEeGW5VuAut5MfDIgriTDoahqxeWAoKsfjyXe58fpXHEspcS-ScM3P8_zFWErJVLK65dglgx90G5egpqjbXy_H0nI5kPDJE4MPWjIETdIUz5A0Kprg5-o1npUF5hy8_8cquVio9DYluPDbknve7tgxl1Fw2uA=",
-      "topic": "Colombia"
-    },
-    {
       "date": "2026-10-24",
       "title": "Allarme 'Black October': Vulnerabilità PHP Sfruttate da Attacchi Cibernetici Potenziati dall'AI",
       "url": "https://briefs.finance/",
@@ -94,6 +82,18 @@
       "date": "2026-10-30",
       "title": "Il Governo Colombiano Propone Tagli alla Spesa Pubblica per Affrontare la Crisi Fiscale",
       "url": "https://www.einpresswire.com/article/996323136/colombia-government-proposes-steep-spending-cut-as-fiscal-woes-deepen",
+      "topic": "Colombia"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Mistral Rilascia il Modello Multimodale Large 4 con Pesi Aperti",
+      "url": "https://techcrunch.com/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-10-31",
+      "title": "Colombia Propone un Taglio Drastico al Credito Fiscale sul Carbonio",
+      "url": "https://carbon-pulse.com/",
       "topic": "Colombia"
     }
   ],

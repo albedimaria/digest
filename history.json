@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-25",
-      "title": "OpenAI Abbandona l'Addestramento su Internet Aperto per i Modelli Frontier",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEc_TdpE4NkxMR9Cu6oWjV3oOBcFGJrrbiSlRcfdhL1jtg0pm8LpHmnNaOBKi2THnkGoZ0ma0xyI-OT_CEEiMAPnljjEWXIutf1B7wblxHDFYY4p_QU07AF5mI76eF4FmOhSgDZjxCf2AOwVS7WV1r5-Cs2w6F5y6N7nB64GcTIU1hFa4Va1HtSPlfqTK0KI2IcruJ5XnBS649etOikag==",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-25",
-      "title": "Block Lancia Dessa, un Modello AI Vocale Full-Duplex Addestrato Solo sulla Parola Umana",
-      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8BtmjArFtn-67NnHLjC3p1hqwlwv9JJPdo5DF8KR3rT7JgSOJ_XBCi6MuxG5i80XQdylWrzAetzqB0yIEKp5znPB2cuPOjXnv5m8OtVhT4bH87ToxQUjeRUHjSPOGa7V5zgotgKofLYGOpqc5zMqCeJcg0HIyoW1qfDeuLjciwus-Cb13fT2mitpZ1np4W0O86rFzjhs==",
-      "topic": "Audio AI & music tech"
-    },
-    {
       "date": "2026-10-26",
       "title": "Il Progetto Open Source 'Cindy' Ridisegna gli Agenti AI con un Approccio Zero-Friction",
       "url": "https://github.com/makecindy/cindy",
@@ -95,6 +83,18 @@
       "title": "Città del Messico Celebra il Giorno dei Morti con una Grande Parata e Altari Monumentali",
       "url": "https://roameoesim.com/blog/mexico-city-day-of-the-dead-2026-parade-route-dates",
       "topic": "Brujería messicana"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Andrej Karpathy lancia HackerTube, un'alternativa a YouTube curata da AI",
+      "url": "https://cryptobriefing.com/andrej-karpathy-hackertube-claude-hacker-news/",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-11-02",
+      "title": "Deezer e YouTube Music introducono etichette e filtri per la musica generata da AI",
+      "url": "https://routenote.com/blog/the-biggest-music-industry-news-october-2026-roundup/",
+      "topic": "Audio AI & music tech"
     }
   ],
   "Laura": [

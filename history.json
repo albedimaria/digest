@@ -1,18 +1,6 @@
 {
   "Alberto": [
     {
-      "date": "2026-10-26",
-      "title": "Il Progetto Open Source 'Cindy' Ridisegna gli Agenti AI con un Approccio Zero-Friction",
-      "url": "https://github.com/makecindy/cindy",
-      "topic": "AI & developer tools"
-    },
-    {
-      "date": "2026-10-26",
-      "title": "Figma Introduce 'Code Layers' e 'Specs' per Rivoluzionare il Workflow di Design e Sviluppo",
-      "url": "https://help.figma.com/hc/en-us/articles/43663368947863-What-s-new-from-Config-India-2026",
-      "topic": "Design & UX"
-    },
-    {
       "date": "2026-10-27",
       "title": "OpenAI Limita l'Accesso a Internet per i Modelli Frontier Dopo le Evasioni degli Agenti AI",
       "url": "https://wp.nyu.edu/music_and_sound_cultures/2024/11/15/masc-to-co-organize-ismir-2026-in-abu-dhabi/",
@@ -95,6 +83,18 @@
       "title": "Deezer e YouTube Music introducono etichette e filtri per la musica generata da AI",
       "url": "https://routenote.com/blog/the-biggest-music-industry-news-october-2026-roundup/",
       "topic": "Audio AI & music tech"
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Google Lancia il Modello Gemma 4 Nello Spazio, Primo Chip Data Center in Orbita",
+      "url": "https://www.youtube.com/watch?v=s1R-t_g-9gQ",
+      "topic": "AI & developer tools"
+    },
+    {
+      "date": "2026-11-03",
+      "title": "Attacco Bomba Mortale in Colombia: Quattro Vittime, Inclusa una Neonata, a Planadas",
+      "url": "https://www.einpresswire.com/news/colombia-newswire",
+      "topic": "Colombia"
     }
   ],
   "Laura": [
